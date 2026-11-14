@@ -192,6 +192,13 @@ footer .cp{width:100%;border-top:1px solid var(--line);padding-top:22px;font-siz
 .socs{display:flex;gap:10px;flex-wrap:wrap}.soc{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1.5px solid var(--line);border-radius:99px;font-weight:600;font-size:14px}.soc svg{width:18px;height:18px;color:var(--g)}.soc:hover{border-color:var(--g)}
 .cp a{color:inherit;text-decoration:underline;text-underline-offset:3px}.cp a:hover{color:var(--g)}
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1111661618319497');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1111661618319497&ev=PageView&noscript=1" alt=""></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 <header id="nav"><div class="wrap">
@@ -343,7 +350,8 @@ document.querySelectorAll('.fq button').forEach(function(b){b.addEventListener('
 document.getElementById('cf').addEventListener('submit',function(e){e.preventDefault();var en=document.documentElement.classList.contains('en'),er=document.getElementById('ferr'),c=document.getElementById('f1').value.trim(),n=document.getElementById('f4').value.trim();
  if(!c||!n){er.textContent=en?'Please enter your company and your name.':'Indiquez le nom de l\'entreprise et votre nom.';er.hidden=false;return}
  if(!WA){er.textContent=en?'Demo: the SiteLik WhatsApp number will be added here.':'Démo : le numéro WhatsApp de SiteLik sera ajouté ici.';er.hidden=false;return}
- var a=document.getElementById('f2');location.href='https://wa.me/'+WA+'?text='+encodeURIComponent((en?'Hello SiteLik, I would like a free demo.':'Bonjour SiteLik, je souhaite une démo gratuite.')+'\n'+(en?'Company: ':'Entreprise : ')+c+'\n'+(en?'Industry: ':'Activité : ')+a.options[a.selectedIndex].text+'\n'+(en?'City: ':'Ville : ')+document.getElementById('f3').value+'\n'+(en?'Name: ':'Nom : ')+n)});
+ var a=document.getElementById('f2');try{fbq('track','Lead',{content_name:'Demo gratuite'})}catch(x){};location.href='https://wa.me/'+WA+'?text='+encodeURIComponent((en?'Hello SiteLik, I would like a free demo.':'Bonjour SiteLik, je souhaite une démo gratuite.')+'\n'+(en?'Company: ':'Entreprise : ')+c+'\n'+(en?'Industry: ':'Activité : ')+a.options[a.selectedIndex].text+'\n'+(en?'City: ':'Ville : ')+document.getElementById('f3').value+'\n'+(en?'Name: ':'Nom : ')+n)});
 </script>
+<script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"]');if(a){try{fbq('track','Contact')}catch(x){}}},true);</script>
 </body>
 </html>
