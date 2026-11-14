@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Votre Société · Carrelage, robinetterie & sanitaire dans votre ville</title>
+<meta name="description" content="Votre Société : carrelage, robinetterie et sanitaire dans votre ville. Showroom en ville, livraison sur votre chantier.">
+<meta name="theme-color" content="#1c1b18">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1c1b18;--sand:#f3eee5;--paper:#faf8f4;--clay:#b4532a;--clay2:#8f3f1f;--olive:#5b6346;--mute:#6f6a60;--line:rgba(28,27,24,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font:400 16px/1.65 'Inter Tight',system-ui,sans-serif;color:var(--ink);background:var(--paper);overflow-x:hidden}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.02em;line-height:1.05}
+h2{font-size:clamp(34px,4.6vw,60px)}
+h2 em,h1 em{font-style:italic;color:var(--clay);font-weight:400}
+.wrap{max-width:1260px;margin:0 auto;padding:0 max(20px,4vw)}
+.eb{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:600;font-size:15px;transition:.25s;white-space:nowrap}
+.btn.dk{background:var(--ink);color:#fff}.btn.dk:hover{background:var(--clay)}
+.btn.cl{background:var(--clay);color:#fff}.btn.cl:hover{background:var(--clay2)}
+.btn.ol{border:1.5px solid var(--line)}.btn.ol:hover{border-color:var(--ink)}
+.btn svg{width:18px;height:18px}
+/* nav */
+#nav{position:fixed;top:0;left:0;right:0;z-index:60;transition:.3s}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px}
+#nav.solid{background:rgba(250,248,244,.94);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.logo{display:flex;align-items:center;gap:11px}
+.logo i{width:36px;height:36px;display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.logo i b{border-radius:2px;background:var(--clay)}.logo i b:nth-child(2){background:var(--ink)}.logo i b:nth-child(3){background:var(--olive)}.logo i b:nth-child(4){background:#d9c9ae}
+.logo span{font-family:Fraunces,serif;font-weight:700;font-size:20px;line-height:1}
+.logo small{display:block;font-family:'Inter Tight',sans-serif;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);margin-top:3px}
+.nl{display:flex;gap:26px;font-weight:500;font-size:15px}.nl a{color:var(--mute)}.nl a:hover{color:var(--ink)}
+/* hero */
+.hero{padding:120px 0 70px;background:var(--sand)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:center}
+.rate{display:inline-flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 16px 7px 8px;margin-bottom:24px;font-size:14px;font-weight:600}
+.rate b{background:var(--ink);color:#fff;border-radius:999px;padding:4px 10px;font-size:13px}
+.rate .st{color:#e3a008;letter-spacing:2px}
+h1{font-size:clamp(42px,5.6vw,78px);margin-bottom:22px}
+.lead{font-size:clamp(17px,1.4vw,19px);color:var(--mute);max-width:520px;margin-bottom:30px}
+.hcta{display:flex;gap:10px;flex-wrap:wrap}
+.feat{display:flex;gap:22px;flex-wrap:wrap;margin-top:34px;font-size:14px;font-weight:600;color:var(--mute)}
+.feat span{display:flex;align-items:center;gap:8px}.feat svg{width:18px;color:var(--clay)}
+.room{position:relative;border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 40px 80px -40px rgba(28,27,24,.45)}
+.room svg{display:block;width:100%;height:auto}
+.room .tag{position:absolute;left:16px;bottom:16px;background:rgba(255,255,255,.94);border-radius:12px;padding:10px 14px;font-size:13px;font-weight:600;display:flex;gap:10px;align-items:center;backdrop-filter:blur(6px)}
+.room .tag i{width:22px;height:22px;border-radius:5px;display:block;box-shadow:inset 0 0 0 1px rgba(0,0,0,.1)}
+.room .tag small{display:block;font-weight:500;color:var(--mute);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.fade{transition:opacity .7s ease}
+/* strip */
+.strip{background:var(--ink);color:#fff;padding:18px 0;overflow:hidden;white-space:nowrap}
+.strip div{display:inline-flex;gap:34px;animation:mq 34s linear infinite;font-family:Fraunces,serif;font-size:21px;font-style:italic}
+.strip i{font-style:normal;color:var(--clay)}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* sections */
+.sec{padding:110px 0}
+.sh{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:46px}
+.sh p{max-width:430px;color:var(--mute);font-size:17px}
+/* configurator */
+.cfg{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:28px;align-items:start}
+.cfg .room{position:sticky;top:96px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:22px}
+.panel h3{font-family:'Inter Tight',sans-serif;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:10px;line-height:1.2}
+.rooms{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.rooms button{padding:12px;border:1.5px solid var(--line);border-radius:12px;font-weight:600;font-size:14px;text-align:left;display:flex;gap:10px;align-items:center;transition:.2s}
+.rooms button svg{width:20px;color:var(--mute)}
+.rooms button.on{border-color:var(--ink);background:var(--ink);color:#fff}.rooms button.on svg{color:#fff}
+.styles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.styles button{display:flex;flex-direction:column;gap:6px;font-size:12.5px;font-weight:600;text-align:left;line-height:1.25}
+.styles button i{display:block;aspect-ratio:1;border-radius:12px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08);transition:.2s;background-size:cover}
+.styles button.on i{box-shadow:0 0 0 2.5px var(--paper),0 0 0 4.5px var(--clay)}
+.pick{background:var(--sand);border-radius:14px;padding:14px 16px;font-size:14px}
+.pick b{display:block;font-family:Fraunces,serif;font-size:20px}
+/* inspirations */
+.flt{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.flt button{padding:10px 18px;border-radius:999px;border:1.5px solid var(--line);font-weight:600;font-size:14px}.flt button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.it{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.35s}
+.it:hover{transform:translateY(-4px);box-shadow:0 24px 40px -24px rgba(28,27,24,.35)}
+.it .sw{aspect-ratio:4/3;background-size:cover;position:relative}
+.it .sw span{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.92);border-radius:999px;padding:4px 10px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.it div.b{padding:16px 18px 18px}
+.it h3{font-size:19px;margin-bottom:4px}.it p{font-size:13px;color:var(--mute)}
+.it .f{display:flex;justify-content:space-between;align-items:center;margin-top:12px;font-size:13px;font-weight:600}
+.it .f a{color:var(--clay)}
+.it.hide{display:none}
+/* delivery */
+.dl{background:var(--olive);color:#fff;border-radius:28px;padding:clamp(34px,5vw,70px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:46px;align-items:center;overflow:hidden}
+.dl .eb{color:#e9d8b8}.dl h2 em{color:#e9d8b8}
+.dl p{opacity:.85;font-size:17px;margin:18px 0 26px;max-width:440px}
+.dl ol{list-style:none;display:flex;flex-direction:column;gap:12px;counter-reset:s}
+.dl li{display:flex;gap:14px;align-items:center;font-weight:600;counter-increment:s}
+.dl li::before{content:counter(s);flex:none;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);display:grid;place-items:center;font-size:14px}
+#route{width:100%;height:auto}
+#route .rd{stroke-dasharray:8 10;animation:rd 1.2s linear infinite}
+@keyframes rd{to{stroke-dashoffset:-36}}
+/* team */
+.team{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
+.q{background:#fff;border:1px solid var(--line);border-radius:22px;padding:36px;display:flex;flex-direction:column;gap:20px}
+.q blockquote{font-family:Fraunces,serif;font-size:clamp(20px,2vw,26px);line-height:1.35}
+.q footer{display:flex;gap:12px;align-items:center;font-weight:600}.q footer i{width:42px;height:42px;border-radius:50%;background:var(--clay);color:#fff;display:grid;place-items:center;font-style:normal}
+.q footer small{display:block;color:var(--mute);font-weight:500;font-size:13px}
+.q .st{color:#e3a008;letter-spacing:3px}
+.score{background:var(--ink);color:#fff;border-radius:22px;padding:36px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.score .big{font-family:Fraunces,serif;font-size:clamp(80px,9vw,128px);line-height:.9}
+.score .big small{font-size:.3em;opacity:.6}
+.tags{display:flex;flex-wrap:wrap;gap:8px}.tags span{border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 14px;font-size:14px}
+/* calc */
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+.cf{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:var(--mute)}
+input,select{font:inherit;font-size:16px;font-weight:600;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink);width:100%}
+input:focus,select:focus{outline:none;border-color:var(--clay)}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.res div{background:var(--sand);border-radius:14px;padding:16px}
+.res b{display:block;font-family:Fraunces,serif;font-size:34px;line-height:1}
+.res span{font-size:12px;font-weight:600;color:var(--mute)}
+.err{color:var(--clay);font-size:14px;font-weight:600}
+/* visit */
+.visit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:22px}
+.vi{background:var(--sand);border-radius:22px;padding:40px;display:flex;flex-direction:column;gap:22px}
+.vl{display:flex;gap:14px}.vl i{flex:none;width:44px;height:44px;border-radius:12px;background:#fff;display:grid;place-items:center;color:var(--clay)}.vl i svg{width:22px}
+.vl small{display:block;color:var(--mute);font-size:13px}.vl b,.vl a{font-weight:700;font-size:17px}
+.map{border-radius:22px;overflow:hidden;min-height:420px;position:relative;border:1px solid var(--line);background:var(--sand)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+footer.ft{background:var(--ink);color:rgba(255,255,255,.6);padding:56px 0 34px;font-size:14px}
+.ft .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.ft .logo span{color:#fff}.ft .logo small{color:rgba(255,255,255,.5)}
+.ft .cp{width:100%;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;margin-top:8px;font-size:12px}
+#wa{position:fixed;right:18px;bottom:18px;z-index:50;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.4)}
+#wa svg{width:28px}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media (max-width:1000px){.nl{display:none}.hero .wrap,.cfg,.dl,.team,.calc,.visit{grid-template-columns:minmax(0,1fr)}.cfg .room{position:relative;top:0}.grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){
+ #nav .wrap{height:64px}.logo span{font-size:17px}#nav .btn{padding:10px 14px;font-size:13px}
+ .hero{padding:96px 0 56px}.hcta .btn{flex:1}
+ .sec{padding:76px 0}
+ .grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}.it div.b{padding:12px}.it h3{font-size:16px}.it .f{flex-direction:column;align-items:flex-start;gap:4px}
+ .panel,.q,.score,.vi,.cf{padding:22px}
+ .styles{grid-template-columns:repeat(3,1fr)}
+ .cfg .room{position:sticky;top:64px;z-index:5;border-radius:16px}
+ .map{min-height:300px}
+}
+#wa,#call{display:none!important}</style>
+</head>
+<body>
+<header id="nav"><div class="wrap">
+ <a class="logo" href="#top"><i><b></b><b></b><b></b><b></b></i><span>Votre Société<small>Oujda</small></span></a>
+ <nav class="nl"><a href="#piece">Créez votre pièce</a><a href="#inspirations">Inspirations</a><a href="#livraison">Livraison</a><a href="#visite">Showroom</a></nav>
+ <a class="btn dk" href="#visite">Nous contacter</a>
+</div></header>
+
+<section class="hero" id="top"><div class="wrap">
+ <div>
+  <span class="rate rv"><b>4,4</b><span class="st">★★★★★</span>Avis Google</span>
+  <h1 class="rv">Le carrelage qui <em>change</em> toute la maison.</h1>
+  <p class="lead rv">Carrelage, robinetterie et sanitaire dans votre ville. Choisissez en showroom, on vous conseille, et on livre sur votre chantier.</p>
+  <div class="hcta rv"><a class="btn cl" href="#piece">Créer ma pièce <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn ol" href="tel:+212662648590">06 00 00 00 00</a></div>
+  <div class="feat rv"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7M7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM17 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>Livraison</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10l9-6 9 6v10H3z M9 20v-6h6v6"/></svg>Achats en magasin</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 7L12 17.6 5.8 21l1.4-7L2 9.3l7-.8z"/></svg>Conseil personnalisé</span></div>
+ </div>
+ <div class="room rv" id="heroRoom"><svg viewBox="0 0 600 420"></svg><div class="tag"><i></i><span><small>Style</small><b>—</b></span></div></div>
+</div></section>
+
+<div class="strip" aria-hidden="true"><div><span>Carrelage</span><i>◆</i><span>Robinetterie</span><i>◆</i><span>Sanitaire</span><i>◆</i><span>Livraison sur chantier</span><i>◆</i><span>Achats en magasin</span><i>◆</i><span>Votre adresse</span><i>◆</i><span>Carrelage</span><i>◆</i><span>Robinetterie</span><i>◆</i><span>Sanitaire</span><i>◆</i><span>Livraison sur chantier</span><i>◆</i><span>Achats en magasin</span><i>◆</i><span>Votre adresse</span><i>◆</i></div></div>
+
+<section class="sec" id="piece"><div class="wrap">
+ <div class="sh rv"><div><span class="eb">Créez votre pièce</span><h2>Voyez votre sol <em>avant</em> de le poser.</h2></div><p>Choisissez la pièce et le style : le carrelage change sous vos yeux. Envoyez votre choix au showroom pour connaître les modèles disponibles.</p></div>
+ <div class="cfg">
+  <div class="room" id="cfgRoom"><svg viewBox="0 0 600 420"></svg><div class="tag"><i></i><span><small>Votre choix</small><b>—</b></span></div></div>
+  <div class="panel rv">
+   <div><h3>1. La pièce</h3><div class="rooms" id="rooms"><button type="button" data-r="salon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3M3 18v-5a2 2 0 0 1 4 0v1h10v-1a2 2 0 0 1 4 0v5H3z"/></svg>Salon</button><button type="button" data-r="cuisine"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10h18v10H3zM3 14h18M8 4v3M12 4v3M16 4v3"/></svg>Cuisine</button><button type="button" data-r="sdb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18v3a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5zM6 12V5a2 2 0 0 1 4 0"/></svg>Salle de bain</button><button type="button" data-r="terrasse"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3M5 7l2 2M19 7l-2 2M8 14a4 4 0 0 1 8 0M3 18h18M3 21h18"/></svg>Terrasse</button></div></div>
+   <div><h3>2. Le style</h3><div class="styles" id="styles"></div></div>
+   <div class="pick" id="pick"><b>—</b><span></span></div>
+   <button class="btn cl" id="askStyle"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:20px;height:20px"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg> Demander ce style</button>
+   <p class="err" id="perr" hidden></p>
+  </div>
+ </div>
+</div></section>
+
+<section class="sec" id="inspirations" style="background:var(--sand)"><div class="wrap">
+ <div class="sh rv"><div><span class="eb">Inspirations</span><h2>Des styles pour <em>chaque</em> pièce.</h2></div><p>Effets marbre, bois, béton, zellige ou terrazzo : venez voir les modèles en showroom. Prix et disponibilité sur place.</p></div>
+ <div class="flt rv" id="flt"><button class="on" data-f="all">Tout</button><button data-f="sol">Sol</button><button data-f="mur">Mur</button><button data-f="sdb">Salle de bain</button><button data-f="ext">Extérieur</button></div>
+ <div class="grid" id="grid"></div>
+</div></section>
+
+<section class="sec" id="livraison"><div class="wrap"><div class="dl rv">
+ <div><span class="eb">Livraison</span><h2>Du showroom à <em>votre chantier.</em></h2><p>Vous choisissez, on prépare la commande et on vous livre. Pas besoin de chercher un transport.</p>
+  <ol><li>Choix en showroom ou par WhatsApp</li><li>Calcul des quantités avec un conseiller</li><li>Préparation de la commande</li><li>Livraison sur votre chantier</li></ol></div>
+ <svg id="route" viewBox="0 0 520 380" aria-hidden="true"><rect width="520" height="380" rx="20" fill="rgba(255,255,255,.07)"/>
+<rect x="40" y="30" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="132" y="30" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="224" y="30" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="316" y="30" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="408" y="30" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="40" y="120" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="132" y="120" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="224" y="120" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="316" y="120" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="408" y="120" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="40" y="210" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="132" y="210" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="224" y="210" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="316" y="210" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="408" y="210" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="40" y="300" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="132" y="300" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="224" y="300" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="316" y="300" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/><rect x="408" y="300" width="70" height="66" rx="8" fill="rgba(255,255,255,.06)"/>
+<path id="rp" d="M80 300 C160 300 170 200 250 190 S370 120 440 80" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="14" stroke-linecap="round"/>
+<path d="M80 300 C160 300 170 200 250 190 S370 120 440 80" fill="none" stroke="#e9d8b8" stroke-width="3" class="rd"/>
+<circle cx="80" cy="300" r="22" fill="#b4532a"/><text x="80" y="342" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="Inter Tight,sans-serif">SHOWROOM</text>
+<circle cx="440" cy="80" r="22" fill="#fff"/><path d="M430 88v-10l10-8 10 8v10z" fill="#5b6346"/><text x="440" y="122" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="Inter Tight,sans-serif">VOTRE CHANTIER</text>
+<g><animateMotion dur="5s" repeatCount="indefinite" rotate="auto"><mpath href="#rp"/></animateMotion>
+<g transform="translate(-22,-14)"><rect x="0" y="4" width="28" height="18" rx="2" fill="#fff"/><path d="M28 9h8l6 6v7H28z" fill="#e9d8b8"/><circle cx="8" cy="24" r="4" fill="#1c1b18"/><circle cx="34" cy="24" r="4" fill="#1c1b18"/><rect x="4" y="8" width="8" height="8" fill="#b4532a"/><rect x="14" y="8" width="8" height="8" fill="#5b6346"/></g></g></svg>
+</div></div></section>
+
+<section class="sec"><div class="wrap">
+ <div class="sh rv"><div><span class="eb">Ils nous font confiance</span><h2>Nos clients l'ont <em>dit</em>.</h2></div><p>Prix, gentillesse, patience : les mots qui reviennent le plus dans les avis Google de Votre Société.</p></div>
+ <div class="team">
+  <div class="score rv"><div><span class="eb" style="color:#e9d8b8">Note Google</span><div class="big">4,4<small> / 5</small></div><p style="opacity:.7">avis clients</p></div>
+   <div class="tags"><span>prix</span><span>gentillesse</span><span>patience</span><span>conseil</span><span>choix</span></div>
+   <a class="btn cl" href="https://www.google.com/maps/search/?api=1&query=Votre Société" target="_blank" rel="noopener" style="align-self:flex-start">Laisser un avis</a></div>
+  <div class="q rv"><div class="st">★★★★★</div><blockquote>« Je tiens à remercier beaucoup notre conseillère pour l'accueil et sa gentillesse, toujours disponible et professionnelle. Elle nous a accompagnés dans nos choix de carrelage. »</blockquote><footer><i>E</i><span>Client<small>Avis Google</small></span></footer></div>
+ </div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap calc">
+ <div class="rv"><span class="eb">Calculateur</span><h2>Combien de m² <em>commander</em> ?</h2><p style="color:var(--mute);font-size:17px;margin-top:16px;max-width:440px">Indiquez les dimensions : on ajoute 10 % pour les coupes et on estime le nombre de carreaux selon le format.</p></div>
+ <form class="cf rv" id="cf" novalidate>
+  <div class="row"><label>Longueur (m)<input id="cl" type="number" inputmode="decimal" value="5" step="0.1" min="0"></label><label>Largeur (m)<input id="cw" type="number" inputmode="decimal" value="4" step="0.1" min="0"></label></div>
+  <label>Format<select id="cs"><option value="0.36">60 × 60 cm</option><option value="0.72">60 × 120 cm</option><option value="0.64">80 × 80 cm</option><option value="0.2025">45 × 45 cm</option><option value="0.18">30 × 60 cm</option></select></label>
+  <div class="res"><div><b id="rb">22</b><span>m² à commander</span></div><div><b id="rc">62</b><span>carreaux env.</span></div></div>
+  <p class="err" id="cerr" hidden></p>
+  <button class="btn dk" type="submit"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:20px;height:20px"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg> Envoyer au showroom</button>
+ </form>
+</div></section>
+
+<section class="sec" id="visite" style="padding-top:0"><div class="wrap visit">
+ <div class="vi rv"><div><span class="eb">Showroom</span><h2>Venez <em>toucher</em> les matières.</h2></div>
+  <div class="vl"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></i><span><small>Adresse</small><b>Votre adresse</b><small>Votre adresse</small></span></div>
+  <div class="vl"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></i><span><small>Téléphone</small><a href="tel:+212662648590">06 00 00 00 00</a></span></div>
+  <div class="vl"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></i><span><small>Horaires</small><b>Ouverture à 8h00</b><small>Achats en magasin · Livraison</small></span></div>
+  <a class="btn dk" style="align-self:flex-start" href="https://www.google.com/maps/search/?api=1&query=Votre Société" target="_blank" rel="noopener">Itinéraire Google Maps</a>
+ </div>
+ <div class="map rv"><iframe src="https://maps.google.com/maps?q=Votre Société&amp;z=15&amp;output=embed" loading="lazy" title="Votre Société sur la carte"></iframe></div>
+</div></section>
+
+<footer class="ft"><div class="wrap">
+ <a class="logo" href="#top"><i><b></b><b></b><b></b><b></b></i><span>Votre Société<small>Oujda</small></span></a>
+ <p>Carrelage, robinetterie & sanitaire<br>Votre adresse · 06 00 00 00 00</p>
+ <p class="cp">© Votre Société · Site démo réalisé par SiteLik</p>
+</div></footer>
+<a id="wa" href="#piece" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:20px;height:20px"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg></a>
+
+<script>
+var WA=''; // numéro WhatsApp (à confirmer)
+var NS='http://www.w3.org/2000/svg';
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function rnd(s){var x=Math.sin(s*9301+49297)*233280;return x-Math.floor(x)}
+/* ---------- styles ---------- */
+var STY={
+ marbre:{n:'Effet marbre blanc',d:'Grand format 60×120, veiné',cols:4,rows:5,grout:'#d8d4cc',c:function(i,k){var v=235+rnd(i*7+k)*14|0;return 'rgb('+v+','+(v-2)+','+(v-6)+')'},vein:'#b9b3a8',wall:'#efebe4'},
+ bois:{n:'Effet bois naturel',d:'Lames 20×120',cols:11,rows:5,grout:'#7b5a3c',c:function(i,k){var h=[[169,124,84],[156,112,74],[181,136,94],[145,104,68]][(i+k*3)%4];return 'rgb('+h+')'},plank:1,wall:'#f1ebe1'},
+ beton:{n:'Effet béton ciré',d:'Grand format 80×80, mat',cols:4,rows:4,grout:'#9a9790',c:function(i,k){var v=168+rnd(i*3+k*5)*16|0;return 'rgb('+v+','+v+','+(v-3)+')'},wall:'#e7e4de'},
+ zellige:{n:'Zellige vert & blanc',d:'Petit format 10×10',cols:14,rows:10,grout:'#e8e2d6',c:function(i,k){return ['#2f6b5e','#f4f0e6','#3e7f6f','#f4f0e6'][(i+k)%4]},wall:'#f4efe6'},
+ terrazzo:{n:'Terrazzo crème',d:'60×60, éclats colorés',cols:5,rows:5,grout:'#d9cfbf',c:function(){return '#ece3d3'},dots:1,wall:'#f3ede3'},
+ noir:{n:'Grand format noir',d:'120×120, effet pierre',cols:3,rows:3,grout:'#2e2d2a',c:function(i,k){var v=40+rnd(i+k*2)*14|0;return 'rgb('+v+','+v+','+(v+2)+')'},vein:'#5a5853',wall:'#ece8e1'}
+};
+var ORDER=['marbre','bois','beton','zellige','terrazzo','noir'];
+function swatch(key){var s=STY[key],c=document.createElement('canvas');c.width=c.height=120;var x=c.getContext('2d');var n=key==='zellige'?6:key==='bois'?5:key==='noir'?2:3;var w=120/n;x.fillStyle=s.grout;x.fillRect(0,0,120,120);
+ for(var i=0;i<n;i++)for(var k=0;k<(key==='bois'?2:n);k++){x.fillStyle=s.c(i,k);var h=key==='bois'?60:w;x.fillRect(i*w+1,k*h+1,w-2,h-2)}
+ if(s.vein){x.strokeStyle=s.vein;x.lineWidth=1.2;x.globalAlpha=.6;for(var v=0;v<3;v++){x.beginPath();x.moveTo(0,20+v*40);x.bezierCurveTo(40,10+v*40,70,50+v*35,120,30+v*40);x.stroke()}x.globalAlpha=1}
+ if(s.dots){for(var d=0;d<40;d++){x.fillStyle=['#b4532a','#5b6346','#c9a77a','#8a8277'][d%4];x.beginPath();x.arc(rnd(d)*120,rnd(d+50)*120,1.5+rnd(d+9)*2.5,0,7);x.fill()}}
+ return c.toDataURL()}
+var SW={};ORDER.forEach(function(k){SW[k]=swatch(k)});
+/* ---------- room renderer ---------- */
+var ROOMS={salon:'Salon',cuisine:'Cuisine',sdb:'Salle de bain',terrasse:'Terrasse'};
+function draw(svg,room,key){
+ var s=STY[key];var g=el('g',{class:'fade',opacity:0},svg);
+ var BL=[150,250],BR=[450,250],FL=[-20,420],FR=[620,420];
+ // ceiling + walls
+ if(room==='terrasse'){el('rect',{x:0,y:0,width:600,height:250,fill:'#cfe3ee'},g);el('circle',{cx:470,cy:80,r:36,fill:'#f6d58a'},g);el('rect',{x:0,y:190,width:600,height:60,fill:'#9fb59a'},g);el('path',{d:'M0 190 Q120 150 240 180 T600 170 V250 H0Z',fill:'#8aa486'},g);el('rect',{x:0,y:236,width:600,height:14,fill:'#d8d0c2'},g)}
+ else{
+  el('polygon',{points:'0,0 600,0 450,40 150,40',fill:'#fbfaf7'},g);
+  el('rect',{x:150,y:40,width:300,height:210,fill:s.wall},g);
+  el('polygon',{points:'0,0 150,40 150,250 -20,420 -20,0',fill:shade(s.wall,-10)},g);
+  el('polygon',{points:'600,0 450,40 450,250 620,420 620,0',fill:shade(s.wall,-18)},g);
+  if(room==='sdb'||room==='cuisine'){var tc=room==='sdb'?STY[key==='zellige'?'zellige':'marbre']:STY.zellige;var top=room==='sdb'?40:130,bot=room==='sdb'?250:190;var wg=el('g',{opacity:room==='sdb'?.95:.9},g);for(var yy=top;yy<bot;yy+=20)for(var xx=150;xx<450;xx+=20)el('rect',{x:xx+.6,y:yy+.6,width:18.8,height:18.8,fill:tc.c(xx/20|0,yy/20|0)},wg);el('rect',{x:150,y:top,width:300,height:bot-top,fill:'none',stroke:tc.grout,'stroke-width':1},wg)}
+  // window
+  if(room!=='sdb'){el('rect',{x:330,y:70,width:90,height:110,fill:'#d7e7ef',stroke:'#fff','stroke-width':6},g);el('line',{x1:375,y1:70,x2:375,y2:180,stroke:'#fff','stroke-width':4},g)}
+ }
+ // floor cells
+ var fg=el('g',{},g);
+ function P(u,v){var e=Math.pow(v,1.55);var y=250+(420-250)*e;var xl=BL[0]+(FL[0]-BL[0])*e,xr=BR[0]+(FR[0]-BR[0])*e;return [xl+(xr-xl)*u,y]}
+ el('polygon',{points:[BL,BR,FR,FL].map(function(p){return p.join(',')}).join(' '),fill:s.grout},fg);
+ for(var i=0;i<s.cols;i++)for(var k=0;k<s.rows;k++){
+  var off=s.plank&&k%2?.5:0,u0=(i+off)/s.cols,u1=(i+1+off)/s.cols;if(u0>=1)continue;u1=Math.min(1,u1);
+  var gap=.004,a=P(u0+gap,k/s.rows+gap*1.5),b=P(u1-gap,k/s.rows+gap*1.5),c=P(u1-gap,(k+1)/s.rows-gap*1.5),d=P(u0+gap,(k+1)/s.rows-gap*1.5);
+  el('polygon',{points:[a,b,c,d].map(function(p){return p.join(',')}).join(' '),fill:s.c(i,k)},fg);
+  if(s.plank&&off&&i===0){var a2=P(0,k/s.rows),d2=P(0,(k+1)/s.rows),b2=P(u0-gap,k/s.rows),c2=P(u0-gap,(k+1)/s.rows);el('polygon',{points:[a2,b2,c2,d2].map(function(p){return p.join(',')}).join(' '),fill:s.c(s.cols,k)},fg)}
+ }
+ if(s.vein){var vg=el('g',{stroke:s.vein,'stroke-width':1.2,fill:'none',opacity:.55},fg);for(var v=0;v<6;v++){var p1=P(rnd(v)*.3,.1+v*.15),p2=P(.5+rnd(v+3)*.3,.15+v*.14),p3=P(.9+rnd(v+6)*.1,.2+v*.13);el('path',{d:'M'+p1+' Q'+p2+' '+p3},vg)}}
+ if(s.dots){for(var d=0;d<140;d++){var p=P(rnd(d),rnd(d+99));el('circle',{cx:p[0],cy:p[1],r:(.8+rnd(d+7)*1.6)*(.6+(p[1]-250)/170),fill:['#b4532a','#5b6346','#c9a77a','#8a8277'][d%4]},fg)}}
+ // sheen
+ var gid='sh'+Math.random().toString(36).slice(2,7);var df=el('defs',{},g);var lg=el('linearGradient',{id:gid,x1:0,y1:0,x2:0,y2:1},df);el('stop',{offset:0,'stop-color':'#fff','stop-opacity':.0},lg);el('stop',{offset:.5,'stop-color':'#fff','stop-opacity':key==='noir'||key==='marbre'?.22:.08},lg);el('stop',{offset:1,'stop-color':'#000','stop-opacity':.08},lg);
+ el('polygon',{points:[BL,BR,FR,FL].map(function(p){return p.join(',')}).join(' '),fill:'url(#'+gid+')'},g);
+ // furniture
+ var fu=el('g',{},g);
+ if(room==='salon'){el('ellipse',{cx:300,cy:350,rx:150,ry:16,fill:'rgba(0,0,0,.12)'},fu);el('rect',{x:170,y:270,width:260,height:70,rx:16,fill:'#6f7a5c'},fu);el('rect',{x:160,y:230,width:280,height:60,rx:18,fill:'#5b6346'},fu);el('rect',{x:190,y:258,width:100,height:40,rx:10,fill:'#7f8a6b'},fu);el('rect',{x:310,y:258,width:100,height:40,rx:10,fill:'#7f8a6b'},fu);el('rect',{x:395,y:240,width:32,height:32,rx:6,fill:'#b4532a'},fu)}
+ if(room==='cuisine'){el('rect',{x:150,y:190,width:300,height:60,fill:'#ffffff'},fu);el('rect',{x:150,y:186,width:300,height:8,fill:'#3a3833'},fu);for(var j=0;j<4;j++)el('rect',{x:156+j*74,y:198,width:68,height:46,fill:'#f4f1ea',stroke:'#ddd'},fu);el('rect',{x:160,y:60,width:150,height:50,fill:'#fff'},fu);el('rect',{x:240,y:330,width:140,height:16,rx:4,fill:'#3a3833'},fu);el('rect',{x:250,y:346,width:8,height:60,fill:'#3a3833'},fu);el('rect',{x:362,y:346,width:8,height:60,fill:'#3a3833'},fu)}
+ if(room==='sdb'){el('ellipse',{cx:250,cy:360,rx:120,ry:14,fill:'rgba(0,0,0,.12)'},fu);el('path',{d:'M140 290 H360 V320 Q360 352 330 352 H170 Q140 352 140 320Z',fill:'#fff',stroke:'#ddd'},fu);el('rect',{x:380,y:170,width:60,height:70,rx:6,fill:'#cfe0ea',stroke:'#fff','stroke-width':3},fu);el('rect',{x:372,y:240,width:76,height:30,rx:4,fill:'#fff',stroke:'#ddd'},fu);el('rect',{x:405,y:270,width:10,height:40,fill:'#c9c4bb'},fu)}
+ if(room==='terrasse'){el('ellipse',{cx:150,cy:395,rx:40,ry:8,fill:'rgba(0,0,0,.15)'},fu);el('path',{d:'M128 395 L120 340 H180 L172 395Z',fill:'#b4532a'},fu);el('path',{d:'M150 340 C120 290 110 270 130 240 M150 340 C160 280 190 260 200 250 M150 340 C140 300 160 270 150 230',stroke:'#4c6b3f','stroke-width':10,fill:'none','stroke-linecap':'round'},fu);el('rect',{x:360,y:300,width:150,height:10,rx:4,fill:'#fff'},fu);el('rect',{x:372,y:310,width:6,height:60,fill:'#fff'},fu);el('rect',{x:492,y:310,width:6,height:60,fill:'#fff'},fu)}
+ requestAnimationFrame(function(){requestAnimationFrame(function(){g.setAttribute('opacity',1)})});
+ var old=[].slice.call(svg.children,0,-1);setTimeout(function(){old.forEach(function(o){o.remove()})},750);
+}
+function shade(c,p){var n=parseInt(c.slice(1),16),r=Math.max(0,Math.min(255,(n>>16)+p)),g2=Math.max(0,Math.min(255,(n>>8&255)+p)),b=Math.max(0,Math.min(255,(n&255)+p));return 'rgb('+r+','+g2+','+b+')'}
+function setTag(box,key){box.querySelector('.tag i').style.backgroundImage='url('+SW[key]+')';box.querySelector('.tag b').textContent=STY[key].n}
+/* hero auto */
+(function(){var box=document.getElementById('heroRoom'),svg=box.querySelector('svg'),seq=[['salon','marbre'],['sdb','zellige'],['cuisine','bois'],['salon','noir'],['terrasse','terrazzo'],['sdb','beton']],i=0;
+ function go(){var r=seq[i%seq.length];draw(svg,r[0],r[1]);setTag(box,r[1]);i++}go();setInterval(go,3400)})();
+/* configurator */
+(function(){var box=document.getElementById('cfgRoom'),svg=box.querySelector('svg'),room='salon',key='marbre',st=document.getElementById('styles');
+ st.innerHTML=ORDER.map(function(k){return '<button type="button" data-k="'+k+'"><i style="background-image:url('+SW[k]+')"></i>'+STY[k].n+'</button>'}).join('');
+ function upd(){draw(svg,room,key);setTag(box,key);document.querySelectorAll('#rooms button').forEach(function(b){b.classList.toggle('on',b.dataset.r===room)});st.querySelectorAll('button').forEach(function(b){b.classList.toggle('on',b.dataset.k===key)});var pk=document.getElementById('pick');pk.querySelector('b').textContent=STY[key].n;pk.querySelector('span').textContent=ROOMS[room]+' · '+STY[key].d}
+ document.getElementById('rooms').addEventListener('click',function(e){var b=e.target.closest('button');if(b){room=b.dataset.r;upd()}});
+ st.addEventListener('click',function(e){var b=e.target.closest('button');if(b){key=b.dataset.k;upd()}});
+ upd();
+ document.getElementById('askStyle').addEventListener('click',function(){var er=document.getElementById('perr');if(!WA){er.textContent='Démo : le numéro WhatsApp du showroom sera ajouté ici.';er.hidden=false;return}location.href='https://wa.me/'+WA+'?text='+encodeURIComponent('Bonjour Votre Société, je cherche un carrelage '+STY[key].n+' pour ma pièce : '+ROOMS[room]+'. Quels modèles avez-vous ?')})})();
+/* inspirations */
+(function(){var IT=[['marbre','Effet marbre blanc','Salon, entrée, grands volumes','sol sdb'],['bois','Effet bois naturel','Chambre, salon, chaleureux','sol'],['beton','Effet béton ciré','Moderne, minimaliste','sol mur'],['zellige','Zellige vert & blanc','Crédence, salle de bain','mur sdb'],['terrazzo','Terrazzo crème','Cuisine, salle de bain','sol sdb'],['noir','Grand format noir','Salle de bain, design','sol sdb'],['beton','Antidérapant extérieur','Terrasse, cour, balcon','ext sol'],['marbre','Faïence murale blanche','Cuisine, salle de bain','mur sdb']];
+ var g=document.getElementById('grid');g.innerHTML=IT.map(function(t){return '<article class="it rv" data-c="'+t[3]+'"><div class="sw" style="background-image:url('+SW[t[0]]+')"><span>'+t[3].split(' ')[0].replace('sdb','salle de bain').replace('ext','extérieur')+'</span></div><div class="b"><h3>'+t[1]+'</h3><p>'+t[2]+'</p><div class="f"><span>Prix sur place</span><a href="#visite">Disponibilité →</a></div></div></article>'}).join('');
+ document.getElementById('flt').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;this.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)});var f=b.dataset.f;g.querySelectorAll('.it').forEach(function(it){it.classList.toggle('hide',f!=='all'&&it.dataset.c.split(' ').indexOf(f)<0)})})})();
+/* nav + reveal */
+(function(){var n=document.getElementById('nav');function f(){n.classList.toggle('solid',scrollY>30)}addEventListener('scroll',f,{passive:true});f();
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});document.querySelectorAll('.rv').forEach(function(e,i){e.style.transitionDelay=(i%4)*70+'ms';io.observe(e)})})();
+/* calculator */
+(function(){var L=document.getElementById('cl'),W=document.getElementById('cw'),S=document.getElementById('cs');function fmt(x){return (Math.round(x*10)/10).toString().replace('.',',')}
+ function c(){var a=(+L.value||0)*(+W.value||0)*1.1,n=a>0?Math.ceil(a/(+S.value)):0;document.getElementById('rb').textContent=fmt(a);document.getElementById('rc').textContent=n;return [a,n]}
+ [L,W,S].forEach(function(i){i.addEventListener('input',c)});c();
+ document.getElementById('cf').addEventListener('submit',function(e){e.preventDefault();var r=c(),er=document.getElementById('cerr');if(!r[0]){er.textContent='Indiquez les dimensions.';er.hidden=false;return}if(!WA){er.textContent='Démo : le numéro WhatsApp du showroom sera ajouté ici.';er.hidden=false;return}
+  location.href='https://wa.me/'+WA+'?text='+encodeURIComponent('Bonjour Votre Société, je souhaite un devis.\nDimensions : '+L.value+' × '+W.value+' m\nFormat : '+S.options[S.selectedIndex].text+'\nÀ commander : '+fmt(r[0])+' m² ('+r[1]+' carreaux)')})})();
+</script>
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Votre Société · Béton prêt à l'emploi, préfa & poutrelles · Oujda</title>
+<meta name="description" content=" · Votre Société : béton prêt à l'emploi, produits préfabriqués et poutrelles. Concassage Benisnassen, Sidi Yahya et .">
+<meta name="theme-color" content="#141414">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Black&display=swap" rel="stylesheet">
+<style>
+:root{--red:#d7232f;--red2:#a3151f;--ink:#141414;--coal:#1d1d1f;--con:#8f9194;--con2:#c9c7c2;--sand:#efede8;--paper:#f7f6f3;--mute:#6d6e72;--line:rgba(20,20,20,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font:400 16px/1.6 Archivo,system-ui,sans-serif;color:var(--ink);background:var(--paper);overflow-x:hidden}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.H{font-family:'Archivo Black',Archivo,system-ui,sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.95;text-transform:uppercase}
+.wrap{max-width:1280px;margin:0 auto;padding:0 max(20px,4vw)}
+.eb{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:18px}
+.eb::before{content:'';width:22px;height:3px;background:currentColor}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 26px;font-weight:800;font-size:15px;letter-spacing:.02em;text-transform:uppercase;transition:.25s;white-space:nowrap;border-radius:4px}
+.btn.red{background:var(--red);color:#fff}.btn.red:hover{background:var(--red2)}
+.btn.line{border:2px solid currentColor}.btn.line:hover{background:#fff;color:var(--ink)}
+.btn svg{width:18px;height:18px}
+.concrete{background-color:var(--sand);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .4 0 0 0 0 .4 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E")}
+#prog{position:fixed;top:0;left:0;height:3px;background:var(--red);width:0;z-index:80}
+/* nav */
+#nav{position:fixed;top:0;left:0;right:0;z-index:70;transition:.3s;color:#fff}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+#nav.solid{background:rgba(20,20,20,.94);backdrop-filter:blur(10px)}
+.logo{display:flex;align-items:center;gap:12px}
+.logo svg{width:46px;height:34px}
+.logo b{display:block;font-family:'Archivo Black',Archivo,sans-serif;font-size:17px;letter-spacing:.04em;line-height:1}
+.logo small{display:block;font-size:10px;font-weight:700;letter-spacing:.22em;color:var(--red);margin-top:4px}
+.nl{display:flex;gap:28px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.06em}.nl a{opacity:.75}.nl a:hover{opacity:1;color:var(--red)}
+/* hero */
+.hero{position:relative;min-height:100svh;background:var(--ink);color:#fff;display:flex;align-items:center;overflow:hidden;padding:110px 0 70px}
+.hero::before{content:'';position:absolute;right:0;top:0;bottom:0;width:34%;background:var(--red);clip-path:polygon(38% 0,100% 0,100% 100%,0 100%)}
+.hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:60px 60px}
+.hero .wrap{position:relative;z-index:1;width:100%}
+.mani{font-family:'Archivo Black',Archivo,sans-serif;font-size:clamp(16px,1.6vw,20px);letter-spacing:.5em;margin-bottom:22px;opacity:0;animation:fade .8s .2s forwards}
+.title{font-size:clamp(52px,10.5vw,170px);display:flex;flex-direction:column}
+.title .row{display:flex;flex-wrap:wrap}
+.title .row+.row{color:transparent;-webkit-text-stroke:2px #fff}
+.L{display:inline-block;opacity:0;transform:translateY(-120%) rotate(-6deg);animation:drop .7s cubic-bezier(.3,1.5,.5,1) forwards}
+@keyframes drop{to{opacity:1;transform:none}}
+@keyframes fade{to{opacity:1}}
+.hsub{display:flex;flex-wrap:wrap;gap:10px 26px;margin:34px 0 38px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:14px;opacity:0;animation:fade .8s 1.6s forwards}
+.hsub span{display:flex;align-items:center;gap:10px}.hsub span::before{content:'';width:8px;height:8px;background:var(--red)}
+.hcta{display:flex;gap:12px;flex-wrap:wrap;opacity:0;animation:fade .8s 1.9s forwards}
+.scrollhint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.3em;text-transform:uppercase;opacity:.6;z-index:1;display:flex;flex-direction:column;align-items:center;gap:10px}
+.scrollhint i{width:2px;height:40px;background:linear-gradient(#fff,transparent);animation:sh 1.6s infinite}
+@keyframes sh{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* ticker */
+.tk{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;padding:16px 0}
+.tk div{display:inline-flex;gap:36px;animation:tk 32s linear infinite;font-family:'Archivo Black',Archivo,sans-serif;font-size:20px;text-transform:uppercase}
+.tk i{font-style:normal;opacity:.6}
+@keyframes tk{to{transform:translateX(-50%)}}
+/* story */
+.story{position:relative;height:620vh}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);align-items:center}
+.cap{padding:0 0 0 max(20px,4vw);position:relative;z-index:2;height:100%}
+.step{position:absolute;left:max(20px,4vw);right:0;top:50%;transform:translateY(-40%);opacity:0;transition:opacity .5s,transform .6s;pointer-events:none}
+.step.on{opacity:1;transform:translateY(-50%)}
+.step .n{font-family:'Archivo Black',Archivo,sans-serif;font-size:14px;color:var(--red);letter-spacing:.2em}
+.step h2{font-size:clamp(34px,4.4vw,64px);margin:12px 0 16px}
+.step p{color:var(--mute);font-size:17px;max-width:420px}
+.sbar{position:absolute;left:max(20px,4vw);bottom:9vh;display:flex;gap:8px;z-index:2}
+.sbar i{width:38px;height:4px;background:var(--line);position:relative;overflow:hidden}.sbar i b{position:absolute;inset:0;background:var(--red);transform-origin:left;transform:scaleX(0)}
+.lvl{position:absolute;right:max(20px,4vw);top:100px;z-index:2;text-align:right}
+.lvl b{display:block;font-family:'Archivo Black',Archivo,sans-serif;font-size:clamp(46px,6vw,90px);line-height:1;color:var(--ink)}
+.lvl span{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+#scene{width:100%;height:100%;display:block}
+/* products */
+.sec{padding:120px 0}
+.dark{background:var(--ink);color:#fff}
+.sh{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:56px}
+.sh h2{font-size:clamp(38px,5.4vw,78px)}
+.sh p{max-width:420px;color:var(--mute);font-size:17px}.dark .sh p{color:rgba(255,255,255,.6)}
+.prods{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,.08)}
+.pr{background:var(--ink);padding:40px 32px 34px;position:relative;overflow:hidden;min-height:440px;display:flex;flex-direction:column;transition:background .4s}
+.pr:hover{background:#1e1e20}
+.pr .k{font-family:'Archivo Black',Archivo,sans-serif;color:var(--red);font-size:14px;letter-spacing:.2em}
+.pr .ill{height:170px;margin:26px 0 22px;display:flex;align-items:center;justify-content:center}
+.pr .ill svg{width:100%;height:100%;overflow:visible}
+.pr h3{font-family:'Archivo Black',Archivo,sans-serif;font-size:28px;text-transform:uppercase;line-height:1;margin-bottom:12px}
+.pr p{color:rgba(255,255,255,.6);font-size:15px;flex:1}
+.pr a{margin-top:22px;font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.drum{transform-box:fill-box;transform-origin:center}
+.spin .stripes{animation:mv 1.2s linear infinite}
+@keyframes mv{to{transform:translateX(-24px)}}
+.stack rect{animation:stk 3.6s infinite both}
+@keyframes stk{0%,8%{transform:translateY(-60px);opacity:0}22%,80%{transform:none;opacity:1}100%{transform:none;opacity:0}}
+.pt g{animation:sl 4s infinite both}
+@keyframes sl{0%,6%{transform:translateX(-120px);opacity:0}24%,82%{transform:none;opacity:1}100%{opacity:0}}
+/* quarries */
+.qz{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:60px;align-items:center}
+.qs{display:flex;flex-direction:column;gap:14px}
+.q{display:flex;gap:18px;align-items:center;padding:22px 24px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--red)}
+.q b{font-family:'Archivo Black',Archivo,sans-serif;font-size:30px;color:var(--con)}
+.q h3{font-size:19px;font-weight:800;text-transform:uppercase}.q span{color:var(--mute);font-size:14px}
+#net{width:100%;height:auto}
+#net .flow{stroke-dasharray:6 10;animation:fl 1.4s linear infinite}
+@keyframes fl{to{stroke-dashoffset:-32}}
+#net .pulse{animation:pu 2s infinite;transform-box:fill-box;transform-origin:center}
+@keyframes pu{0%{transform:scale(.6);opacity:.8}100%{transform:scale(2.6);opacity:0}}
+/* calc */
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;background:var(--ink);color:#fff}
+.calc .l{padding:clamp(34px,5vw,70px);background:var(--red);position:relative;overflow:hidden}
+.calc .l h2{font-size:clamp(36px,4.4vw,62px);margin-bottom:18px}.calc .l p{opacity:.85;font-size:17px;max-width:420px}
+.calc .l .eb{color:#fff}
+.calc .l .big{position:absolute;right:-10px;bottom:-40px;font-family:'Archivo Black',Archivo,sans-serif;font-size:220px;line-height:1;opacity:.12}
+.cf{padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;gap:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{padding:11px 16px;border:1.5px solid rgba(255,255,255,.25);font-weight:700;font-size:14px;border-radius:3px}.chips button.on{background:#fff;color:var(--ink);border-color:#fff}
+.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+label{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+input{font:inherit;font-size:17px;font-weight:700;padding:13px 14px;border:1.5px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;border-radius:3px;width:100%}
+input:focus{outline:none;border-color:var(--red)}
+.out{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(255,255,255,.1)}
+.out div{background:var(--coal);padding:20px}
+.out b{display:block;font-family:'Archivo Black',Archivo,sans-serif;font-size:40px;line-height:1}.out span{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.trucks{display:flex;gap:6px;flex-wrap:wrap;min-height:26px}.trucks svg{width:40px;height:24px;color:var(--red);animation:pop .4s backwards}
+@keyframes pop{from{transform:scale(0)}}
+.err{color:#ff8a8a;font-size:14px;font-weight:700}
+.note{font-size:12px;color:rgba(255,255,255,.45)}
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink)}
+.w{padding:34px 26px 30px;border-right:1px solid var(--line)}.w:last-child{border:0}
+.w b{font-family:'Archivo Black',Archivo,sans-serif;font-size:56px;color:var(--red);line-height:1}
+.w h3{font-size:20px;font-weight:800;text-transform:uppercase;margin:16px 0 8px}.w p{color:var(--mute);font-size:15px}
+/* clients */
+.cl{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.c{background:#fff;border:1px solid var(--line);padding:30px}
+.c svg{width:42px;height:42px;color:var(--red);margin-bottom:18px}
+.c h3{font-size:20px;font-weight:800;text-transform:uppercase;margin-bottom:8px}.c p{color:var(--mute);font-size:15px}
+/* contact */
+.ct{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:50px;align-items:start}
+.ph{display:flex;flex-direction:column;gap:12px;margin:30px 0}
+.ph a{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 24px;border:1.5px solid rgba(255,255,255,.15);font-family:'Archivo Black',Archivo,sans-serif;font-size:clamp(22px,2.4vw,30px);transition:.25s}
+.ph a:hover{background:var(--red);border-color:var(--red)}
+.ph a small{font-family:Archivo,sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.55}
+.df{background:#fff;color:var(--ink);padding:34px;display:flex;flex-direction:column;gap:14px}
+.df label{color:var(--mute)}.df input,.df select{background:var(--paper);border-color:var(--line);color:var(--ink)}
+.df select{font:inherit;font-size:16px;font-weight:700;padding:13px 14px;border:1.5px solid var(--line);border-radius:3px;width:100%;background:var(--paper)}
+.df .chips button{border-color:var(--line)}.df .chips button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.df .err{color:var(--red)}
+footer{background:#0c0c0c;color:rgba(255,255,255,.6);padding:60px 0 36px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer .logo{color:#fff}
+footer .cp{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:22px;margin-top:10px;font-size:12px}
+#call{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.5)}
+#call svg{width:24px}
+#call::after{content:'';position:absolute;inset:0;border-radius:50%;border:2px solid var(--red);animation:pu2 2s infinite}
+@keyframes pu2{to{transform:scale(1.6);opacity:0}}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;transition:none!important}.L,.mani,.hsub,.hcta{opacity:1;transform:none}.rv{opacity:1;transform:none}}
+@media (max-width:1000px){
+ .nl{display:none}
+ .stage{grid-template-columns:minmax(0,1fr);grid-template-rows:auto 1fr;align-items:stretch}
+ .cap{height:36svh;padding-top:84px}
+ .step{top:84px;transform:translateY(16px);right:20px}.step.on{transform:none}
+ .step h2{font-size:clamp(28px,7.4vw,44px);margin:8px 0 8px}.step p{font-size:15px}
+ .sbar{top:calc(36svh + 10px);bottom:auto}
+ .lvl{top:calc(36svh + 4px);text-align:right}.lvl b{font-size:38px}
+ #scene{height:auto;align-self:end;margin-bottom:4svh}
+ .prods{grid-template-columns:minmax(0,1fr)}.pr{min-height:0}
+ .qz,.calc,.ct{grid-template-columns:minmax(0,1fr)}
+ .why{grid-template-columns:1fr 1fr}.w:nth-child(2){border-right:0}.w:nth-child(-n+2){border-bottom:1px solid var(--line)}
+ .cl{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+ .hero::before{width:46%;clip-path:polygon(70% 0,100% 0,100% 100%,20% 100%);opacity:.9}
+ .title{font-size:11.6vw}
+ .title .row+.row{-webkit-text-stroke:1.4px #fff}
+ .hcta .btn{flex:1}
+ .sec{padding:80px 0}
+ .row3{grid-template-columns:1fr 1fr}
+ .out b{font-size:32px}
+ .df{padding:24px}
+ .w{padding:26px 16px}.w b{font-size:42px}
+}
+#wa,#call{display:none!important}</style>
+</head>
+<body>
+<div id="prog"></div>
+<header id="nav"><div class="wrap">
+ <a class="logo" href="#top"><svg viewBox="0 0 46 34"><path d="M3 30 A20 20 0 0 1 23 4" fill="none" stroke="#d7232f" stroke-width="3"/><path d="M8 30 A15 15 0 0 1 23 9" fill="none" stroke="#d7232f" stroke-width="2"/><rect x="26" y="8" width="5" height="22" fill="#fff"/><rect x="33" y="5" width="5" height="25" fill="#fff"/><rect x="40" y="2" width="5" height="28" fill="#fff"/></svg><span><b>VOTRE SOCIÉTÉ</b><small>BÉTON · OUJDA</small></span></a>
+ <nav class="nl"><a href="#chantier">Le chantier</a><a href="#produits">Produits</a><a href="#carrieres">Carrières</a><a href="#calcul">Calculateur</a></nav>
+ <a class="btn red" href="#contact">Commander</a>
+</div></header>
+
+<section class="hero" id="top"><div class="wrap">
+ <div class="mani"></div>
+ <h1 class="title H"><span class="row" data-w="VOTRE"></span><span class="row" data-w="SOCIÉTÉ"></span></h1>
+ <div class="hsub"><span>Béton prêt à l'emploi</span><span>Produits préfa</span><span>Poutrelles</span><span>Concassage</span></div>
+ <div class="hcta"><a class="btn red" href="#calcul">Calculer mon béton <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn line" href="#chantier">Voir comment on construit</a></div>
+</div><div class="scrollhint">Faites défiler<i></i></div></section>
+
+<div class="tk" aria-hidden="true"><div><span>Béton prêt à l'emploi</span><i>■</i><span>Produits préfa</span><i>■</i><span>Poutrelles</span><i>■</i><span>Concassage Bennisnassen</span><i>■</i><span>Concassage Sidi Yahya</span><i>■</i><span>Concassage</span><i>■</i><span>Votre ville</span><i>■</i><span>Béton prêt à l'emploi</span><i>■</i><span>Produits préfa</span><i>■</i><span>Poutrelles</span><i>■</i><span>Concassage Bennisnassen</span><i>■</i><span>Concassage Sidi Yahya</span><i>■</i><span>Concassage</span><i>■</i><span>Votre ville</span><i>■</i></div></div>
+
+<section class="story concrete" id="chantier"><div class="stage">
+ <div class="cap">
+  <div class="step" data-s="0"><span class="n">01 / 05</span><h2 class="H">Tout commence au sol.</h2><p>Nos toupies arrivent sur votre chantier avec un béton prêt à l'emploi, dosé pour vos fondations.</p></div>
+  <div class="step" data-s="1"><span class="n">02 / 05</span><h2 class="H">Les fondations.</h2><p>Un béton régulier, coulé directement sur place : la base solide de tout le bâtiment.</p></div>
+  <div class="step" data-s="2"><span class="n">03 / 05</span><h2 class="H">Poteaux & poutrelles.</h2><p>Les poutrelles et produits préfabriqués V.S posés étage après étage, prêts à recevoir la dalle.</p></div>
+  <div class="step" data-s="3"><span class="n">04 / 05</span><h2 class="H">La dalle est coulée.</h2><p>La pompe monte le béton jusqu'au dernier niveau. Agrégats issus de nos propres carrières de concassage.</p></div>
+  <div class="step" data-s="4"><span class="n">05 / 05</span><h2 class="H">Votre projet est debout.</h2><p>Du gravier au dernier étage, un seul fournisseur de la région pour tout le gros œuvre.</p></div>
+  <div class="sbar"><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div>
+ </div>
+ <div class="lvl"><b id="lv">R+0</b><span id="lvt">Niveau en cours</span></div>
+ <svg id="scene" viewBox="0 0 1000 720" preserveAspectRatio="xMidYMax meet" aria-label="Animation d'un chantier de construction"></svg>
+</div></section>
+
+<section class="sec dark" id="produits"><div class="wrap">
+ <div class="sh rv"><div><span class="eb">Nos produits</span><h2 class="H">Le gros œuvre,<br>de A à Z.</h2></div><p>Trois gammes produites et livrées par V.S pour les particuliers, entrepreneurs et promoteurs de la région.</p></div>
+ <div class="prods">
+  <article class="pr rv"><span class="k">01</span><div class="ill"><svg viewBox="0 0 260 150" class="spin"><defs><clipPath id="dc2"><ellipse cx="95" cy="62" rx="80" ry="34"/></clipPath></defs>
+<rect x="10" y="96" width="190" height="10" fill="#555"/>
+<ellipse cx="95" cy="62" rx="80" ry="34" fill="#e8e6e1"/>
+<g clip-path="url(#dc2)"><g class="stripes"><path d="M-48 20 l34 90" stroke="#d7232f" stroke-width="8"/><path d="M-24 20 l34 90" stroke="#d7232f" stroke-width="8"/><path d="M0 20 l34 90" stroke="#d7232f" stroke-width="8"/><path d="M24 20 l34 90" stroke="#d7232f" stroke-width="8"/><path d="M48 20 l34 90" stroke="#d7232f" stroke-width="8"/><path d="M72 20 l34 90" stroke="#d7232f" stroke-width="8"/><path d="M96 20 l34 90" stroke="#d7232f" stroke-width="8"/><path d="M120 20 l34 90" stroke="#d7232f" stroke-width="8"/><path d="M144 20 l34 90" stroke="#d7232f" stroke-width="8"/><path d="M168 20 l34 90" stroke="#d7232f" stroke-width="8"/><path d="M192 20 l34 90" stroke="#d7232f" stroke-width="8"/><path d="M216 20 l34 90" stroke="#d7232f" stroke-width="8"/><path d="M240 20 l34 90" stroke="#d7232f" stroke-width="8"/><path d="M264 20 l34 90" stroke="#d7232f" stroke-width="8"/></g></g>
+<ellipse cx="95" cy="62" rx="80" ry="34" fill="none" stroke="#999" stroke-width="2"/>
+<path d="M200 106V48h36l22 30v28z" fill="#d7232f"/><path d="M208 56h26l15 20h-41z" fill="#cfe1f0"/>
+<circle cx="45" cy="114" r="17" fill="#000"/><circle cx="45" cy="114" r="7" fill="#888"/><circle cx="85" cy="114" r="17" fill="#000"/><circle cx="85" cy="114" r="7" fill="#888"/><circle cx="225" cy="114" r="17" fill="#000"/><circle cx="225" cy="114" r="7" fill="#888"/>
+<line x1="0" y1="132" x2="260" y2="132" stroke="#333" stroke-width="2"/></svg></div><h3>Béton prêt à l'emploi</h3><p>Livré par camion toupie et pompé sur votre chantier : fondations, dalles, poteaux, voiles.</p><a href="#calcul">Calculer mon volume →</a></article>
+  <article class="pr rv"><span class="k">02</span><div class="ill"><svg viewBox="0 0 260 150" class="stack"><rect x="40" y="108" width="56" height="26" rx="2" fill="#c9c7c2" style="animation-delay:0.00s"/><rect x="102" y="108" width="56" height="26" rx="2" fill="#a3a19c" style="animation-delay:0.18s"/><rect x="164" y="108" width="56" height="26" rx="2" fill="#b9b7b2" style="animation-delay:0.36s"/><rect x="40" y="78" width="56" height="26" rx="2" fill="#a3a19c" style="animation-delay:0.54s"/><rect x="102" y="78" width="56" height="26" rx="2" fill="#b9b7b2" style="animation-delay:0.72s"/><rect x="164" y="78" width="56" height="26" rx="2" fill="#c9c7c2" style="animation-delay:0.90s"/><rect x="40" y="48" width="56" height="26" rx="2" fill="#b9b7b2" style="animation-delay:1.08s"/><rect x="102" y="48" width="56" height="26" rx="2" fill="#c9c7c2" style="animation-delay:1.26s"/><rect x="164" y="48" width="56" height="26" rx="2" fill="#a3a19c" style="animation-delay:1.44s"/><line x1="20" y1="136" x2="240" y2="136" stroke="#555" stroke-width="2"/></svg></div><h3>Produits préfa</h3><p>Éléments préfabriqués en béton pour gagner du temps sur le chantier et garantir une qualité constante.</p><a href="#contact">Demander le catalogue →</a></article>
+  <article class="pr rv"><span class="k">03</span><div class="ill"><svg viewBox="0 0 260 150" class="pt"><g style="animation-delay:0.0s"><rect x="20" y="118" width="220" height="9" fill="#c9c7c2"/><path d="M24 118 L30 106 L40 118 L50 106 L60 118 L70 106 L80 118 L90 106 L100 118 L110 106 L120 118 L130 106 L140 118 L150 106 L160 118 L170 106 L180 118 L190 106 L200 118 L210 106 L220 118 L230 106" fill="none" stroke="#d7232f" stroke-width="2"/><line x1="24" y1="106" x2="234" y2="106" stroke="#d7232f" stroke-width="2"/></g><g style="animation-delay:0.3s"><rect x="20" y="92" width="220" height="9" fill="#c9c7c2"/><path d="M24 92 L30 80 L40 92 L50 80 L60 92 L70 80 L80 92 L90 80 L100 92 L110 80 L120 92 L130 80 L140 92 L150 80 L160 92 L170 80 L180 92 L190 80 L200 92 L210 80 L220 92 L230 80" fill="none" stroke="#d7232f" stroke-width="2"/><line x1="24" y1="80" x2="234" y2="80" stroke="#d7232f" stroke-width="2"/></g><g style="animation-delay:0.6s"><rect x="20" y="66" width="220" height="9" fill="#c9c7c2"/><path d="M24 66 L30 54 L40 66 L50 54 L60 66 L70 54 L80 66 L90 54 L100 66 L110 54 L120 66 L130 54 L140 66 L150 54 L160 66 L170 54 L180 66 L190 54 L200 66 L210 54 L220 66 L230 54" fill="none" stroke="#d7232f" stroke-width="2"/><line x1="24" y1="54" x2="234" y2="54" stroke="#d7232f" stroke-width="2"/></g><g style="animation-delay:0.9s"><rect x="20" y="40" width="220" height="9" fill="#c9c7c2"/><path d="M24 40 L30 28 L40 40 L50 28 L60 40 L70 28 L80 40 L90 28 L100 40 L110 28 L120 40 L130 28 L140 40 L150 28 L160 40 L170 28 L180 40 L190 28 L200 40 L210 28 L220 40 L230 28" fill="none" stroke="#d7232f" stroke-width="2"/><line x1="24" y1="28" x2="234" y2="28" stroke="#d7232f" stroke-width="2"/></g><line x1="10" y1="132" x2="250" y2="132" stroke="#555" stroke-width="2"/></svg></div><h3>Poutrelles</h3><p>Poutrelles en béton armé pour vos planchers, prêtes à poser avec les hourdis.</p><a href="#contact">Demander un devis →</a></article>
+ </div>
+</div></section>
+
+<section class="sec" id="carrieres"><div class="wrap qz">
+ <div class="rv"><span class="eb">Nos carrières</span><h2 class="H" style="font-size:clamp(38px,5vw,70px);margin-bottom:22px">La matière première est à nous.</h2><p style="color:var(--mute);font-size:17px;margin-bottom:30px;max-width:460px">Trois sites de concassage alimentent nos centrales : graviers et sables maîtrisés de la carrière jusqu'à votre dalle.</p>
+  <div class="qs"><div class="q"><b>01</b><div><h3>Concassage Bennisnassen</h3><span>Graviers & agrégats</span></div></div><div class="q"><b>02</b><div><h3>Concassage Sidi Yahya</h3><span>Graviers & agrégats</span></div></div><div class="q"><b>03</b><div><h3>Concassage</h3><span>Graviers & agrégats</span></div></div></div>
+ </div>
+ <svg id="net" class="rv" viewBox="0 0 560 480" aria-hidden="true"><rect x="0" y="0" width="560" height="480" fill="#fff" stroke="rgba(20,20,20,.12)"/><line x1="40" y1="0" x2="40" y2="480" stroke="#f0eee9"/><line x1="80" y1="0" x2="80" y2="480" stroke="#f0eee9"/><line x1="120" y1="0" x2="120" y2="480" stroke="#f0eee9"/><line x1="160" y1="0" x2="160" y2="480" stroke="#f0eee9"/><line x1="200" y1="0" x2="200" y2="480" stroke="#f0eee9"/><line x1="240" y1="0" x2="240" y2="480" stroke="#f0eee9"/><line x1="280" y1="0" x2="280" y2="480" stroke="#f0eee9"/><line x1="320" y1="0" x2="320" y2="480" stroke="#f0eee9"/><line x1="360" y1="0" x2="360" y2="480" stroke="#f0eee9"/><line x1="400" y1="0" x2="400" y2="480" stroke="#f0eee9"/><line x1="440" y1="0" x2="440" y2="480" stroke="#f0eee9"/><line x1="480" y1="0" x2="480" y2="480" stroke="#f0eee9"/><line x1="520" y1="0" x2="520" y2="480" stroke="#f0eee9"/><line x1="0" y1="40" x2="560" y2="40" stroke="#f0eee9"/><line x1="0" y1="80" x2="560" y2="80" stroke="#f0eee9"/><line x1="0" y1="120" x2="560" y2="120" stroke="#f0eee9"/><line x1="0" y1="160" x2="560" y2="160" stroke="#f0eee9"/><line x1="0" y1="200" x2="560" y2="200" stroke="#f0eee9"/><line x1="0" y1="240" x2="560" y2="240" stroke="#f0eee9"/><line x1="0" y1="280" x2="560" y2="280" stroke="#f0eee9"/><line x1="0" y1="320" x2="560" y2="320" stroke="#f0eee9"/><line x1="0" y1="360" x2="560" y2="360" stroke="#f0eee9"/><line x1="0" y1="400" x2="560" y2="400" stroke="#f0eee9"/><line x1="0" y1="440" x2="560" y2="440" stroke="#f0eee9"/><path d="M110 120 Q220.0 60 330 300" fill="none" stroke="#141414" stroke-width="3" class="flow"/><path d="M90 330 Q210.0 240 330 300" fill="none" stroke="#141414" stroke-width="3" class="flow"/><path d="M450 110 Q390.0 50 330 300" fill="none" stroke="#141414" stroke-width="3" class="flow"/><circle cx="110" cy="120" r="14" fill="#d7232f" class="pulse" style="animation-delay:0.0s"/><circle cx="110" cy="120" r="11" fill="#141414"/><text x="110" y="124" fill="#fff" font-size="11" font-weight="800" text-anchor="middle" font-family="Archivo,sans-serif">01</text><text x="110" y="154" fill="#141414" font-size="14" font-weight="800" text-anchor="middle" font-family="Archivo,sans-serif">BENNISNASSEN</text><circle cx="90" cy="330" r="14" fill="#d7232f" class="pulse" style="animation-delay:0.5s"/><circle cx="90" cy="330" r="11" fill="#141414"/><text x="90" y="334" fill="#fff" font-size="11" font-weight="800" text-anchor="middle" font-family="Archivo,sans-serif">02</text><text x="90" y="364" fill="#141414" font-size="14" font-weight="800" text-anchor="middle" font-family="Archivo,sans-serif">SIDI YAHYA</text><circle cx="450" cy="110" r="14" fill="#d7232f" class="pulse" style="animation-delay:1.0s"/><circle cx="450" cy="110" r="11" fill="#141414"/><text x="450" y="114" fill="#fff" font-size="11" font-weight="800" text-anchor="middle" font-family="Archivo,sans-serif">03</text><text x="450" y="144" fill="#141414" font-size="14" font-weight="800" text-anchor="middle" font-family="Archivo,sans-serif"></text><circle cx="330" cy="300" r="34" fill="#d7232f" class="pulse"/><circle cx="330" cy="300" r="30" fill="#d7232f"/><path d="M316 312V296l14-10 14 10v16z" fill="#fff"/><text x="330" y="358" fill="#141414" font-size="15" font-weight="900" text-anchor="middle" font-family="Archivo Black,Archivo,sans-serif">VOTRE CHANTIER</text></svg>
+</div></section>
+
+<section id="calcul"><div class="calc">
+ <div class="l"><span class="eb">Calculateur béton</span><h2 class="H">Combien de m³ pour votre chantier ?</h2><p>Choisissez l'ouvrage, entrez les dimensions : nous estimons le volume et le nombre de toupies, puis vous envoyez la demande à V.S.</p><span class="big">m³</span></div>
+ <form class="cf" id="cf" novalidate>
+  <label>Ouvrage</label>
+  <div class="chips" id="ctype"><button type="button" class="on" data-d="0.15">Dalle</button><button type="button" data-d="0.4">Fondation</button><button type="button" data-d="0.12">Dallage</button><button type="button" data-d="0.25">Voile / mur</button></div>
+  <div class="row3"><label>Longueur (m)<input id="cl" type="number" inputmode="decimal" value="12" min="0" step="0.1"></label><label>Largeur (m)<input id="cw" type="number" inputmode="decimal" value="10" min="0" step="0.1"></label><label>Épaisseur (cm)<input id="ce" type="number" inputmode="decimal" value="15" min="0" step="1"></label></div>
+  <div class="out"><div><b id="om">18</b><span>m³ de béton</span></div><div><b id="ot">3</b><span>toupies env.</span></div></div>
+  <div class="trucks" id="trk"></div>
+  <p class="note">Estimation indicative (toupie ≈ 8 m³, +5 % de marge). Le volume exact est confirmé par V.S.</p>
+  <p class="err" id="cerr" hidden></p>
+  <button class="btn red" type="submit">Envoyer ma demande</button>
+ </form>
+</div></section>
+
+<section class="sec concrete"><div class="wrap">
+ <div class="sh rv"><div><span class="eb">Pourquoi V.S</span><h2 class="H">Un seul fournisseur.<br>Toute la chaîne.</h2></div></div>
+ <div class="why">
+  <div class="w rv"><b>03</b><h3>Carrières</h3><p>Nos propres sites de concassage pour des agrégats maîtrisés.</p></div>
+  <div class="w rv"><b>03</b><h3>Gammes</h3><p>Béton prêt à l'emploi, produits préfa et poutrelles.</p></div>
+  <div class="w rv"><b>01</b><h3>Interlocuteur</h3><p>Commande, livraison et suivi avec une seule équipe.</p></div>
+  <div class="w rv"><b>∞</b><h3>Chantiers</h3><p>De la maison familiale aux projets de promotion de la région.</p></div>
+ </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+ <div class="sh rv"><div><span class="eb">Pour qui</span><h2 class="H">On construit avec vous.</h2></div></div>
+ <div class="cl">
+  <div class="c rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><h3>Particuliers</h3><p>Vous construisez votre maison : on vous aide à estimer le béton et les poutrelles étage par étage.</p></div>
+  <div class="c rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 20h20M4 20V10l6-3v13M10 20V4l10 4v12M14 9h2M14 13h2M14 17h2"/></svg><h3>Entrepreneurs</h3><p>Livraisons planifiées selon vos coulages, avec pompe et toupies sur chantier.</p></div>
+  <div class="c rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7h6v14M13 21V3h6v18M7 11h2M7 15h2M15 7h2M15 11h2M15 15h2"/></svg><h3>Promoteurs</h3><p>Un fournisseur capable de suivre vos résidences et projets du gros œuvre à la livraison.</p></div>
+ </div>
+</div></section>
+
+<section class="sec dark" id="contact"><div class="wrap ct">
+ <div class="rv"><span class="eb">Contact</span><h2 class="H" style="font-size:clamp(40px,5.4vw,78px)">Commandez votre béton.</h2>
+  <div class="ph"><a href="tel:+212661434629"><span>06 61 43 46 29</span><small>Appeler</small></a><a href="tel:+212666035094"><span>06 66 03 50 94</span><small>Appeler</small></a></div>
+  <p style="color:rgba(255,255,255,.55)">Votre ville · Votre région</p></div>
+ <form class="df rv" id="df" novalidate>
+  <label>Produit</label><div class="chips multi" id="dprod"><button type="button" class="on">Béton prêt à l'emploi</button><button type="button">Produits préfa</button><button type="button">Poutrelles</button><button type="button">Agrégats</button></div>
+  <label>Volume / quantité<input id="dq" placeholder="ex. 20 m³, 150 poutrelles"></label>
+  <label>Lieu du chantier<input id="dl" placeholder="Quartier, ville"></label>
+  <label>Date souhaitée<input id="dd" type="date"></label>
+  <label>Nom<input id="dn" placeholder="Votre nom" autocomplete="name"></label>
+  <p class="err" id="derr" hidden></p>
+  <button class="btn red" type="submit">Envoyer sur WhatsApp</button>
+ </form>
+</div></section>
+
+<footer><div class="wrap">
+ <a class="logo" href="#top"><svg viewBox="0 0 46 34"><path d="M3 30 A20 20 0 0 1 23 4" fill="none" stroke="#d7232f" stroke-width="3"/><path d="M8 30 A15 15 0 0 1 23 9" fill="none" stroke="#d7232f" stroke-width="2"/><rect x="26" y="8" width="5" height="22" fill="#fff"/><rect x="33" y="5" width="5" height="25" fill="#fff"/><rect x="40" y="2" width="5" height="28" fill="#fff"/></svg><span><b>VOTRE SOCIÉTÉ</b><small>BÉTON · OUJDA</small></span></a>
+ <p>Béton prêt à l'emploi · Produits préfa · Poutrelles<br>Concassage Bennisnassen · Sidi Yahya · </p>
+ <p class="cp">©  · Votre Société · Site démo réalisé par SiteLik</p>
+</div></footer>
+<a id="call" href="tel:+212661434629" aria-label="Appeler"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></a>
+
+<script>
+var WA=''; // numéro WhatsApp V.S (à confirmer)
+var NS='http://www.w3.org/2000/svg';
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function cl(x,a,b){return Math.max(a,Math.min(b,x))}
+function seg(p,a,b){return cl((p-a)/(b-a),0,1)}
+function ease(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
+// hero letters
+document.querySelectorAll('.title .row').forEach(function(r,ri){var w=r.dataset.w,h='';for(var i=0;i<w.length;i++)h+='<span class="L" style="animation-delay:'+(.35+ri*.45+i*.06)+'s">'+w[i]+'</span>';r.innerHTML=h});
+// nav/progress
+(function(){var n=document.getElementById('nav'),pg=document.getElementById('prog');function f(){n.classList.toggle('solid',scrollY>40);var h=document.documentElement.scrollHeight-innerHeight;pg.style.width=(h>0?scrollY/h*100:0)+'%'}addEventListener('scroll',f,{passive:true});f()})();
+// reveal
+(function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.rv').forEach(function(e,i){e.style.transitionDelay=(i%3)*90+'ms';io.observe(e)})})();
+
+/* ================= SCENE ================= */
+(function(){
+ var S=document.getElementById('scene');function vb(){S.setAttribute('viewBox',innerWidth<1000?'210 120 790 560':'0 0 1000 720')}vb();addEventListener('resize',vb);
+ var GY=640, BX=470, BW=440, FH=92, NF=4; // ground, building x, width, floor height
+ var CON='#b9b7b2',CON2='#a3a19c',DARK='#2a2a2c',RED='#d7232f';
+ // sky / sun
+ var sky=el('rect',{x:-500,y:-200,width:2000,height:1200,fill:'#efede8'},S);
+ var sun=el('circle',{cx:300,cy:150,r:56,fill:RED,opacity:.9},S);
+ // distant skyline
+ var sk=el('g',{fill:'#dcd9d3'},S);[[40,520,60,120],[110,540,50,100],[170,500,70,140],[250,555,40,85],[300,530,60,110],[930,520,70,120]].forEach(function(b){el('rect',{x:b[0],y:b[1],width:b[2],height:b[3]},sk)});
+ // ground
+ el('rect',{x:-500,y:GY,width:2000,height:300,fill:'#3a3a3c'},S);
+ el('rect',{x:-500,y:GY,width:2000,height:6,fill:'#555'},S);
+ // crane (static tower crane background)
+ var cr=el('g',{stroke:'#9a9894','stroke-width':3,fill:'none'},S);
+ el('path',{d:'M960 640 V150 M940 640 V150 M940 150 H980 M960 150 L960 120 M600 150 H1000 M960 120 L640 150 M960 120 L1000 150'},cr);
+ for(var y=170;y<640;y+=30)el('path',{d:'M940 '+y+' L960 '+(y+30)+' M960 '+y+' L940 '+(y+30)},cr);
+ var hook=el('g',{},S);var hl=el('line',{x1:0,y1:150,x2:0,y2:300,stroke:'#777','stroke-width':2},hook);var hb=el('rect',{x:-30,y:300,width:60,height:8,fill:RED},hook);
+ // building group
+ var B=el('g',{},S);
+ var fnd=el('rect',{x:BX-10,y:GY-14,width:0,height:14,fill:CON2},B);
+ var floors=[];
+ for(var f=0;f<NF;f++){
+  var yb=GY-14-f*(FH+12), g=el('g',{},B), fl={cols:[],beams:[],wins:[]};
+  for(var c=0;c<5;c++){var x=BX+c*(BW-22)/4;fl.cols.push(el('rect',{x:x,y:yb,width:22,height:0,fill:CON},g))}
+  for(var k=0;k<9;k++){fl.beams.push(el('rect',{x:BX+6+k*(BW-12)/9,y:yb-FH-6,width:(BW-12)/9-4,height:6,fill:DARK,opacity:0},g))}
+  fl.slab=el('rect',{x:BX-10,y:yb-FH-12,width:0,height:12,fill:CON2},g);
+  for(var w=0;w<4;w++){fl.wins.push(el('rect',{x:BX+30+w*(BW-22)/4,y:yb-FH+18,width:(BW-22)/4-38,height:FH-36,fill:'#3b3b3e',opacity:0},g))}
+  fl.yb=yb;floors.push(fl)
+ }
+ var sign=el('g',{opacity:0},B);el('rect',{x:BX+40,y:GY-14-NF*(FH+12)-46,width:BW-80,height:40,fill:RED},sign);var st=el('text',{x:BX+BW/2,y:GY-14-NF*(FH+12)-19,'text-anchor':'middle',fill:'#fff','font-family':'Archivo Black,Archivo,sans-serif','font-size':20,'letter-spacing':2},sign);st.textContent='VOTRE SOCIÉTÉ';
+ // truck (mixer) with pump
+ var T=el('g',{},S);
+ el('rect',{x:0,y:-60,width:250,height:14,fill:DARK},T); // chassis
+ var cab=el('path',{d:'M250 -46 V-118 H300 L330 -80 V-46 Z',fill:RED},T);el('path',{d:'M262 -110 H298 L318 -84 H262 Z',fill:'#cfe1f0'},T);
+ var drumG=el('g',{},T);
+ var dc=el('clipPath',{id:'dclip'},S);el('ellipse',{cx:120,cy:-100,rx:110,ry:44},dc);
+ el('ellipse',{cx:120,cy:-100,rx:110,ry:44,fill:'#e8e6e1'},drumG);
+ var str=el('g',{'clip-path':'url(#dclip)'},drumG),strI=el('g',{},str);
+ for(var i=-4;i<14;i++)el('path',{d:'M'+(i*24)+' -150 l40 100',stroke:RED,'stroke-width':9},strI);
+ el('ellipse',{cx:120,cy:-100,rx:110,ry:44,fill:'none',stroke:'#999','stroke-width':2},drumG);
+ el('text',{x:120,y:-94,'text-anchor':'middle',fill:DARK,'font-family':'Archivo Black,Archivo,sans-serif','font-size':17},drumG).textContent='V.S';
+ var wheels=[];[40,90,280].forEach(function(x){var w=el('g',{transform:'translate('+x+',-34)'},T);el('circle',{r:24,fill:'#111'},w);el('circle',{r:11,fill:'#888'},w);el('rect',{x:-2,y:-11,width:4,height:22,fill:'#333'},w);wheels.push(w)});
+ // pump boom
+ var boom=el('g',{},S);
+ var b1=el('line',{stroke:DARK,'stroke-width':12,'stroke-linecap':'round'},boom),b2=el('line',{stroke:DARK,'stroke-width':9,'stroke-linecap':'round'},boom),b3=el('line',{stroke:RED,'stroke-width':7,'stroke-linecap':'round'},boom);
+ var pourL=el('line',{stroke:'#8d8b86','stroke-width':8,'stroke-linecap':'round','stroke-dasharray':'4 6'},boom);
+ // dust
+ var dust=el('g',{},S);var dots=[];for(var i=0;i<14;i++)dots.push(el('circle',{r:3+Math.random()*4,fill:'#cfcdc8',opacity:0},dust));
+ var steps=document.querySelectorAll('.step'),bars=document.querySelectorAll('.sbar b'),lv=document.getElementById('lv'),lvt=document.getElementById('lvt');
+ var story=document.querySelector('.story'),p=0,tp=0,t0=performance.now();
+ function prog(){var r=story.getBoundingClientRect();var h=story.offsetHeight-innerHeight;return cl(-r.top/h,0,1)}
+ function frame(now){
+  tp=prog();p+=(tp-p)*.12;var t=(now-t0)/1000;
+  // phases
+  var drive=ease(seg(p,0,.1)), F=seg(p,.1,.18);
+  var tx=-420+drive*(BX-360+420); // truck x
+  T.setAttribute('transform','translate('+tx+','+(GY)+')');
+  wheels.forEach(function(w,i){var x=[40,90,280][i];w.setAttribute('transform','translate('+x+',-34) rotate('+(tx*1.6)+')')});
+  strI.setAttribute('transform','translate('+(-((t*30)%24))+',0)');
+  fnd.setAttribute('width',(BW+20)*ease(F));
+  var cur=0,curY=GY-14,pourOn=false,pourX=BX;
+  for(var f=0;f<NF;f++){
+   var a=.18+f*.18, q=seg(p,a,a+.18), fl=floors[f];
+   var cp=seg(q,0,.35), bp=seg(q,.35,.65), sp=seg(q,.65,1);
+   fl.cols.forEach(function(c,i){var h=FH*ease(seg(cp,i*.12,i*.12+.52));c.setAttribute('height',h);c.setAttribute('y',fl.yb-h)});
+   fl.beams.forEach(function(b,i){var v=seg(bp,i/9*.8,i/9*.8+.2);b.setAttribute('opacity',v);b.setAttribute('transform','translate(0,'+(-40*(1-v))+')')});
+   fl.slab.setAttribute('width',(BW+20)*sp);
+   if(q>0){cur=f}
+   if(sp>0&&sp<1){pourOn=true;curY=fl.yb-FH-12;pourX=BX-10+(BW+20)*sp}
+   if(bp>0&&bp<1){hook.setAttribute('transform','translate('+(BX+BW*bp)+',0)');hl.setAttribute('y2',fl.yb-FH-60);hb.setAttribute('y',fl.yb-FH-60)}
+  }
+  if(F>0&&F<1){pourOn=true;curY=GY-14;pourX=BX-10+(BW+20)*F}
+  // night & finish
+  var fin=seg(p,.9,1);
+  sky.setAttribute('fill',mix('#efede8','#1b1c22',fin));
+  sun.setAttribute('fill',mix('#d7232f','#f3efe2',fin));sun.setAttribute('r',56-fin*18);
+  floors.forEach(function(fl,fi){fl.wins.forEach(function(w,i){var v=seg(fin,(fi*4+i)/16*.7,(fi*4+i)/16*.7+.3);w.setAttribute('opacity',v);w.setAttribute('fill',mix('#3b3b3e','#ffd36b',v))})});
+  sign.setAttribute('opacity',fin);
+  // boom from truck turret
+  var bx=tx+250,by=GY-130,show=drive>=.99;
+  if(show){
+   var tgx=pourOn?pourX:BX+BW*.3, tgy=(pourOn?curY:GY-14-(cur+1)*(FH+12))-70;
+   var ex=(bx+tgx)/2-30, ey=Math.min(by,tgy)-80-Math.sin(t*2)*3;
+   b1.setAttribute('x1',bx);b1.setAttribute('y1',by);b1.setAttribute('x2',ex);b1.setAttribute('y2',ey);
+   b2.setAttribute('x1',ex);b2.setAttribute('y1',ey);b2.setAttribute('x2',tgx);b2.setAttribute('y2',tgy);
+   b3.setAttribute('x1',tgx);b3.setAttribute('y1',tgy);b3.setAttribute('x2',tgx);b3.setAttribute('y2',tgy+30);
+   pourL.setAttribute('x1',tgx);pourL.setAttribute('y1',tgy+30);pourL.setAttribute('x2',tgx);pourL.setAttribute('y2',pourOn?curY:tgy+30);
+   pourL.setAttribute('stroke-dashoffset',-t*60);
+   boom.setAttribute('opacity',1-fin);
+  }else boom.setAttribute('opacity',0);
+  dots.forEach(function(d,i){if(pourOn&&show){var a=(t*1.5+i/14)%1;d.setAttribute('cx',pourX+Math.cos(i*2.3)*a*40);d.setAttribute('cy',curY-a*24);d.setAttribute('opacity',.7*(1-a))}else d.setAttribute('opacity',0)});
+  // captions
+  var si=p<.1?0:p<.18?1:p<.6?2:p<.9?3:4;
+  if(p>=.18&&p<.9){var ff=Math.floor((p-.18)/.18),qq=((p-.18)/.18)%1;si=qq<.65?2:3}
+  steps.forEach(function(s,i){s.classList.toggle('on',i===si)});
+  bars.forEach(function(b,i){var r=[[0,.1],[.1,.18],[.18,.9],[.18,.9],[.9,1]][i];b.style.transform='scaleX('+seg(p,r[0],r[1])+')'});
+  var lvl=p<.18?'R+0':(p>=.9?'R+'+(NF-1):'R+'+Math.min(NF-1,Math.floor((p-.18)/.18)));
+  document.querySelector('.lvl').style.color=(fin>.5&&innerWidth>=1000)?'#fff':'';lv.style.color=(fin>.5&&innerWidth>=1000)?'#fff':'';lv.textContent=p>=.9?'Livré':lvl;lvt.textContent=p>=.9?'Bâtiment R+'+(NF-1):'Niveau en cours';
+  requestAnimationFrame(frame)
+ }
+ function mix(a,b,t){var x=parseInt(a.slice(1),16),y=parseInt(b.slice(1),16);var r=Math.round((x>>16)+((y>>16)-(x>>16))*t),g=Math.round((x>>8&255)+((y>>8&255)-(x>>8&255))*t),bl=Math.round((x&255)+((y&255)-(x&255))*t);return 'rgb('+r+','+g+','+bl+')'}
+ requestAnimationFrame(frame)
+})();
+
+/* calculator */
+(function(){var ty=document.getElementById('ctype'),L=document.getElementById('cl'),W=document.getElementById('cw'),E=document.getElementById('ce'),last=-1;
+ function fmt(x){return (Math.round(x*10)/10).toString().replace('.',',')}
+ function truck(){return '<svg viewBox="0 0 40 24"><rect x="1" y="13" width="26" height="3" fill="currentColor"/><ellipse cx="13" cy="9" rx="11" ry="6" fill="currentColor"/><path d="M27 16V7h6l5 5v4z" fill="#fff"/><circle cx="7" cy="19" r="3.4" fill="#fff"/><circle cx="31" cy="19" r="3.4" fill="#fff"/></svg>'}
+ function calc(){var m=(+L.value||0)*(+W.value||0)*((+E.value||0)/100)*1.05,n=m>0?Math.ceil(m/8):0;document.getElementById('om').textContent=fmt(m);document.getElementById('ot').textContent=n;
+  if(n!==last){last=n;var h='';for(var i=0;i<Math.min(n,24);i++)h+=truck().replace('<svg','<svg style="animation-delay:'+(i*40)+'ms"');document.getElementById('trk').innerHTML=h+(n>24?'<b style="align-self:center">+'+(n-24)+'</b>':'')}return [m,n]}
+ ty.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;ty.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)});E.value=Math.round(+b.dataset.d*100);calc()});
+ [L,W,E].forEach(function(i){i.addEventListener('input',calc)});calc();
+ document.getElementById('cf').addEventListener('submit',function(e){e.preventDefault();var r=calc(),er=document.getElementById('cerr');if(!r[0]){er.textContent='Indiquez les dimensions.';er.hidden=false;return}if(!WA){er.textContent='Démo : le numéro WhatsApp de V.S sera ajouté ici.';er.hidden=false;return}
+  location.href='https://wa.me/'+WA+'?text='+encodeURIComponent(['Bonjour V.S, je souhaite commander du béton.','Ouvrage : '+ty.querySelector('.on').textContent,'Dimensions : '+L.value+' × '+W.value+' m, ép. '+E.value+' cm','Volume estimé : '+fmt(r[0])+' m³ ('+r[1]+' toupies)'].join('\n'))})})();
+/* devis */
+document.querySelectorAll('.chips.multi').forEach(function(c){c.addEventListener('click',function(e){var b=e.target.closest('button');if(b)b.classList.toggle('on')})});
+document.getElementById('df').addEventListener('submit',function(e){e.preventDefault();var er=document.getElementById('derr'),n=document.getElementById('dn').value.trim();if(!n){er.textContent='Indiquez votre nom.';er.hidden=false;return}if(!WA){er.textContent='Démo : le numéro WhatsApp de V.S sera ajouté ici.';er.hidden=false;return}
+ var pr=[].map.call(document.querySelectorAll('#dprod .on'),function(b){return b.textContent}).join(', ');
+ location.href='https://wa.me/'+WA+'?text='+encodeURIComponent(['Bonjour V.S, je souhaite un devis.','Produits : '+pr,'Quantité : '+document.getElementById('dq').value,'Chantier : '+document.getElementById('dl').value,'Date : '+document.getElementById('dd').value,'Nom : '+n].join('\n'))});
+</script>
+</body>
+</html>

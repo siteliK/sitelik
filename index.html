@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SiteLik · Sites web pour entreprises, restaurants et commerces</title>
+<meta name="description" content="SiteLik crée des sites web professionnels pour les entreprises, restaurants et commerces : menu, catalogue, demandes de devis WhatsApp, fiche Google. Démo gratuite avant paiement.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bk:#0a0a0a;--ink:#111;--g:#16a34a;--g2:#22c55e;--gl:#dcfce7;--paper:#fff;--soft:#f5f5f4;--mute:#6b6b6b;--line:rgba(0,0,0,.1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font:400 16px/1.65 Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper);overflow-x:hidden}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+html.en .fr,html:not(.en) .en{display:none!important}
+h1,h2,h3{font-family:'Inter Tight',Inter,sans-serif;letter-spacing:-.03em;line-height:1.02}
+h2{font-size:clamp(36px,5vw,68px);font-weight:800}
+h2 em,h1 em{font-style:normal;color:var(--g)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 max(20px,4vw)}
+.eb{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--g);margin-bottom:18px}
+.eb::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--g2);box-shadow:0 0 0 4px var(--gl)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 26px;border-radius:999px;font-weight:700;font-size:15px;transition:.25s;white-space:nowrap}
+.btn.k{background:var(--bk);color:#fff}.btn.k:hover{background:var(--g)}
+.btn.g{background:var(--g2);color:#04210f}.btn.g:hover{background:#4ade80}
+.btn.o{border:1.5px solid var(--line)}.btn.o:hover{border-color:var(--bk)}
+.btn.w{border:1.5px solid rgba(255,255,255,.25);color:#fff}.btn.w:hover{border-color:#fff}
+.btn svg{width:18px;height:18px}
+/* nav */
+#nav{position:fixed;top:0;left:0;right:0;z-index:70;transition:.3s}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px}
+#nav.solid{background:rgba(255,255,255,.9);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Inter Tight',sans-serif;font-weight:900;font-size:24px;letter-spacing:-.04em}
+.logo i{width:36px;height:36px;border-radius:10px;background:var(--bk);display:grid;place-items:center}.logo i svg{width:22px}
+.logo em{font-style:normal;color:var(--g)}
+.nl{display:flex;gap:28px;font-weight:600;font-size:14px}.nl a{color:var(--mute)}.nl a:hover{color:var(--ink)}
+.nr{display:flex;align-items:center;gap:10px}
+.lang{display:flex;border:1.5px solid var(--line);border-radius:999px;padding:3px;font-size:12px;font-weight:800}
+.lang button{padding:6px 10px;border-radius:999px;color:var(--mute)}.lang button.on{background:var(--bk);color:#fff}
+/* hero */
+.hero{padding:140px 0 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;right:-20%;top:-30%;width:70vw;height:70vw;border-radius:50%;background:radial-gradient(circle,rgba(34,197,94,.16),transparent 62%);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:center;position:relative}
+.pill{display:inline-flex;align-items:center;gap:10px;border:1.5px solid var(--line);border-radius:999px;padding:7px 14px 7px 7px;font-size:13px;font-weight:600;margin-bottom:26px;background:#fff}
+.pill b{background:var(--gl);color:var(--g);border-radius:999px;padding:3px 10px;font-size:12px}
+h1{font-size:clamp(46px,6.4vw,92px);font-weight:900;margin-bottom:24px}
+h1 .rot{display:inline-grid;vertical-align:bottom;color:var(--g);clip-path:inset(-8% -2% -14% -2%)}
+h1 .rot span{grid-area:1/1;opacity:0;transform:translateY(80%);transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .4s;white-space:nowrap}
+h1 .rot span.on{opacity:1;transform:none}h1 .rot span.out{opacity:0;transform:translateY(-80%)}
+.lead{font-size:clamp(17px,1.5vw,20px);color:var(--mute);max-width:540px;margin-bottom:34px}
+.hcta{display:flex;gap:10px;flex-wrap:wrap}
+.ticks{display:flex;gap:22px;flex-wrap:wrap;margin-top:34px;font-size:14px;font-weight:600}
+.ticks span{display:flex;gap:8px;align-items:center}.ticks svg{width:18px;color:var(--g)}
+/* browser mock */
+.br{border-radius:18px;background:#fff;box-shadow:0 50px 100px -40px rgba(0,0,0,.45),0 0 0 1px var(--line);overflow:hidden;position:relative}
+.br .bar{height:40px;background:var(--soft);display:flex;align-items:center;gap:7px;padding:0 14px;border-bottom:1px solid var(--line)}
+.br .bar i{width:11px;height:11px;border-radius:50%;background:#e5e5e5}.br .bar i:nth-child(1){background:#ff5f57}.br .bar i:nth-child(2){background:#febc2e}.br .bar i:nth-child(3){background:#28c840}
+.br .url{margin-left:12px;flex:1;height:24px;border-radius:7px;background:#fff;border:1px solid var(--line);font-size:12px;color:var(--mute);display:flex;align-items:center;padding:0 10px;gap:6px;overflow:hidden;white-space:nowrap}
+.br .url b{color:var(--ink)}
+.mini{position:relative;aspect-ratio:16/11;overflow:hidden}
+.ms{position:absolute;inset:0;opacity:0;transition:opacity .6s;display:flex;flex-direction:column}
+.ms.on{opacity:1}
+.ms .mh{flex:1;position:relative;padding:7% 7%;display:flex;flex-direction:column;justify-content:center;color:#fff;overflow:hidden}
+.ms .mh small{font-size:10px;letter-spacing:.3em;font-weight:700;opacity:.8}
+.ms .mh h4{font-family:'Inter Tight',sans-serif;font-size:clamp(22px,3vw,40px);line-height:1;margin:8px 0 12px;font-weight:900;letter-spacing:-.03em;max-width:70%}
+.ms .mh .cta{display:inline-flex;align-self:flex-start;padding:9px 16px;border-radius:999px;font-size:11px;font-weight:800}
+.ms .mf{height:30%;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:10px;background:#fff}
+.ms .mf div{border-radius:10px;background:var(--soft);position:relative;overflow:hidden}
+.ms .mf div::after{content:'';position:absolute;left:10%;right:30%;bottom:12%;height:8px;border-radius:4px;background:rgba(0,0,0,.12)}
+.wabub{position:absolute;right:14px;bottom:14px;width:42px;height:42px;border-radius:50%;background:#25d366;display:grid;place-items:center;color:#fff;box-shadow:0 10px 20px -6px rgba(0,0,0,.35);z-index:3}
+.wabub svg{width:22px}
+.notif{position:absolute;left:-28px;bottom:40px;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:0 24px 50px -16px rgba(0,0,0,.35);display:flex;gap:12px;align-items:center;font-size:13px;z-index:4;animation:nf 7s infinite;max-width:280px}
+.notif i{width:38px;height:38px;border-radius:10px;background:#25d366;display:grid;place-items:center;color:#fff;flex:none}.notif i svg{width:20px}
+.notif b{display:block;font-size:13px}.notif span{color:var(--mute)}
+@keyframes nf{0%,8%{opacity:0;transform:translateY(16px)}14%,80%{opacity:1;transform:none}90%,100%{opacity:0;transform:translateY(-8px)}}
+.hv{position:relative}
+/* strip */
+.strip{background:var(--bk);color:#fff;padding:20px 0;overflow:hidden;white-space:nowrap}
+.strip div{display:inline-flex;gap:34px;animation:mq 36s linear infinite;font-family:'Inter Tight',sans-serif;font-weight:800;font-size:22px}
+.strip i{font-style:normal;color:var(--g2)}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* sections */
+.sec{padding:120px 0}
+.sh{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:56px}
+.sh p{max-width:440px;color:var(--mute);font-size:17px}
+.dark{background:var(--bk);color:#fff}.dark .sh p{color:rgba(255,255,255,.6)}
+.soft{background:var(--soft)}
+/* problem */
+.prob{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pb{border:1.5px solid var(--line);border-radius:22px;padding:32px;background:#fff;position:relative}
+.pb .n{font-family:'Inter Tight',sans-serif;font-weight:900;font-size:64px;line-height:1;color:var(--soft);-webkit-text-stroke:1.5px rgba(0,0,0,.12)}
+.pb h3{font-size:24px;margin:18px 0 10px}.pb p{color:var(--mute)}
+.pb .ic{position:absolute;top:28px;right:28px;width:48px;height:48px;border-radius:14px;background:var(--gl);color:var(--g);display:grid;place-items:center}.pb .ic svg{width:24px}
+/* features */
+.feats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);border-radius:24px;overflow:hidden}
+.ft{background:var(--bk);padding:32px 26px;transition:.35s;position:relative;overflow:hidden}
+.ft::before{content:'';position:absolute;inset:0;background:radial-gradient(400px circle at var(--x,50%) var(--y,0%),rgba(34,197,94,.18),transparent 50%);opacity:0;transition:.3s}
+.ft:hover::before{opacity:1}
+.ft>*{position:relative}
+.ft .ic{width:48px;height:48px;border-radius:14px;background:rgba(34,197,94,.12);color:var(--g2);display:grid;place-items:center;margin-bottom:22px}.ft .ic svg{width:24px}
+.ft h3{font-size:20px;margin-bottom:8px}.ft p{color:rgba(255,255,255,.6);font-size:15px}
+/* demo free */
+.free{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:50px;align-items:center}
+.fsteps{display:flex;flex-direction:column;gap:12px}
+.fs{display:flex;gap:18px;align-items:flex-start;padding:22px;border-radius:18px;background:#fff;border:1.5px solid var(--line)}
+.fs b{flex:none;width:44px;height:44px;border-radius:50%;background:var(--bk);color:#fff;display:grid;place-items:center;font-family:'Inter Tight',sans-serif}
+.fs h3{font-size:19px;margin-bottom:4px}.fs p{color:var(--mute);font-size:15px}
+.fs.hi{border-color:var(--g2);background:var(--gl)}.fs.hi b{background:var(--g)}
+.big0{font-family:'Inter Tight',sans-serif;font-weight:900;font-size:clamp(90px,12vw,170px);line-height:.85;letter-spacing:-.05em}
+.big0 em{font-style:normal;color:var(--g)}
+/* work */
+.work{display:grid;grid-template-columns:minmax(0,.42fr) minmax(0,1fr);gap:40px;align-items:start}
+.wtabs{display:flex;flex-direction:column;gap:6px;position:sticky;top:90px;max-height:calc(100vh - 110px);overflow:auto}
+.wt{display:flex;align-items:center;gap:14px;padding:12px 16px;border-radius:16px;border:1.5px solid var(--line);text-align:left;transition:.25s}
+.wt i{width:42px;height:42px;border-radius:12px;background:var(--soft);display:grid;place-items:center;flex:none;font-style:normal;font-size:20px}
+.wt b{display:block;font-size:16px}.wt small{color:var(--mute);font-size:13px}
+.wt.on{border-color:var(--bk);background:var(--bk);color:#fff}.wt.on small{color:rgba(255,255,255,.6)}.wt.on i{background:var(--g2)}
+.dev{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:24px;align-items:end}
+.lap .scr{position:relative;aspect-ratio:16/10;background:#fff;overflow:hidden}
+.lap iframe,.phn iframe{position:absolute;top:0;left:0;border:0;transform-origin:0 0;background:#fff}
+.phn{border-radius:38px;background:#111;padding:10px;box-shadow:0 40px 80px -30px rgba(0,0,0,.5)}
+.phn .scr{position:relative;aspect-ratio:9/19.5;border-radius:30px;overflow:hidden;background:#fff}
+.wnote{margin-top:16px;font-size:13px;color:var(--mute);display:flex;gap:8px;align-items:center}.wnote svg{width:16px;color:var(--g)}
+/* sectors */
+.secs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.sc{border-radius:20px;padding:24px;border:1.5px solid var(--line);display:flex;flex-direction:column;gap:10px;transition:.3s;background:#fff}
+.sc:hover{border-color:var(--g2);transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(22,163,74,.5)}
+.sc i{font-style:normal;font-size:28px}.sc h3{font-size:18px}.sc p{font-size:14px;color:var(--mute)}
+/* process */
+.proc{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.proc::before{content:'';position:absolute;top:28px;left:12%;right:12%;height:2px;background:rgba(255,255,255,.15)}
+.proc .fill{position:absolute;top:28px;left:12%;height:2px;background:var(--g2);width:0;transition:width 2.4s cubic-bezier(.2,.8,.2,1)}
+.pr{text-align:center;padding:0 16px;position:relative}
+.pr b{width:56px;height:56px;border-radius:50%;margin:0 auto 22px;display:grid;place-items:center;background:var(--bk);border:2px solid rgba(255,255,255,.2);font-family:'Inter Tight',sans-serif;font-size:20px;transition:.5s;position:relative;z-index:1}
+.pr.on b{background:var(--g2);border-color:var(--g2);color:#04210f;box-shadow:0 0 0 8px rgba(34,197,94,.18)}
+.pr h3{font-size:20px;margin-bottom:8px}.pr p{color:rgba(255,255,255,.6);font-size:15px}
+/* offers */
+.offers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}
+.of{border-radius:26px;padding:34px;border:1.5px solid var(--line);display:flex;flex-direction:column;background:#fff;position:relative}
+.of.best{background:var(--bk);color:#fff;border-color:var(--bk);box-shadow:0 40px 80px -30px rgba(22,163,74,.45)}
+.of .tag{position:absolute;top:22px;right:22px;background:var(--g2);color:#04210f;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.of h3{font-size:24px}.of .sub{color:var(--mute);font-size:14px;margin-top:4px}.of.best .sub{color:rgba(255,255,255,.6)}
+.of .pz{font-family:'Inter Tight',sans-serif;font-weight:900;font-size:50px;letter-spacing:-.04em;margin:22px 0 4px;line-height:1}.of .pz small{font-size:16px;font-weight:700;letter-spacing:0;color:var(--mute)}
+.of ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin:24px 0 30px;flex:1}
+.of li{display:flex;gap:10px;font-size:15px}.of li svg{flex:none;width:20px;color:var(--g2);margin-top:2px}
+/* guarantees */
+.gar{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ga{padding:28px;border-radius:22px;background:var(--gl)}
+.ga svg{width:30px;color:var(--g);margin-bottom:16px}.ga h3{font-size:19px;margin-bottom:6px}.ga p{font-size:14px;color:#2f4d39}
+/* faq */
+.faq{max-width:860px;margin:0 auto}
+.fq{border-bottom:1.5px solid var(--line)}
+.fq button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;text-align:left;font-family:'Inter Tight',sans-serif;font-size:clamp(18px,2vw,22px);font-weight:700}
+.fq button i{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;flex:none;transition:.3s;font-style:normal}
+.fq.on button i{transform:rotate(45deg);background:var(--bk);color:#fff;border-color:var(--bk)}
+.fq .a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s}
+.fq.on .a{grid-template-rows:1fr}
+.fq .a>div{overflow:hidden;color:var(--mute);font-size:16px}.fq.on .a>div{padding-bottom:24px}
+/* cta */
+.cta{background:var(--bk);color:#fff;border-radius:34px;padding:clamp(40px,6vw,80px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:50px;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;right:-10%;bottom:-40%;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(34,197,94,.35),transparent 65%)}
+.cta>*{position:relative}
+.cta h2{color:#fff}.cta p{color:rgba(255,255,255,.65);font-size:17px;margin-top:18px;max-width:440px}
+.cf{background:#fff;color:var(--ink);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:14px}
+label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:700;color:var(--mute)}
+input,select{font:inherit;font-size:16px;font-weight:600;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--soft);color:var(--ink);width:100%;min-width:0}
+input:focus,select:focus{outline:none;border-color:var(--g2);background:#fff}
+.err{color:#dc2626;font-size:14px;font-weight:600}
+footer{padding:60px 0 36px;font-size:14px;color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start}
+footer nav{display:flex;flex-direction:column;gap:8px;font-weight:600}
+footer .cp{width:100%;border-top:1px solid var(--line);padding-top:22px;font-size:13px}
+#wa{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.45)}
+#wa svg{width:28px}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media (max-width:1000px){.nl{display:none}.hero .wrap,.free,.work,.cta{grid-template-columns:minmax(0,1fr)}.prob,.offers{grid-template-columns:minmax(0,1fr)}.feats,.secs,.gar{grid-template-columns:1fr 1fr}.wtabs{position:relative;top:0;flex-direction:row;overflow-x:auto;padding-bottom:6px}.wt{flex:none}.notif{left:10px}}
+@media (max-width:640px){
+ #nav .wrap{height:64px}.logo{font-size:20px}.logo i{width:32px;height:32px}#nav .btn{display:none}
+ .hero{padding:100px 0 50px}.hcta .btn{flex:1}
+ .sec{padding:80px 0}
+ .feats,.gar{grid-template-columns:minmax(0,1fr)}.secs{grid-template-columns:1fr 1fr}.sc{padding:18px}
+ .proc{grid-template-columns:minmax(0,1fr);gap:28px}.proc::before,.proc .fill{display:none}.pr{display:grid;grid-template-columns:56px 1fr;gap:16px;text-align:left;padding:0}.pr b{margin:0}
+ .dev{grid-template-columns:minmax(0,1fr)}.lap{display:none}.phn{width:min(300px,78vw);margin:0 auto}
+ .wt{padding:12px 14px}.wt i{width:34px;height:34px}
+ .of,.pb{padding:26px}.cf{padding:22px}
+ .notif{display:none}
+}
+.si{width:22px;height:22px;display:block}.wt i{color:var(--g)}.wt.on i{color:#fff}.sc i{width:52px;height:52px;border-radius:14px;background:var(--gl);color:var(--g);display:grid;place-items:center;transition:.3s}.sc:hover i{background:var(--g);color:#fff}.sc i .si{width:26px;height:26px}.url .si{width:12px;height:12px;flex:none}
+.sc.more{grid-column:span 3;background:var(--bk);color:#fff;border-color:var(--bk);justify-content:center}.sc.more p{color:rgba(255,255,255,.7)}.sc.more:hover{background:var(--g)}@media (max-width:1000px){.sc.more{grid-column:span 1}}
+</style>
+</head>
+<body>
+<header id="nav"><div class="wrap">
+ <a class="logo" href="#top"><i><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.6" stroke-linecap="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></i><span>Site<em>Lik</em></span></a>
+ <nav class="nl"><a href="#services"><span class="fr">Services</span><span class="en">Services</span></a><a href="#realisations"><span class="fr">Réalisations</span><span class="en">Work</span></a><a href="#offres"><span class="fr">Offres</span><span class="en">Packages</span></a><a href="#faq">FAQ</a></nav>
+ <div class="nr"><div class="lang" id="lang"><button data-l="fr" class="on">FR</button><button data-l="en">EN</button></div><a class="btn k" href="#contact"><span class="fr">Démo gratuite</span><span class="en">Free demo</span></a></div>
+</div></header>
+
+<section class="hero" id="top"><div class="wrap">
+ <div>
+  <span class="pill rv"><b>SiteLik</b><span class="fr">Entreprises · Restaurants · Commerces</span><span class="en">Businesses · Restaurants · Shops</span></span>
+  <h1 class="rv"><span class="fr">Un site qui vous apporte des <span class="rot" data-w="clients.|appels.|devis.|commandes."></span></span><span class="en">A website that brings you <span class="rot" data-w="clients.|calls.|quotes.|orders."></span></span></h1>
+  <p class="lead rv"><span class="fr">Vos clients vous cherchent sur Google avant d'appeler. SiteLik crée votre site professionnel, à vos couleurs : catalogue, menu, réservations et demandes de devis directement sur votre WhatsApp.</span><span class="en">Your clients search Google before they call. SiteLik builds your professional website, in your brand colours: catalogue, menu, bookings and quote requests sent straight to your WhatsApp.</span></p>
+  <div class="hcta rv"><a class="btn k" href="#contact"><span class="fr">Recevoir ma démo gratuite</span><span class="en">Get my free demo</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn o" href="#realisations"><span class="fr">Voir des réalisations</span><span class="en">See our work</span></a></div>
+  <div class="ticks rv"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span class="fr">Démo avant paiement</span><span class="en">Demo before payment</span></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span class="fr">Devis sur WhatsApp</span><span class="en">Quotes on WhatsApp</span></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span class="fr">Français · English</span><span class="en">French · English</span></span></div>
+ </div>
+ <div class="hv rv">
+  <div class="br"><div class="bar"><i></i><i></i><i></i><div class="url"><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> <b id="murl">marbre-prestige.ma</b></div></div>
+   <div class="mini" id="mini"><div class="ms on" data-u="marbre-prestige.ma"><div class="mh" style="background:linear-gradient(135deg,#1a1917,#3a332a)"><small>MARBRE · GRANITE</small><h4>La pierre d'exception.</h4><span class="cta" style="background:#c9a45c;color:#0e0d0c">Demander un devis</span></div><div class="mf"><div></div><div></div><div></div></div></div><div class="ms" data-u="carrelage-design.ma"><div class="mh" style="background:linear-gradient(135deg,#b4532a,#e3a07a)"><small>CARRELAGE · SANITAIRE</small><h4>Le carrelage qui change tout.</h4><span class="cta" style="background:#fff;color:#b4532a">Demander un devis</span></div><div class="mf"><div></div><div></div><div></div></div></div><div class="ms" data-u="beton-pro.ma"><div class="mh" style="background:linear-gradient(135deg,#141414,#3a3a3c)"><small>BÉTON · PRÉFA</small><h4>On construit avec vous.</h4><span class="cta" style="background:#d7232f;color:#fff">Demander un devis</span></div><div class="mf"><div></div><div></div><div></div></div></div><div class="ms" data-u="location-auto.ma"><div class="mh" style="background:linear-gradient(135deg,#0b0b0d,#2a2a33)"><small>LOCATION DE VOITURES</small><h4>Prenez la route.</h4><span class="cta" style="background:#e3202b;color:#fff">Demander un devis</span></div><div class="mf"><div></div><div></div><div></div></div></div><div class="ms" data-u="restaurant-plage.ma"><div class="mh" style="background:linear-gradient(135deg,#0e4c5c,#3aa0a8)"><small>RESTAURANT · SAÏDIA</small><h4>Face à la mer.</h4><span class="cta" style="background:#f5d48a;color:#0e4c5c">Demander un devis</span></div><div class="mf"><div></div><div></div><div></div></div></div><span class="wabub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:20px;height:20px"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg></span></div></div>
+  <div class="notif"><i><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:20px;height:20px"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg></i><div><b><span class="fr">Nouvelle demande de devis</span><span class="en">New quote request</span></b><span class="fr">Escalier · 16 marches</span><span class="en">Staircase · 16 steps</span></div></div>
+ </div>
+</div></section>
+
+<div class="strip" aria-hidden="true"><div><span>Restaurants</span><i>●</i><span>Cafés</span><i>●</i><span>Marbre & granite</span><i>●</i><span>Carrelage</span><i>●</i><span>Béton & BTP</span><i>●</i><span>Hôtels</span><i>●</i><span>Boutiques</span><i>●</i><span>Beauté</span><i>●</i><span>Location de voitures</span><i>●</i><span>Matériaux</span><i>●</i><span>Restaurants</span><i>●</i><span>Cafés</span><i>●</i><span>Marbre & granite</span><i>●</i><span>Carrelage</span><i>●</i><span>Béton & BTP</span><i>●</i><span>Hôtels</span><i>●</i><span>Boutiques</span><i>●</i><span>Beauté</span><i>●</i><span>Location de voitures</span><i>●</i><span>Matériaux</span><i>●</i></div></div>
+
+<section class="sec"><div class="wrap">
+ <div class="sh rv"><div><span class="eb"><span class="fr">Le constat</span><span class="en">The reality</span></span><h2><span class="fr">Le client décide<br><em>avant</em> de vous appeler.</span><span class="en">Clients decide<br><em>before</em> they call you.</span></h2></div><p><span class="fr">Familles, touristes, promoteurs, architectes : tout le monde vérifie sur son téléphone avant de choisir.</span><span class="en">Families, tourists, developers, architects: everyone checks on their phone before choosing.</span></p></div>
+ <div class="prob">
+  <div class="pb rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></span><span class="n">01</span><h3><span class="fr">Il cherche</span><span class="en">They search</span></h3><p><span class="fr">« restaurant », « marbre », « carrelage » près de chez eux… sur Google, avant tout appel.</span><span class="en">“restaurant”, “marble”, “tiles” near them… on Google, before any call.</span></p></div>
+  <div class="pb rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="16" rx="1"/><rect x="14" y="4" width="7" height="16" rx="1"/></svg></span><span class="n">02</span><h3><span class="fr">Il compare</span><span class="en">They compare</span></h3><p><span class="fr">Photos, produits, avis, adresse. Une simple fiche sans site ne montre presque rien.</span><span class="en">Photos, products, reviews, address. A plain listing with no website shows almost nothing.</span></p></div>
+  <div class="pb rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 7L12 17.6 5.8 21l1.4-7L2 9.3l7-.8z"/></svg></span><span class="n">03</span><h3><span class="fr">Il choisit</span><span class="en">They choose</span></h3><p><span class="fr">Celui qui inspire le plus confiance. Souvent, celui qui a le site le plus sérieux.</span><span class="en">The one who inspires the most trust. Often, the one with the most professional website.</span></p></div>
+ </div>
+</div></section>
+
+<section class="sec dark" id="services"><div class="wrap">
+ <div class="sh rv"><div><span class="eb"><span class="fr">Ce que vous obtenez</span><span class="en">What you get</span></span><h2><span class="fr">Un site complet,<br>pensé pour <em>vendre.</em></span><span class="en">A complete website,<br>built to <em>sell.</em></span></h2></div><p><span class="fr">Pas un modèle copié-collé : chaque site est conçu pour votre métier, vos produits et vos clients.</span><span class="en">Not a copy-paste template: every site is designed for your trade, your products and your clients.</span></p></div>
+ <div class="feats" id="feats"><div class="ft rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4"/></svg></span><h3><span class="fr">Design sur mesure</span><span class="en">Custom design</span></h3><p><span class="fr">À vos couleurs, avec votre logo et votre identité.</span><span class="en">Your colours, your logo, your identity.</span></p></div><div class="ft rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><h3><span class="fr">Catalogue, menu & réalisations</span><span class="en">Catalogue, menu & projects</span></h3><p><span class="fr">Produits, plats, photos et vidéos, toujours à jour.</span><span class="en">Products, dishes, photos and videos, always up to date.</span></p></div><div class="ft rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-4-7.5L21 3v5h-5"/></svg></span><h3><span class="fr">Devis & réservations WhatsApp</span><span class="en">Quotes & bookings on WhatsApp</span></h3><p><span class="fr">Chaque demande ou réservation arrive complète sur votre WhatsApp.</span><span class="en">Every request or booking arrives complete on your WhatsApp.</span></p></div><div class="ft rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2"/></svg></span><h3><span class="fr">Outils interactifs</span><span class="en">Interactive tools</span></h3><p><span class="fr">Calculateurs, configurateurs, carte animée : le client agit seul.</span><span class="en">Calculators, configurators, animated menus: clients act on their own.</span></p></div><div class="ft rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><h3><span class="fr">Fiche Google</span><span class="en">Google listing</span></h3><p><span class="fr">Revendiquée, complétée et reliée à votre site.</span><span class="en">Claimed, completed and linked to your website.</span></p></div><div class="ft rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18M19 3v18M5 8h14M5 16h14"/></svg></span><h3><span class="fr">Animations premium</span><span class="en">Premium animations</span></h3><p><span class="fr">Des effets qui marquent, sans ralentir le site.</span><span class="en">Memorable effects that keep the site fast.</span></p></div><div class="ft rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><h3><span class="fr">Multilingue</span><span class="en">Multilingual</span></h3><p><span class="fr">Français, anglais, et plus selon vos clients.</span><span class="en">French, English, and more depending on your clients.</span></p></div><div class="ft rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span><h3><span class="fr">Parfait sur mobile</span><span class="en">Perfect on mobile</span></h3><p><span class="fr">Testé sur téléphone et ordinateur.</span><span class="en">Tested on phone and desktop.</span></p></div></div>
+</div></section>
+
+<section class="sec soft"><div class="wrap free">
+ <div class="rv"><span class="eb"><span class="fr">Démo gratuite</span><span class="en">Free demo</span></span><div class="big0">0 <em>DH</em></div><h2 style="margin-top:20px"><span class="fr">Voyez votre site<br>avant de payer.</span><span class="en">See your website<br>before you pay.</span></h2><p style="color:var(--mute);font-size:17px;margin-top:18px;max-width:440px"><span class="fr">Nous préparons une démo à votre nom et à vos couleurs, et nous venons vous la présenter dans vos bureaux. Elle vous plaît ? On continue. Sinon, vous ne payez rien.</span><span class="en">We prepare a demo with your name and colours, and present it at your office. Like it? We continue. If not, you pay nothing.</span></p></div>
+ <div class="fsteps">
+  <div class="fs rv"><b>1</b><div><h3><span class="fr">Vous nous écrivez</span><span class="en">You message us</span></h3><p><span class="fr">Le nom de votre entreprise et votre activité, sur WhatsApp.</span><span class="en">Your company name and activity, on WhatsApp.</span></p></div></div>
+  <div class="fs rv"><b>2</b><div><h3><span class="fr">Nous créons la démo</span><span class="en">We build the demo</span></h3><p><span class="fr">À votre nom, avec vos produits et vos couleurs.</span><span class="en">With your name, products and colours.</span></p></div></div>
+  <div class="fs hi rv"><b>3</b><div><h3><span class="fr">On vous la présente</span><span class="en">We present it to you</span></h3><p><span class="fr">Dans vos bureaux, sur ordinateur et sur téléphone. Sans engagement.</span><span class="en">At your office, on desktop and mobile. No commitment.</span></p></div></div>
+ </div>
+</div></section>
+
+<section class="sec" id="realisations"><div class="wrap">
+ <div class="sh rv"><div><span class="eb"><span class="fr">Réalisations</span><span class="en">Our work</span></span><h2><span class="fr">Testez-les <em>vous-même.</em></span><span class="en">Try them <em>yourself.</em></span></h2></div><p><span class="fr">Restaurants, matériaux, construction : ces sites sont en direct ci-dessous. Faites défiler, cliquez, changez les options.</span><span class="en">Restaurants, building supplies, construction: these sites are live below. Scroll, click, change the options.</span></p></div>
+ <div class="work">
+  <div class="wtabs" id="wtabs">
+   <button class="wt on" data-d="plage"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0"/><path d="M2 12c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0"/><path d="M2 17c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0"/></svg></i><span><b><span class="fr">Restaurant bord de mer</span><span class="en">Seaside restaurant</span></b><small><span class="fr">Vidéos, carte en livre animé</span><span class="en">Videos, flip-book menu</span></small></span></button>
+   <button class="wt" data-d="jardin"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12"/></svg></i><span><b><span class="fr">Restaurant haut de gamme</span><span class="en">Upscale restaurant</span></b><small><span class="fr">Réservations, anniversaires, espace enfants</span><span class="en">Bookings, birthdays, kids area</span></small></span></button>
+   <button class="wt" data-d="terrasse"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 3.5 18.5a17 17 0 0 0 17 0Z"/><path d="M5.6 14.8a14 14 0 0 0 12.8 0"/><circle cx="12" cy="10" r="1"/><circle cx="10" cy="14.5" r="1"/><circle cx="14.2" cy="14" r="1"/></svg></i><span><b><span class="fr">Restaurant italien</span><span class="en">Italian restaurant</span></b><small><span class="fr">Menu photo, commandes WhatsApp</span><span class="en">Photo menu, WhatsApp orders</span></small></span></button>
+   <button class="wt" data-d="marbre"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12l4 6-10 12L2 9Z"/><path d="M2 9h20"/><path d="m12 21-4-12 4-6 4 6Z"/></svg></i><span><b><span class="fr">Marbre & granite</span><span class="en">Marble & granite</span></b><small><span class="fr">Chantier animé, estimation m²</span><span class="en">Animated site build, m² estimate</span></small></span></button>
+   <button class="wt" data-d="beton"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V4h11"/><path d="M4 4l3-1"/><path d="M15 4v4"/><rect x="12.5" y="8" width="5" height="4"/><path d="M10 21v-6h10v6"/><path d="M2 21h20"/></svg></i><span><b><span class="fr">Béton & BTP</span><span class="en">Concrete & construction</span></b><small><span class="fr">Bâtiment qui se construit, calcul m³</span><span class="en">Building rises as you scroll, m³ calculator</span></small></span></button>
+   <button class="wt" data-d="carrelage"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></i><span><b><span class="fr">Carrelage</span><span class="en">Tiles</span></b><small><span class="fr">« Créez votre pièce » interactif</span><span class="en">Interactive “design your room”</span></small></span></button>
+   <button class="wt" data-d="sanitaire"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l2.5 2.5"/><path d="M13.5 6.5a4.95 4.95 0 0 0-7 7"/><path d="M15 5 5 15"/><path d="M14 17v.01M10 16v.01M13 13v.01M16 10v.01M11 20v.01M17 14v.01M20 11v.01"/></svg></i><span><b><span class="fr">Sanitaire & robinetterie</span><span class="en">Bathroom & plumbing</span></b><small><span class="fr">Univers produits, devis</span><span class="en">Product ranges, quotes</span></small></span></button>
+  </div>
+  <div class="rv">
+   <div class="dev"><div class="br lap"><div class="bar"><i></i><i></i><i></i><div class="url"><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> <b id="wurl">demo.sitelik.ma</b></div></div><div class="scr" id="lapscr"></div></div><div class="phn"><div class="scr" id="phnscr"></div></div></div>
+   <p class="wnote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span class="fr">Projets de démonstration : noms, logos et coordonnées masqués.</span><span class="en">Demo projects: names, logos and contact details hidden.</span></p>
+  </div>
+ </div>
+</div></section>
+
+<section class="sec soft"><div class="wrap">
+ <div class="sh rv"><div><span class="eb"><span class="fr">Secteurs</span><span class="en">Industries</span></span><h2><span class="fr">Petites ou grandes,<br>pour tous les <em>métiers.</em></span><span class="en">Small or large,<br>for every <em>trade.</em></span></h2></div><p><span class="fr">Un site pensé pour la façon dont vos clients achètent.</span><span class="en">A website designed around how your clients buy.</span></p></div>
+ <div class="secs"><div class="sc rv"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V2"/><path d="M6 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></i><h3><span class="fr">Restaurants & cafés</span><span class="en">Restaurants & cafés</span></h3><p><span class="fr">Carte, réservations.</span><span class="en">Menu, bookings.</span></p></div><div class="sc rv"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/><path d="M22 10v6"/></svg></i><h3><span class="fr">Écoles & formations</span><span class="en">Schools & training</span></h3><p><span class="fr">Programmes, inscriptions.</span><span class="en">Programmes, enrolment.</span></p></div><div class="sc rv"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12l4 6-10 12L2 9Z"/><path d="M2 9h20"/><path d="m12 21-4-12 4-6 4 6Z"/></svg></i><h3><span class="fr">Marbre & granite</span><span class="en">Marble & granite</span></h3><p><span class="fr">Pierres, escaliers, cuisines.</span><span class="en">Stone, stairs, kitchens.</span></p></div><div class="sc rv"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></i><h3><span class="fr">Carrelage & sanitaire</span><span class="en">Tiles & bathrooms</span></h3><p><span class="fr">Collections, configurateur.</span><span class="en">Collections, room designer.</span></p></div><div class="sc rv"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V4h11"/><path d="M4 4l3-1"/><path d="M15 4v4"/><rect x="12.5" y="8" width="5" height="4"/><path d="M10 21v-6h10v6"/><path d="M2 21h20"/></svg></i><h3><span class="fr">Béton & BTP</span><span class="en">Concrete & construction</span></h3><p><span class="fr">Produits, calcul de volume.</span><span class="en">Products, volume calculator.</span></p></div><div class="sc rv"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M9 10h.01M15 10h.01"/></svg></i><h3><span class="fr">Architectes & design</span><span class="en">Architects & design</span></h3><p><span class="fr">Portfolio, projets, rendez-vous.</span><span class="en">Portfolio, projects, appointments.</span></p></div><div class="sc rv"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9Z"/></svg></i><h3><span class="fr">Matériaux & quincaillerie</span><span class="en">Building supplies</span></h3><p><span class="fr">Catalogue, devis chantier.</span><span class="en">Catalogue, site quotes.</span></p></div><div class="sc rv"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M4 12h16"/></svg></i><h3><span class="fr">Aluminium & menuiserie</span><span class="en">Aluminium & joinery</span></h3><p><span class="fr">Réalisations, devis sur mesure.</span><span class="en">Projects, custom quotes.</span></p></div><div class="sc rv"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg></i><h3><span class="fr">Salons & instituts</span><span class="en">Salons & beauty</span></h3><p><span class="fr">Prestations, rendez-vous.</span><span class="en">Services, appointments.</span></p></div><div class="sc rv"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg></i><h3><span class="fr">Hôtels & riads</span><span class="en">Hotels & guesthouses</span></h3><p><span class="fr">Chambres, réservations.</span><span class="en">Rooms, bookings.</span></p></div><div class="sc rv"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></i><h3><span class="fr">Boutiques & marques</span><span class="en">Shops & brands</span></h3><p><span class="fr">Collections, commandes.</span><span class="en">Collections, orders.</span></p></div><div class="sc rv"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></i><h3><span class="fr">Transport & logistique</span><span class="en">Transport & logistics</span></h3><p><span class="fr">Services, zones, contact.</span><span class="en">Services, areas, contact.</span></p></div><div class="sc rv"><i><svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9L18 10l-2.7-3.6A2 2 0 0 0 13.7 6H7.4a2 2 0 0 0-1.7 1L3 11l-1 1v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></i><h3><span class="fr">Location de voitures</span><span class="en">Car rental</span></h3><p><span class="fr">Flotte, réservation.</span><span class="en">Fleet, bookings.</span></p></div><a class="sc more rv" href="#contact"><h3><span class="fr">Votre métier n’est pas dans la liste ?</span><span class="en">Your trade is not listed?</span></h3><p><span class="fr">On crée des sites pour toutes les activités. Demandez votre démo gratuite →</span><span class="en">We build websites for every business. Ask for your free demo →</span></p></a></div>
+</div></section>
+
+<section class="sec dark"><div class="wrap">
+ <div class="sh rv"><div><span class="eb"><span class="fr">Comment ça marche</span><span class="en">How it works</span></span><h2><span class="fr">4 étapes,<br><em>zéro stress.</em></span><span class="en">4 steps,<br><em>zero stress.</em></span></h2></div></div>
+ <div class="proc" id="proc"><i class="fill"></i>
+  <div class="pr"><b>1</b><div><h3><span class="fr">Démo gratuite</span><span class="en">Free demo</span></h3><p><span class="fr">Votre site à votre nom, présenté chez vous.</span><span class="en">Your site with your name, presented at your office.</span></p></div></div>
+  <div class="pr"><b>2</b><div><h3><span class="fr">Vos contenus</span><span class="en">Your content</span></h3><p><span class="fr">Photos, produits, prix et numéro WhatsApp.</span><span class="en">Photos, products, prices and WhatsApp number.</span></p></div></div>
+  <div class="pr"><b>3</b><div><h3><span class="fr">Mise en ligne</span><span class="en">Go live</span></h3><p><span class="fr">Domaine à votre nom et fiche Google reliée.</span><span class="en">Domain in your name and Google listing connected.</span></p></div></div>
+  <div class="pr"><b>4</b><div><h3><span class="fr">Suivi</span><span class="en">Ongoing care</span></h3><p><span class="fr">Mises à jour, nouveaux produits, avis Google.</span><span class="en">Updates, new products, Google reviews.</span></p></div></div>
+ </div>
+</div></section>
+
+<section class="sec" id="offres"><div class="wrap">
+ <div class="sh rv"><div><span class="eb"><span class="fr">Offres</span><span class="en">Pricing</span></span><h2><span class="fr">Des offres <em>claires.</em></span><span class="en">Clear <em>packages.</em></span></h2></div><p><span class="fr">Un prix adapté à votre projet, présenté avec votre démo. Paiement en deux fois : 50 % au démarrage, 50 % à la mise en ligne.</span><span class="en">A price tailored to your project, presented with your demo. Pay in two parts: 50% at the start, 50% at launch.</span></p></div>
+ <div class="offers"><div class="of rv"><h3><span class="fr">Site Pro</span><span class="en">Pro Website</span></h3><p class="sub"><span class="fr">L'essentiel pour être trouvé</span><span class="en">Everything to get found</span></p><div class="pz" style="font-size:34px"><span class="fr">Sur devis</span><span class="en">On quote</span></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span><span class="fr">Site sur mesure (jusqu'à 6 sections)</span><span class="en">Custom website (up to 6 sections)</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span><span class="fr">Catalogue de produits</span><span class="en">Product catalogue</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span><span class="fr">Demandes de devis WhatsApp</span><span class="en">WhatsApp quote requests</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span><span class="fr">Nom de domaine + hébergement 1 an</span><span class="en">Domain + hosting for 1 year</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span><span class="fr">Version mobile</span><span class="en">Mobile version</span></span></li></ul><a class="btn k" href="#contact"><span class="fr">Commencer par la démo</span><span class="en">Start with the demo</span></a></div><div class="of best rv"><span class="tag"><span class="fr">Recommandé</span><span class="en">Recommended</span></span><h3><span class="fr">Premium</span><span class="en">Premium</span></h3><p class="sub"><span class="fr">Le site qui fait la différence</span><span class="en">The site that stands out</span></p><div class="pz" style="font-size:34px"><span class="fr">Sur devis</span><span class="en">On quote</span></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span><span class="fr">Tout le Site Pro</span><span class="en">Everything in Pro</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span><span class="fr">Animations premium & calculateur</span><span class="en">Premium animations & calculator</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span><span class="fr">Fiche Google revendiquée et optimisée</span><span class="en">Claimed, optimised Google listing</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span><span class="fr">Email professionnel</span><span class="en">Professional email</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span><span class="fr">Version français + anglais</span><span class="en">French + English version</span></span></li></ul><a class="btn g" href="#contact"><span class="fr">Commencer par la démo</span><span class="en">Start with the demo</span></a></div><div class="of rv"><h3><span class="fr">Suivi</span><span class="en">Care plan</span></h3><p class="sub"><span class="fr">Votre site toujours à jour</span><span class="en">Your site always up to date</span></p><div class="pz" style="font-size:34px"><span class="fr">Mensuel</span><span class="en">Monthly</span></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span><span class="fr">Mises à jour du catalogue</span><span class="en">Catalogue updates</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span><span class="fr">Petites modifications</span><span class="en">Small changes</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span><span class="fr">Suivi des avis Google</span><span class="en">Google reviews follow-up</span></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span><span class="fr">Support proche de vous</span><span class="en">Local support</span></span></li></ul><a class="btn k" href="#contact"><span class="fr">Commencer par la démo</span><span class="en">Start with the demo</span></a></div></div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap">
+ <div class="gar">
+  <div class="ga rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><h3><span class="fr">Démo avant paiement</span><span class="en">Demo before payment</span></h3><p><span class="fr">Vous voyez votre site avant de payer quoi que ce soit.</span><span class="en">You see your website before paying anything.</span></p></div>
+  <div class="ga rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/></svg><h3><span class="fr">Domaine à votre nom</span><span class="en">Domain in your name</span></h3><p><span class="fr">Le nom de domaine vous appartient.</span><span class="en">The domain name belongs to you.</span></p></div>
+  <div class="ga rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/></svg><h3><span class="fr">Paiement 50 / 50</span><span class="en">50 / 50 payment</span></h3><p><span class="fr">Le solde n'est payé qu'à la mise en ligne.</span><span class="en">The balance is only paid at launch.</span></p></div>
+  <div class="ga rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><h3><span class="fr">Proche de vous</span><span class="en">Close to you</span></h3><p><span class="fr">On se déplace dans vos bureaux pour vous présenter votre site.</span><span class="en">We come to your office to present your website.</span></p></div>
+ </div>
+</div></section>
+
+<section class="sec soft" id="faq"><div class="wrap">
+ <div class="sh rv" style="justify-content:center;text-align:center"><div><span class="eb">FAQ</span><h2><span class="fr">Vos questions.</span><span class="en">Your questions.</span></h2></div></div>
+ <div class="faq" id="fq"><div class="fq rv"><button type="button"><span class="fr">La démo est vraiment gratuite ?</span><span class="en">Is the demo really free?</span><i>+</i></button><div class="a"><div><span class="fr">Oui. Nous préparons une démo à votre nom et vous la présentons. Vous ne payez que si vous décidez de continuer.</span><span class="en">Yes. We prepare a demo with your name and present it to you. You only pay if you decide to go ahead.</span></div></div></div><div class="fq rv"><button type="button"><span class="fr">Vous travaillez avec les petites entreprises ?</span><span class="en">Do you work with small businesses?</span><i>+</i></button><div class="a"><div><span class="fr">Oui. Restaurant, boutique, artisan ou grande société : chaque site est adapté à votre taille et à votre budget.</span><span class="en">Yes. Restaurant, shop, craftsman or large company: every site is adapted to your size and budget.</span></div></div></div><div class="fq rv"><button type="button"><span class="fr">Combien de temps pour avoir mon site ?</span><span class="en">How long until my site is live?</span><i>+</i></button><div class="a"><div><span class="fr">Cela dépend du projet et de la rapidité de réception de vos photos et contenus. Nous fixons le délai ensemble au démarrage.</span><span class="en">It depends on the project and how quickly we receive your photos and content. We agree the timeline together at the start.</span></div></div></div><div class="fq rv"><button type="button"><span class="fr">Je n'ai pas de photos, c'est un problème ?</span><span class="en">I don't have photos, is that a problem?</span><i>+</i></button><div class="a"><div><span class="fr">Non. Nous pouvons démarrer avec des visuels et animations, puis ajouter vos photos et vidéos ensuite.</span><span class="en">No. We can start with visuals and animations, then add your photos and videos later.</span></div></div></div><div class="fq rv"><button type="button"><span class="fr">Comment les clients me contactent ?</span><span class="en">How do clients contact me?</span><i>+</i></button><div class="a"><div><span class="fr">Par WhatsApp, par téléphone ou via les formulaires de devis : chaque demande arrive complète sur votre WhatsApp.</span><span class="en">By WhatsApp, phone, or the quote forms: every request arrives complete on your WhatsApp.</span></div></div></div><div class="fq rv"><button type="button"><span class="fr">Le site m'appartient ?</span><span class="en">Do I own the website?</span><i>+</i></button><div class="a"><div><span class="fr">Oui. Le nom de domaine est enregistré à votre nom.</span><span class="en">Yes. The domain name is registered in your name.</span></div></div></div><div class="fq rv"><button type="button"><span class="fr">Et si je veux modifier quelque chose après ?</span><span class="en">What if I want changes later?</span><i>+</i></button><div class="a"><div><span class="fr">Avec le Suivi, nous mettons à jour votre catalogue et faisons les petites modifications chaque mois.</span><span class="en">With the care plan, we update your catalogue and make small changes every month.</span></div></div></div></div>
+</div></section>
+
+<section class="sec" id="contact"><div class="wrap"><div class="cta rv">
+ <div><span class="eb" style="color:var(--g2)"><span class="fr">Démo gratuite</span><span class="en">Free demo</span></span><h2><span class="fr">Votre site est peut-être déjà prêt.</span><span class="en">Your website might already be ready.</span></h2><p><span class="fr">Donnez-nous le nom de votre entreprise : nous préparons votre démo et nous venons vous la montrer.</span><span class="en">Give us your company name: we prepare your demo and come to show it to you.</span></p></div>
+ <form class="cf" id="cf" novalidate>
+  <label><span class="fr">Nom de l'entreprise</span><span class="en">Company name</span><input id="f1" autocomplete="organization"></label>
+  <label><span class="fr">Activité</span><span class="en">Industry</span><select id="f2"><option>Marbre & granite / Marble</option><option>Carrelage & sanitaire / Tiles</option><option>Béton & BTP / Construction</option><option>Matériaux / Building supplies</option><option>Aluminium & menuiserie / Joinery</option><option>Transport & logistique / Logistics</option><option>Restaurant / Café</option><option>Salon / Institut — Beauty</option><option>Hôtel / Riad — Hotel</option><option>Boutique / Marque — Shop</option><option>Location de voitures / Car rental</option><option>Autre / Other</option></select></label>
+  <label><span class="fr">Ville</span><span class="en">City</span><input id="f3"></label>
+  <label><span class="fr">Votre nom</span><span class="en">Your name</span><input id="f4" autocomplete="name"></label>
+  <p class="err" id="ferr" hidden></p>
+  <button class="btn k" type="submit"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:20px;height:20px"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg> <span class="fr">Demander ma démo</span><span class="en">Request my demo</span></button>
+ </form>
+</div></div></section>
+
+<footer><div class="wrap">
+ <div><a class="logo" href="#top"><i><svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.6" stroke-linecap="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></i><span>Site<em>Lik</em></span></a><p style="margin-top:14px;max-width:360px"><span class="fr">Sites web professionnels pour les entreprises.</span><span class="en">Professional websites for businesses.</span></p></div>
+ <nav><a href="#services">Services</a><a href="#realisations"><span class="fr">Réalisations</span><span class="en">Work</span></a><a href="#offres"><span class="fr">Offres</span><span class="en">Packages</span></a><a href="#contact">Contact</a></nav>
+ <p class="cp">© SiteLik</p>
+</div></footer>
+<a id="wa" href="#contact" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:20px;height:20px"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg></a>
+
+<script>
+var WA='212731144364'; // numéro WhatsApp SiteLik
+(function(){var b=document.getElementById('wa');if(b&&WA){b.href='https://wa.me/'+WA+'?text='+encodeURIComponent('Bonjour SiteLik, je souhaite une démo gratuite.');b.target='_blank';b.rel='noopener'}})();
+// lang
+(function(){var h=document.documentElement,b=document.querySelectorAll('#lang button');function set(l){h.classList.toggle('en',l==='en');h.lang=l;b.forEach(function(x){x.classList.toggle('on',x.dataset.l===l)});try{localStorage.setItem('sl-lang',l)}catch(e){}}
+ var s='fr';try{s=localStorage.getItem('sl-lang')||((navigator.language||'').slice(0,2)==='en'?'en':'fr')}catch(e){}set(s);
+ b.forEach(function(x){x.addEventListener('click',function(){set(x.dataset.l)})})})();
+// nav
+(function(){var n=document.getElementById('nav');function f(){n.classList.toggle('solid',scrollY>30)}addEventListener('scroll',f,{passive:true});f()})();
+// rotating words
+document.querySelectorAll('.rot').forEach(function(r){var w=r.dataset.w.split('|');r.innerHTML=w.map(function(x,i){return '<span class="'+(i?'':'on')+'">'+x+'</span>'}).join('');var s=r.children,i=0;setInterval(function(){var o=s[i];o.classList.remove('on');o.classList.add('out');setTimeout(function(){o.classList.remove('out')},700);i=(i+1)%s.length;s[i].classList.add('on')},2200)});
+// mini sites
+(function(){var m=document.querySelectorAll('.ms'),u=document.getElementById('murl'),i=0;setInterval(function(){m[i].classList.remove('on');i=(i+1)%m.length;m[i].classList.add('on');u.textContent=m[i].dataset.u},3000)})();
+// reveal
+(function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.rv').forEach(function(e,i){e.style.transitionDelay=(i%3)*90+'ms';io.observe(e)})})();
+// feature glow
+document.querySelectorAll('.ft').forEach(function(f){f.addEventListener('pointermove',function(e){var r=f.getBoundingClientRect();f.style.setProperty('--x',(e.clientX-r.left)+'px');f.style.setProperty('--y',(e.clientY-r.top)+'px')})});
+// process
+(function(){var p=document.getElementById('proc');new IntersectionObserver(function(es,o){if(!es[0].isIntersecting)return;o.disconnect();p.querySelector('.fill').style.width='76%';p.querySelectorAll('.pr').forEach(function(s,i){setTimeout(function(){s.classList.add('on')},300+i*550)})},{threshold:.4}).observe(p)})();
+// faq
+document.querySelectorAll('.fq button').forEach(function(b){b.addEventListener('click',function(){b.parentNode.classList.toggle('on')})});
+// live demos
+(function(){var lap=document.getElementById('lapscr'),phn=document.getElementById('phnscr'),cur=null,U={plage:'restaurant-plage.demo',jardin:'restaurant-jardin.demo',terrasse:'restaurant-italien.demo',marbre:'marbre.demo',beton:'beton.demo',carrelage:'carrelage.demo',sanitaire:'sanitaire.demo'};var SRC={plage:'demos/plage/index.html',jardin:'demos/jardin/index.html',terrasse:'demos/terrasse/index.html',marbre:'demos/marbre.html',beton:'demos/beton.html',carrelage:'demos/carrelage.html',sanitaire:'demos/sanitaire.html'};
+ function mk(box,w){var f=document.createElement('iframe');f.setAttribute('title','Démo');f.setAttribute('loading','lazy');box.innerHTML='';box.appendChild(f);function fit(){var s=box.clientWidth/w;f.style.width=w+'px';f.style.height=(box.clientHeight/s)+'px';f.style.transform='scale('+s+')'}fit();addEventListener('resize',fit);return f}
+ var fl,fp;function load(k){if(k===cur)return;cur=k;if(!fl){fl=mk(lap,1280);fp=mk(phn,390)}if(getComputedStyle(lap.parentNode).display!=='none')fl.src=SRC[k];fp.src=SRC[k];document.getElementById('wurl').textContent=U[k];document.querySelectorAll('.wt').forEach(function(b){b.classList.toggle('on',b.dataset.d===k)})}
+ document.getElementById('wtabs').addEventListener('click',function(e){var b=e.target.closest('.wt');if(b)load(b.dataset.d)});
+ new IntersectionObserver(function(es,o){if(es[0].isIntersecting){o.disconnect();load('plage')}},{rootMargin:'300px'}).observe(document.getElementById('realisations'))})();
+// contact
+document.getElementById('cf').addEventListener('submit',function(e){e.preventDefault();var en=document.documentElement.classList.contains('en'),er=document.getElementById('ferr'),c=document.getElementById('f1').value.trim(),n=document.getElementById('f4').value.trim();
+ if(!c||!n){er.textContent=en?'Please enter your company and your name.':'Indiquez le nom de l\'entreprise et votre nom.';er.hidden=false;return}
+ if(!WA){er.textContent=en?'Demo: the SiteLik WhatsApp number will be added here.':'Démo : le numéro WhatsApp de SiteLik sera ajouté ici.';er.hidden=false;return}
+ var a=document.getElementById('f2');location.href='https://wa.me/'+WA+'?text='+encodeURIComponent((en?'Hello SiteLik, I would like a free demo.':'Bonjour SiteLik, je souhaite une démo gratuite.')+'\n'+(en?'Company: ':'Entreprise : ')+c+'\n'+(en?'Industry: ':'Activité : ')+a.options[a.selectedIndex].text+'\n'+(en?'City: ':'Ville : ')+document.getElementById('f3').value+'\n'+(en?'Name: ':'Nom : ')+n)});
+</script>
+</body>
+</html>

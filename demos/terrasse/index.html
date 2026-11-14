@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>La Terrasse · Restaurant italien à Oujda</title>
+<meta name="description" content="La Terrasse, restaurant italien à Oujda : pizzas, pâtes et dolci. Du mardi au dimanche, 13h–22h. 4,8 sur Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Manrope:wght@300;400;500;600&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Restaurant La Terrasse","servesCuisine":"Italian","address":{"@type":"PostalAddress","streetAddress":"Lotissement la Colline, imm. 70, n°42","addressLocality":"Oujda","addressCountry":"MA"},"geo":{"@type":"GeoCoordinates","latitude":34.6534596,"longitude":-1.9102859},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"13:00","closes":"22:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"67"},"acceptsReservations":true}</script>
+<style>
+/* Layout: editorial, photo-led (Carbone / Wolseley style): full-bleed hero photo, thin rules, generous white space, straight-edged images */
+:root{
+  --green:#2a1d14; --green-2:#24342a; --sage:#e3cf9f; --olive:#e3cf9f; --terra:#7a4f28; --terra-d:#5f3c1d;
+  --paper:#f7f0e2; --white:#ffffff; --fg:#161714; --muted:#6c6d63; --line:#e2ded3; --on:#f7f0e2; --on-m:#b4b7a7;
+  --display:"Playfair Display",Georgia,serif; --body:"Manrope","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--fg);font-family:var(--body);font-weight:400;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:clip;padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
+@media (min-width:900px){body{padding-bottom:0}}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--display);font-weight:500;line-height:1.04;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--terra);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(22px,env(safe-area-inset-left,0px));padding-right:max(22px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:.7rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;color:var(--terra)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;font:inherit;font-size:.76rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.btn.terra{background:var(--terra);color:#fff}.btn.terra:hover{background:var(--terra-d)}
+.btn.out-l{border-color:rgba(243,239,229,.6);color:var(--on)}.btn.out-l:hover{background:var(--on);color:var(--green)}
+.btn.out-d{border-color:var(--fg);color:var(--fg);background:transparent}.btn.out-d:hover{background:var(--fg);color:var(--paper)}
+.btn svg{width:17px;height:17px}
+
+.demo{background:var(--green);color:var(--on-m);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;text-align:center;padding:5px 12px;padding-top:calc(5px + env(safe-area-inset-top,0px));border-bottom:1px solid rgba(243,239,229,.1)}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:40;transition:background .35s,padding .35s,box-shadow .35s;padding-top:env(safe-area-inset-top,0px)}
+nav.solid{background:rgba(19,19,18,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(243,239,229,.08)}
+nav.solid .wrap{padding-block:12px}
+nav .wrap{transition:padding .35s}
+nav .links{justify-self:center}
+nav .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding-block:22px}
+nav .logo img{height:34px;width:auto}
+.links{display:none;gap:34px;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase}
+.links a{text-decoration:none;color:var(--on);opacity:.85}.links a:hover{opacity:1}
+nav .r{justify-self:end;display:flex;align-items:center;gap:16px}
+.langs{display:flex;gap:2px}
+.langs button{font:inherit;font-size:.66rem;letter-spacing:.14em;color:var(--on);opacity:.6;background:none;border:0;border-bottom:1px solid transparent;padding:6px 5px;cursor:pointer}
+.langs button[aria-pressed="true"]{opacity:1;border-bottom-color:var(--terra)}
+@media (max-width:420px){.status{font-size:0;gap:0}.status::before{width:8px;height:8px}}
+.status{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--on);display:flex;align-items:center;gap:8px;white-space:nowrap}
+.status::before{content:"";width:6px;height:6px;border-radius:50%;background:#9cc25a}
+.status.closed::before{background:var(--terra)}
+nav .btn{padding:11px 18px;display:none}
+@media (max-width:959px){nav .wrap{grid-template-columns:1fr auto}.hero .bg{object-position:72% 100%;animation:none;transform:scale(1.55);transform-origin:62% 96%}}
+@media (min-width:960px){.links{display:flex}nav .btn{display:inline-flex}}
+
+/* hero */
+.hero .media{position:absolute;inset:0;z-index:0;display:grid;grid-template-columns:1fr;background:#000}
+.hero .media video{width:100%;height:100%;object-fit:cover;display:block}
+.hero .media .d{display:none}
+@media (min-width:900px){.hero .media{grid-template-columns:repeat(3,1fr);gap:4px}.hero .media .d{display:block}.hero .media .v:first-child{order:2}.hero .media .v:last-child{order:3}}
+
+.hero{position:relative;min-height:clamp(560px,92svh,940px);display:flex;align-items:flex-end;color:var(--on);background:var(--green);overflow:hidden}
+.hero .bg{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:62% 78%;animation:zoom 30s ease-out both}
+@keyframes zoom{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,14,11,.55) 0%,rgba(10,14,11,.05) 30%,rgba(10,14,11,.35) 60%,rgba(10,14,11,.9) 100%)}
+.hero .hc{position:relative;z-index:2;width:100%;padding-block:0 clamp(40px,7vw,80px);display:grid;grid-template-columns:1fr;gap:28px;align-items:end}
+.hero h1{font-size:clamp(3.5rem,14vw,6.4rem);font-weight:500;max-width:12ch;line-height:.98}
+.hero h1 i{font-weight:500}
+.hero .side{display:flex;flex-direction:column;gap:22px;max-width:380px}
+.hero .side p{color:#dcd8cb;font-size:1rem;font-weight:300}
+.hero .cta{display:flex;gap:10px;flex-wrap:wrap}
+@media (min-width:900px){.hero .hc{grid-template-columns:1.4fr 1fr}.hero .side{justify-self:end}}
+
+/* facts */
+.facts{background:var(--green);color:var(--on);display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(243,239,229,.08)}
+.facts div{padding:18px 10px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;border-left:1px solid rgba(243,239,229,.1)}
+.facts div:first-child{border-left:0}
+.facts span{font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:var(--olive)}
+.facts b{font-family:var(--display);font-weight:500;font-size:clamp(1.05rem,4.4vw,1.7rem);line-height:1.15}
+.facts em{font-style:normal;color:var(--terra)}
+@media (min-width:860px){.facts div{padding:30px 20px}.facts span{font-size:.66rem}}
+
+section{padding-block:clamp(72px,11vw,140px)}
+
+/* intro */
+.intro{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+.intro h2{font-size:clamp(2.6rem,7vw,4.8rem)}
+.intro h2 i{color:var(--terra)}
+.atelier .eyebrow,.dark-visit .eyebrow,.resa .eyebrow{color:var(--sage)!important}
+.intro .txt{display:flex;flex-direction:column;gap:22px;max-width:520px}
+.intro .txt p{color:var(--muted);font-size:1.05rem;font-weight:300}
+.intro figure{margin:0;position:relative}
+.intro figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.intro figcaption{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+@media (min-width:900px){.intro{grid-template-columns:1fr 1fr;gap:100px}.intro figure{order:2}}
+
+/* table spread */
+.spread{margin:0;background:var(--green)}
+.spread img{width:100%;height:clamp(260px,42vw,640px);object-fit:cover;object-position:50% 50%;display:block}
+@media (max-width:700px){.spread img{height:auto;aspect-ratio:1200/1280}}
+/* plats gallery */
+.plats .grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 14px}
+.plats article{display:flex;flex-direction:column;gap:8px;min-width:0}
+.plats img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--line)}
+.plats h3{font-size:clamp(1.25rem,4.5vw,1.7rem);margin-top:6px}
+.plats p{color:var(--muted);font-size:.86rem;font-weight:300;line-height:1.5}
+@media (min-width:860px){.plats .grid{grid-template-columns:repeat(3,1fr);gap:46px 30px}}
+/* atelier */
+.atelier{background:var(--green);color:var(--on)}
+.atelier .wrap{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
+.atelier .av{justify-self:center;width:min(100%,360px)}
+.atelier video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#000}
+.atelier .at{display:flex;flex-direction:column;gap:20px;align-items:flex-start;max-width:460px}
+.atelier h2{font-size:clamp(2.6rem,8vw,4.6rem);color:var(--on)}
+.atelier h2 i{color:var(--olive)}
+.atelier p{color:var(--on-m);font-weight:300;font-size:1.05rem}
+@media (min-width:860px){.atelier .wrap{grid-template-columns:auto 1fr;gap:90px}.atelier .av{width:380px}}
+/* facade */
+.facadev{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;margin-bottom:22px;max-height:560px;background:#000}
+.facade{width:100%;aspect-ratio:4/5;object-fit:cover;margin-bottom:22px;max-height:520px}
+/* points forts */
+.pts{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.pt{display:flex;flex-direction:column;gap:6px;padding:22px 16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;transition:background .25s}
+.pt:hover{background:var(--white)}
+.pt b{font-family:var(--display);font-weight:500;font-size:clamp(1.35rem,4.5vw,1.9rem);line-height:1.1}
+.pt span{font-size:.88rem;color:var(--muted);font-weight:300;line-height:1.5}
+.pt:nth-child(1) b{color:var(--terra)}
+@media (min-width:860px){.pts{grid-template-columns:repeat(3,1fr)}.pt{padding:34px 30px}}
+/* cartes list */
+.cartes{border-top:1px solid var(--line)}
+.carte{display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 24px;padding:26px 0;border-bottom:1px solid var(--line);text-decoration:none;transition:padding .3s}
+.carte:hover{padding-left:12px}
+.carte h3{font-size:clamp(2rem,6vw,3.4rem)}
+.carte .when{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.carte .ar{font-family:var(--display);font-size:2rem;color:var(--terra)}
+.carte p{grid-column:1/-1;color:var(--muted);font-weight:300}
+@media (min-width:860px){.carte{grid-template-columns:1.2fr 1fr auto}.carte p{grid-column:auto}}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px 20px;flex-wrap:wrap;margin-bottom:34px}
+.sec-head h2{font-size:clamp(2.4rem,6vw,4rem)}
+
+/* menu */
+.menu{background:var(--white)}
+.tabs{display:flex;gap:28px;overflow-x:auto;border-bottom:1px solid var(--line);margin-bottom:10px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;font:inherit;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;padding:14px 0;border:0;border-bottom:2px solid transparent;background:none;cursor:pointer;color:var(--muted);margin-bottom:-1px}
+.tabs button[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--terra)}
+.panel{display:grid;grid-template-columns:1fr;column-gap:80px}
+.panel[hidden]{display:none!important}
+.item{display:grid;grid-template-columns:1fr auto;gap:2px 20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.item .top{grid-column:1/-1;display:flex;align-items:baseline;gap:14px}
+.item .dots{flex:1;border-bottom:1px dotted #cfc9b9;transform:translateY(-5px);min-width:16px}
+.item h4{font-size:1.4rem;font-weight:500;min-width:0}
+.item .pr{font-size:.95rem;font-weight:400;font-variant-numeric:tabular-nums;white-space:nowrap;padding-top:4px}
+.item p{grid-column:1/-1;color:var(--muted);font-size:.9rem;font-weight:300}
+.more{display:none;margin-top:22px}
+.pend{padding:40px 0;color:var(--muted);font-family:var(--display);font-style:italic;font-size:1.5rem}
+.maison{grid-column:1/-1;padding-top:22px;font-family:var(--display);font-style:italic;font-size:1.4rem;color:var(--terra)}
+.qrline{display:flex;gap:20px;align-items:center;margin-top:44px;padding:22px;border:1px solid var(--line)}
+.qrbox{flex:none;width:96px;height:96px;background:#fff;padding:6px}.qrbox img,.qrbox canvas{width:100%!important;height:100%!important;image-rendering:pixelated;display:block}
+.qrline canvas{width:76px;height:76px;image-rendering:pixelated;flex:none}
+.qrnote{display:block;margin-top:6px;font-size:.78rem;color:var(--terra)}
+.qrline p{color:var(--muted);font-size:.95rem;font-weight:300}
+.qrline b{display:block;color:var(--fg);font-weight:500;font-size:1rem;margin-bottom:2px}
+@media (min-width:860px){.panel{grid-template-columns:1fr 1fr}}
+@media (max-width:859px){.panel.clip .item:nth-of-type(n+7){display:none}.panel.clip~.more,.more.show{display:inline-flex}}
+
+/* drink groups */
+.grp{padding:18px 0;border-bottom:1px solid var(--line);min-width:0}
+.grp .gt{display:flex;align-items:baseline;gap:14px}
+.grp h4{font-size:1.45rem;font-weight:500}
+.grp .gt .dots{flex:1;border-bottom:1px dotted #cfc9b9;transform:translateY(-5px);min-width:16px}
+.grp .pr{font-size:.95rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+.grp ul{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:4px}
+.grp li{font-size:.9rem;font-weight:300;color:var(--muted);line-height:1.45}
+.grp li b{font-weight:500;color:var(--fg)}
+.grp li span::before{content:" — "}
+.grp .gn{font-size:.82rem;color:var(--muted);font-style:italic;margin-top:6px}
+@media (max-width:859px){.panel.clip .grp:nth-of-type(n+5){display:none}}
+/* photos */
+.photos{display:grid;grid-template-columns:1fr;gap:12px}
+.photos img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+@media (min-width:860px){.photos{grid-template-columns:1.5fr 1fr}.photos img{aspect-ratio:auto;height:560px}}
+
+/* reservation */
+.resa{background:var(--green);color:var(--on)}
+.resa .grid{display:grid;grid-template-columns:1fr;gap:40px}
+.resa h2{font-size:clamp(2.6rem,7vw,4.6rem);color:var(--on)}
+.resa h2 i{color:var(--olive)}
+.resa .lead{color:var(--on-m);font-weight:300;max-width:40ch;margin-top:18px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}
+.fld{display:flex;flex-direction:column;gap:4px;min-width:0}
+.fld.full{grid-column:1/-1}
+.fld label{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--on-m)}
+.fld input,.fld select{font:inherit;font-weight:300;padding:12px 0;border:0;border-bottom:1px solid rgba(243,239,229,.3);background:transparent;color:var(--on);width:100%;min-width:0;border-radius:0}
+.fld select option{color:#111}
+.fld input:focus,.fld select:focus{outline:none;border-bottom-color:var(--terra)}
+.form .btn{grid-column:1/-1;margin-top:8px}
+.err{grid-column:1/-1;color:#e8b08f;font-size:.88rem}
+@media (min-width:860px){.resa .grid{grid-template-columns:1fr 1fr;gap:100px}}
+
+/* visit */
+.dark-visit{background:var(--green);color:var(--on)}
+.dark-visit .vinfo h2{color:var(--on)}
+.dark-visit .hrs{border-color:rgba(243,239,229,.14)}
+.dark-visit .hrs .lbl,.dark-visit .addr{color:var(--on-m)}
+.dark-visit .btn.out-d{border-color:rgba(243,239,229,.6);color:var(--on)}
+.dark-visit .map{filter:none}
+@media (max-width:859px){.dark-visit .visit .facadev{width:calc(100% + 2*max(22px,env(safe-area-inset-left,0px)));margin-left:calc(-1*max(22px,env(safe-area-inset-left,0px)));aspect-ratio:3/4}.dark-visit{padding-top:0}}
+
+.visit{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
+.visit .facadev{margin:0;max-height:none;aspect-ratio:4/5}
+.vinfo{display:flex;flex-direction:column;gap:22px;align-items:flex-start}
+.vinfo h2{font-size:clamp(2.4rem,7vw,4rem)}
+.vinfo h2 i{color:var(--olive)}
+.hrs{display:flex;flex-direction:column;gap:2px;padding:22px 0;border-block:1px solid var(--line);width:100%}
+.hrs .lbl{font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+.hrs b{font-family:var(--display);font-weight:500;font-size:clamp(3.4rem,12vw,5.4rem);line-height:1}
+.hrs .now{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--olive);display:flex;align-items:center;gap:8px;margin-top:6px}
+.hrs .now::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.hrs .now.closed{color:var(--terra)}
+.vinfo .row{display:flex;gap:10px;flex-wrap:wrap}
+.addr{color:var(--muted);font-weight:300}.addr em{font-style:normal;color:var(--terra)}
+@media (min-width:860px){.visit{grid-template-columns:.85fr 1fr;gap:90px}}
+/* map */
+.map{margin-top:40px;height:360px;max-width:100%;background:var(--line);overflow:hidden;position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;filter:grayscale(.3) contrast(1.05)}
+@media (max-width:700px){.map{height:320px}}
+#infos{padding-bottom:60px}
+/* infos */
+.infos{display:grid;grid-template-columns:1fr;gap:50px}
+.infos h3{font-size:2rem;margin-bottom:18px}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-weight:300}
+.hours td{padding:11px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:end}
+.hours tr.today td{font-weight:500}
+.hours tr.today td:first-child::after{content:"  aujourd'hui";font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--terra)}
+.rate{font-family:var(--display);font-size:4.2rem;line-height:1}
+.rate small{font-family:var(--body);font-size:.85rem;color:var(--muted);margin-left:10px}
+.infos .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+@media (min-width:860px){.infos{grid-template-columns:1fr 1fr;gap:100px}}
+
+footer{background:var(--fg);color:var(--on-m);padding-block:56px 36px;font-size:.82rem}
+footer .wrap{display:flex;flex-direction:column;gap:26px}
+footer .top{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;border-bottom:1px solid rgba(243,239,229,.12);padding-bottom:26px}
+footer img{height:40px;width:auto}
+.soc{display:flex;gap:22px;flex-wrap:wrap}
+.soc a{display:inline-flex;align-items:center;gap:8px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+.soc svg{width:20px;height:20px}
+footer a{text-decoration:none;color:var(--on)}
+footer .bot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;opacity:.7}
+
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1fr 1.4fr;background:var(--green);border-top:1px solid rgba(243,239,229,.12);
+  padding:0 env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
+.mbar a{display:flex;align-items:center;justify-content:center;padding:20px 6px;text-decoration:none;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--on);border-right:1px solid rgba(243,239,229,.12)}
+.mbar a.go{background:var(--terra);color:#fff;border:0}
+@media (min-width:900px){.mbar{display:none}}
+
+.f1{animation:fade 1.2s .15s both}.f2{animation:fade 1.2s .35s both}
+@keyframes fade{from{opacity:.001;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+.zel{height:34px;background-color:#f7f0e2;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2234%22%20height%3D%2234%22%20viewBox%3D%220%200%2034%2034%22%3E%3Crect%20width%3D%2234%22%20height%3D%2234%22%20fill%3D%22%23f7f0e2%22/%3E%3Cg%20transform%3D%22translate%2817%2017%29%22%3E%3Crect%20x%3D%22-9%22%20y%3D%22-9%22%20width%3D%2218%22%20height%3D%2218%22%20fill%3D%22%237a4f28%22/%3E%3Crect%20x%3D%22-9%22%20y%3D%22-9%22%20width%3D%2218%22%20height%3D%2218%22%20fill%3D%22%237a4f28%22%20transform%3D%22rotate%2845%29%22/%3E%3Ccircle%20r%3D%225%22%20fill%3D%22%23e3cf9f%22/%3E%3Ccircle%20r%3D%222%22%20fill%3D%22%23f7f0e2%22/%3E%3C/g%3E%3Cg%20fill%3D%22%23e3cf9f%22%3E%3Cpath%20d%3D%22M0%200h5L0%205z%22/%3E%3Cpath%20d%3D%22M34%200h-5l5%205z%22/%3E%3Cpath%20d%3D%22M0%2034h5l-5-5z%22/%3E%3Cpath%20d%3D%22M34%2034h-5l5-5z%22/%3E%3C/g%3E%3C/svg%3E");background-size:34px 34px;background-repeat:repeat-x;background-position:center}
+.zel.thin{height:22px;background-size:22px 22px}
+.logo.img img{height:62px;width:auto;display:block}
+footer .logo.img img{height:110px}
+nav.solid .logo.img img{height:46px}
+.logo.txt{font-family:var(--display);font-size:1.7rem;font-weight:600;color:var(--on);text-decoration:none;letter-spacing:.01em;line-height:1;white-space:nowrap}
+.logo.txt small{display:block;font-family:var(--body);font-size:.55rem;letter-spacing:.42em;text-transform:uppercase;color:var(--sage);margin-top:4px;font-weight:500}
+footer .logo.img img{height:62px;width:auto;display:block}
+footer .logo.img img{height:110px}
+nav.solid .logo.img img{height:46px}
+.logo.txt{font-size:2.1rem}
+
+.ouv{background:var(--green);color:var(--on);border-top:1px solid rgba(243,239,229,.08)}
+.ouv .wrap{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
+.ouv .ot{display:flex;flex-direction:column;gap:20px;align-items:flex-start;max-width:480px}
+.ouv h2{font-size:clamp(2.6rem,8vw,4.6rem);color:var(--on)}
+.ouv h2 i{color:var(--sage)}
+.ouv p{color:var(--on-m);font-weight:300;font-size:1.05rem}
+.ouv .eyebrow{color:var(--sage)}
+.ouv .row{display:flex;gap:10px;flex-wrap:wrap}
+.ov{position:relative;justify-self:center;width:min(100%,380px)}
+.ov video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#000}
+.snd{position:absolute;right:14px;bottom:14px;display:flex;align-items:center;gap:8px;padding:10px 14px;background:rgba(19,19,18,.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:var(--on);border:1px solid rgba(243,239,229,.3);font:inherit;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;cursor:pointer}
+.snd svg{width:18px;height:18px}.snd .w{display:none}.snd.on .w{display:block}.snd.on .x{display:none}
+@media (max-width:859px){.ouv .ov{justify-self:start;width:calc(100% + 2*max(22px,env(safe-area-inset-left,0px)));margin-left:calc(-1*max(22px,env(safe-area-inset-left,0px)));order:-1}.ouv{padding-top:0}}
+@media (min-width:860px){.ouv .wrap{grid-template-columns:1fr auto;gap:90px}.ouv .ov{width:400px}}
+.visit img.facadev{object-fit:cover;max-width:none}
+@media (max-width:859px){.dark-visit .visit img.facadev{width:calc(100% + 2*max(22px,env(safe-area-inset-left,0px)))}}
+.loc{padding-bottom:clamp(60px,8vw,100px)}
+
+/* avis */
+.avis{background:var(--white)}
+.av-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.av-score{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:28px;background:var(--green);color:var(--on)}
+.av-score b{font-family:var(--display);font-weight:500;font-size:5.4rem;line-height:.9}
+.av-score .st{color:var(--sage);letter-spacing:.2em}
+.av-score p{color:var(--on-m);font-weight:300;font-size:.95rem;margin-bottom:8px}
+.av-score .btn.out-d{border-color:rgba(243,239,229,.6);color:var(--on)}
+.q{margin:0;padding:28px;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:18px;background:var(--paper)}
+.q blockquote{margin:0;font-family:var(--display);font-size:1.45rem;line-height:1.25}
+.q figcaption{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terra)}
+@media (min-width:860px){.av-grid{grid-template-columns:1fr 1fr 1fr 1fr}}
+/* catalogue */
+.cat{background:var(--paper)}
+.cat-lead{color:var(--muted);font-weight:300;max-width:62ch;margin:-14px 0 26px}
+.cat .sec-head h2 i{color:var(--terra)}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-bottom:26px}
+.chips::-webkit-scrollbar{display:none}
+.chips button{flex:none;font:inherit;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;padding:11px 18px;border:1px solid var(--line);background:transparent;color:var(--fg);cursor:pointer}
+.chips button.on{background:var(--fg);border-color:var(--fg);color:var(--paper)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ci{position:relative;display:flex;flex-direction:column;text-align:left;padding:0;border:0;background:var(--white);font:inherit;color:inherit;cursor:pointer;transition:transform .25s,box-shadow .25s}
+.ci:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.08)}
+.ci[hidden]{display:none}
+.ci .ph{display:block;aspect-ratio:4/3;overflow:hidden;background:var(--line)}
+.ci img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.ci:hover img{transform:scale(1.05)}
+.ci .cb{display:flex;flex-direction:column;gap:4px;padding:14px 14px 18px}
+.ci b{font-family:var(--display);font-weight:500;font-size:1.3rem;line-height:1.1}
+.ci small{color:var(--muted);font-weight:300;font-size:.84rem;line-height:1.45}
+.pr{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-top:4px}
+.ci .plus{position:absolute;top:10px;right:10px;width:36px;height:36px;display:grid;place-items:center;background:var(--terra);color:#fff;font-size:1.3rem;line-height:1}
+@media (min-width:860px){.cgrid{grid-template-columns:repeat(3,1fr);gap:24px}.ci .cb{padding:18px 20px 22px}}
+@media (max-width:420px){.ci small{display:none}.ci b{font-size:1.1rem}}
+dialog{border:0;padding:0;background:var(--paper);color:var(--fg);max-width:min(560px,94vw);width:100%;max-height:92svh;overflow:auto}
+dialog::backdrop{background:rgba(10,10,9,.72);backdrop-filter:blur(3px)}
+dialog .x{position:absolute;top:10px;right:10px;width:40px;height:40px;border:0;background:rgba(19,19,18,.75);color:#fff;font-size:1.5rem;cursor:pointer;z-index:2}
+.dish img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.dish .db{padding:24px;display:flex;flex-direction:column;gap:10px}
+.dish h3{font-size:2rem}
+.dish p{color:var(--muted);font-weight:300}
+.qty{display:flex;align-items:center;gap:18px;margin:8px 0}
+.qty button{width:42px;height:42px;border:1px solid var(--line);background:transparent;font-size:1.3rem;cursor:pointer;color:var(--fg)}
+.qty b{font-size:1.2rem;min-width:20px;text-align:center}
+.cart-btn{position:fixed;right:16px;bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:35;display:flex;align-items:center;gap:10px;padding:14px 18px;background:var(--terra);color:#fff;border:0;font:inherit;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.cart-btn[hidden]{display:none}
+.cart-btn svg{width:18px;height:18px}
+.cart-btn b{background:#fff;color:var(--terra);min-width:24px;height:24px;display:grid;place-items:center;font-size:.8rem;letter-spacing:0}
+@media (min-width:900px){.cart-btn{bottom:24px;right:24px}}
+.cart{padding:28px}
+.cart h3{font-size:2rem;margin-bottom:14px}
+.cart ul{list-style:none;margin:0 0 18px;padding:0;border-top:1px solid var(--line)}
+.cart li{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.cart li img{width:54px;height:54px;object-fit:cover}
+.cart li span{flex:1;font-family:var(--display);font-size:1.2rem;line-height:1.1}
+.cart li .qty{margin:0;gap:10px}.cart li .qty button{width:32px;height:32px;font-size:1rem}
+.cart .fld{margin-bottom:14px}
+.cart .fld label{color:var(--muted)}
+.cart .fld input{color:var(--fg);border-bottom-color:var(--line)}
+.seg{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.seg button{font:inherit;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;padding:10px 14px;border:1px solid var(--line);background:transparent;color:var(--fg);cursor:pointer}
+.seg button.on{background:var(--fg);color:var(--paper);border-color:var(--fg)}
+.cart .btn{width:100%}
+.cart .err{color:var(--terra)}
+/* evenements */
+.ev{background:var(--green);color:var(--on)}
+.ev .wrap{display:grid;grid-template-columns:1fr;gap:36px;align-items:start}
+.evp{margin:0}
+.evp img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.evt{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+.ev h2{font-size:clamp(2.6rem,8vw,4.6rem);color:var(--on)}
+.ev h2 i{color:var(--sage)}
+.ev .eyebrow{color:var(--sage)}
+.ev .evt>p{color:var(--on-m);font-weight:300;font-size:1.05rem}
+.evl{list-style:none;margin:0;padding:0;width:100%;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(243,239,229,.14)}
+.evl li{display:flex;flex-direction:column;gap:2px;padding:14px 12px 14px 0;border-bottom:1px solid rgba(243,239,229,.14)}
+.evl b{font-family:var(--display);font-weight:500;font-size:1.35rem}
+.evl span{font-size:.84rem;color:var(--on-m);font-weight:300}
+.evf{width:100%;margin-top:6px}
+@media (max-width:859px){.ev .evp{margin:0 calc(-1*max(22px,env(safe-area-inset-left,0px)))}.ev{padding-top:0}}
+@media (min-width:860px){.ev .wrap{grid-template-columns:.9fr 1fr;gap:90px}.evp{position:sticky;top:100px}}
+.hero .media img{width:100%;height:100%;object-fit:cover;display:block}
+.facts b em{color:var(--sage)}
+
+/* ===== La Terrasse : identité propre ===== */
+nav.solid{background:rgba(42,29,20,.95)}
+.btn{border-radius:999px;letter-spacing:.12em}
+.logo.txt{font-style:italic;font-weight:700;letter-spacing:0}
+.logo.txt small{font-style:normal;color:var(--sage)}
+@media (min-width:960px){nav .wrap{grid-template-columns:1fr auto 1fr}nav .logo{grid-column:2;grid-row:1;justify-self:center;text-align:center}nav .links{grid-column:1;grid-row:1;justify-self:start}}
+.hero{align-items:center;text-align:center}
+.hero::before{background:radial-gradient(ellipse at center,rgba(20,14,10,.5) 0%,rgba(20,14,10,.35) 55%,rgba(20,14,10,.7) 100%)}
+.hero .hc{grid-template-columns:1fr!important;justify-items:center;padding-block:130px 70px}
+.hero h1{max-width:16ch;margin:0 auto;font-weight:500}
+.hero h1 i{color:var(--sage)}
+.hero .side{align-items:center;justify-self:center!important;max-width:520px}
+.hero .cta{justify-content:center}
+.facts{background:var(--paper);color:var(--fg);border:0;border-bottom:1px solid var(--line)}
+.facts div{border-left-color:var(--line)}
+.facts span{color:var(--terra)}
+.facts b em{color:var(--terra)}
+.spread{background:var(--paper);padding:0 max(22px,env(safe-area-inset-left,0px))}
+.spread img{border-radius:22px;max-width:1200px;margin:24px auto 0}
+.intro figure img,.plats img,.ci .ph,.evp img,.atelier video,.atelier .av img,.ov img,.map,.q,.av-score,dialog,.qrline,.facadev{border-radius:18px}
+.ci{border-radius:18px;overflow:hidden}
+.ci .plus{border-radius:50%}
+.chips button,.tabs button,.seg button{border-radius:999px}
+.tabs{gap:8px;border-bottom:0}
+.tabs button{padding:10px 18px;border:1px solid var(--line)}
+.tabs button[aria-selected="true"]{background:var(--green);color:var(--on);border-color:var(--green)}
+.pts{border:0;gap:12px}
+.pt{border:1px solid var(--line)!important;border-radius:18px;background:var(--white)}
+.pt b{color:var(--fg)}
+.pt:nth-child(1) b{color:var(--terra)}
+.sec-head h2{font-weight:500}
+.sec-head h2 i,.intro h2 i{color:var(--terra)}
+.eyebrow{color:var(--terra)}
+.avis{background:var(--paper)}
+.q{background:var(--white)}
+.av-score{background:var(--green)}
+.av-score .st{color:var(--sage)!important}
+.facts span{color:#73703f!important}
+.logo.img img{height:60px;width:auto}
+@media (min-width:960px){.logo.img img{height:76px}nav.solid .logo.img img{height:54px}}
+nav.solid .logo.img img{height:48px}
+footer .logo.img img{height:96px;width:auto}
+.pt:nth-child(1) b{color:#73703f}
+.av-score .st{color:#fff}
+.av-score p{color:rgba(255,255,255,.85)}
+.mbar a.go,.cart-btn{border-radius:0}
+.cart-btn{border-radius:999px}
+footer{background:var(--green)}
+@media (max-width:859px){.dark-visit .visit .facadev,.ev .evp img,.ouv .ov img{border-radius:0}}
+
+/* ===== flipbook ===== */
+.fbsec{background:#22180f;color:var(--on)}
+.fbsec .sec-head h2{color:var(--on)}
+.fbwrap{position:relative;display:flex;align-items:center;justify-content:center;gap:14px;padding:10px 0 4px}
+.book{position:relative;width:min(900px,100%);aspect-ratio:1.42;perspective:2600px;transition:transform .8s cubic-bezier(.4,.1,.2,1)}
+.book.closed{transform:translateX(-25%)}.book.end{transform:translateX(25%)}
+.leaf{position:absolute;top:0;left:50%;width:50%;height:100%;transform-origin:left center;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.45,.05,.25,1);cursor:pointer}
+.leaf.flipped{transform:rotateY(-180deg)}
+.leaf .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden}
+.leaf .face.b{transform:rotateY(180deg)}
+.leaf .face::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.14),rgba(0,0,0,0) 9%)}
+.leaf .face.b::after{background:linear-gradient(270deg,rgba(0,0,0,.14),rgba(0,0,0,0) 9%)}
+.leaf.turning{z-index:50!important}
+.leaf.turning .face{box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.pg{height:100%;background:#fbf8f2;color:#2a1d14;padding:7% 8% 6%;display:flex;flex-direction:column;gap:.4em;font-size:clamp(10px,1.25vw,14px);box-shadow:inset 0 0 0 1px rgba(0,0,0,.04)}
+.bh{font-family:var(--display);font-weight:500;font-size:1.9em;text-align:center;letter-spacing:.08em;text-transform:uppercase;margin:.2em 0 .1em;color:#3a2716}
+.bh::before,.bh::after{content:"✦";font-size:.35em;vertical-align:middle;margin:0 .8em;color:#b08a55}
+.bn{text-align:center;font-size:.8em;letter-spacing:.22em;text-transform:uppercase;color:#8a7356;margin-bottom:.6em}
+.bi{margin:.35em 0}
+.bt{display:flex;align-items:baseline;gap:.6em}
+.bt b{font-family:var(--display);font-weight:600;font-size:1.12em;text-transform:uppercase;letter-spacing:.04em}
+.bt .bd{flex:1;border-bottom:1px dotted #b9a888;transform:translateY(-.25em)}
+.bt em{font-style:normal;font-weight:600;font-variant-numeric:tabular-nums}
+.bi small{display:block;font-style:italic;color:#7d6a55;font-size:.86em;line-height:1.35}
+.br{border:0;border-top:1px solid #e3d8c4;margin:.5em 18%}
+.bf{margin-top:auto;text-align:center;font-size:.75em;letter-spacing:.2em;text-transform:uppercase;color:#a08a6a}
+.pg.cover{background:#2f2117;color:#e9d8b4;padding:6%}
+.cv{height:100%;border:1px solid rgba(227,207,159,.45);outline:1px solid rgba(227,207,159,.2);outline-offset:-10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1em;text-align:center;padding:8%}
+.cv img{width:46%;max-width:200px}
+.cl{width:40px;height:1px;background:#b08a55}
+.ct{font-family:var(--display);font-style:italic;font-size:2.4em;color:#f1e3c4}
+.cs{font-size:.85em;letter-spacing:.2em;text-transform:uppercase;color:#cdb68c;line-height:1.6}
+.back .cv img{width:30%}
+.fbnav{flex:none;width:46px;height:46px;border-radius:50%;border:1px solid rgba(243,239,229,.35);background:transparent;color:var(--on);font-size:1.8rem;line-height:1;cursor:pointer;display:grid;place-items:center;z-index:5}
+.fbnav:hover{background:rgba(255,255,255,.08)}.fbnav:disabled{opacity:.25;cursor:default}
+.fbbar{display:flex;justify-content:center;gap:22px;margin:18px 0 6px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--on-m)}
+.fbsec .qrline{border-color:rgba(243,239,229,.15)}.fbsec .qrline b{color:var(--on)}.fbsec .qrline p{color:var(--on-m)}
+@media (max-width:760px){
+ .fbwrap{gap:0}.fbnav{position:absolute;bottom:-58px}.fbnav.prev{left:10%}.fbnav.next{right:10%}
+ .book{width:min(92vw,420px);aspect-ratio:.71}.book.closed,.book.end{transform:none}
+ .leaf{left:0;width:100%}.leaf.flipped{transform:rotateY(-180deg);opacity:0;transition:transform 1s cubic-bezier(.45,.05,.25,1),opacity .2s .8s}
+ .pg{font-size:clamp(11px,3.4vw,14px)}.fbbar{margin-top:70px}
+}
+#wa,.wa-float,.fab{display:none!important}</style>
+</head>
+<body>
+<div class="demo">Aperçu proposé par SiteLik</div>
+
+<header class="hero" id="top">
+  <div class="media" aria-hidden="true"><video class="v" src="media/v-pizza.mp4" muted loop playsinline autoplay preload="auto" poster="media/hero-poster.jpg"></video><video class="v d" data-src="media/v-four.mp4" muted loop playsinline preload="auto"></video><video class="v d" data-src="media/v-pate.mp4" muted loop playsinline preload="auto"></video></div>
+  <nav><div class="wrap">
+    <a class="logo img" href="#top" aria-label="La Terrasse, accueil"><span style="font-family:Georgia,serif;font-size:22px;letter-spacing:.12em;color:#f1e3c4;white-space:nowrap">LA TERRASSE</span></a>
+    <div class="links"><a href="#catalogue">La carte</a><a href="#evenements">Événements</a><a href="#reserver">Réserver</a><a href="#infos">Infos</a></div>
+    <div class="r"><div class="langs" role="group" aria-label="Langue"><button type="button" data-l="fr">FR</button><button type="button" data-l="en">EN</button><button type="button" data-l="it">IT</button><button type="button" data-l="es">ES</button></div><span class="status" id="status">Ouvert</span><a class="btn out-l" href="#reserver">Réserver</a></div>
+  </div></nav>
+  <div class="wrap hc">
+    <h1 class="f1">Benvenuto <i>al Terrasse.</i></h1>
+    <div class="side f2">
+      <p>Pizzas napolitaines, sandwichs traditionnels, plats et bien plus encore. Du mardi au dimanche, de 13h à 22h.</p>
+      <div class="cta"><a class="btn terra" href="#reserver">Réserver une table</a><a class="btn out-l" href="#carte">La carte</a></div>
+    </div>
+  </div>
+</header>
+
+<div class="facts">
+  <div><span>Ouvert</span><b>13h – 22h</b></div>
+  <div><span>Réservation</span><b>06 00 00 00 00</b></div>
+  <div><span>Google</span><b>4,8 <em>★</em></b></div>
+</div>
+
+<figure class="spread"><picture><source media="(max-width:700px)" srcset="media/banner-m.jpg"><img loading="lazy" src="media/banner.jpg" alt="La Terrasse : pizza aux légumes, penne et escalope, tiramisu"></picture></figure>
+
+<section><div class="wrap intro">
+  <figure><img loading="lazy" src="media/p-dolce.jpg" alt="Tiramisu en verrine"><figcaption>Tiramisu maison · La Terrasse</figcaption></figure>
+  <div class="txt">
+    <span class="eyebrow">Restaurant La Terrasse</span>
+    <h2>Comme <i>en Italie.</i></h2>
+    <p>Une cuisine italienne généreuse, des assiettes soignées et un accueil chaleureux. Nos clients nous donnent 4,8 sur 5 sur Google.</p>
+  </div>
+</div></section>
+
+<section class="avis" id="avis"><div class="wrap">
+  <div class="sec-head"><h2>Ils en parlent</h2><span class="eyebrow">Avis Google</span></div>
+  <div class="av-grid">
+    <div class="av-score"><b>4,8</b><span class="st">★★★★★</span><p>Note moyenne sur Google, d'après 67 avis.</p><a class="btn out-d" href="https://www.google.com/maps/search/?api=1&query=restaurant+Oujda" target="_blank" rel="noopener">Voir tous les avis</a></div>
+    <figure class="q"><blockquote>“If you're in Oujda, and you want a delicious pizza this is your place.”</blockquote><figcaption>Client · Google</figcaption></figure>
+    <figure class="q"><blockquote>“It was a delicious meal, the quality of the food was great, and the presentation was awesome.”</blockquote><figcaption>Client · Google</figcaption></figure>
+    <figure class="q"><blockquote>“The best food in the world is in this restaurant.”</blockquote><figcaption>Client · Google</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="plats" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><h2>Nos assiettes</h2><span class="eyebrow">De la cuisine à votre table</span></div>
+  <div class="grid">
+    <article><img loading="lazy" src="media/a-15.7.jpg" alt="Pizza Pomodoro Stracciatella"><h3>Pomodoro Stracciatella</h3><p>Sauce tomate maison, mozzarella, stracciatella, tomates cerises, basilic.</p></article>
+    <article><img loading="lazy" src="media/p-spaghetti.jpg" alt="Spaghetti"><h3>Pâtes fraîches</h3><p>Penne, fusilli ou spaghetti, de 55 à 75 DH.</p></article>
+    <article><img loading="lazy" src="media/p-penne.jpg" alt="Penne à la tomate et escalope gratinée"><h3>Penne &amp; escalope</h3><p>Penne à la tomate, escalope panée gratinée à la mozzarella.</p></article>
+    <article><img loading="lazy" src="media/p-salade.jpg" alt="Salade au poulet et parmesan"><h3>Salade poulet &amp; parmesan</h3><p>Poulet grillé, copeaux de parmesan, tomates confites, croûtons.</p></article>
+    <article><img loading="lazy" src="media/p-tiramisu.jpg" alt="Tiramisu"><h3>Tiramisu</h3><p>L'incontournable dessert italien, café et mascarpone.</p></article>
+    <article><img loading="lazy" src="media/p-sandwich.jpg" alt="Sandwichs du Terrasse"><h3>Sandwichs</h3><p>Poulet, crispy, shawarma ou gambas, dès 30 DH.</p></article>
+  </div>
+</div></section>
+
+<section class="atelier"><div class="wrap">
+  <div class="av"><video class="lazyv" data-src="media/v-alfredo.mp4" poster="media/alfredo-poster.jpg" muted loop playsinline preload="none" style="aspect-ratio:4/5"></video></div>
+  <div class="at">
+    <span class="eyebrow">Pizza Alfredo</span>
+    <h2>Laissez-vous <i>séduire.</i></h2>
+    <p>Une base de crème onctueuse, des champignons, des olives et du basilic, sur notre pâte napolitaine dorée au four.</p>
+    <a class="btn terra" href="#carte">Voir la carte</a>
+  </div>
+</div></section>
+
+
+
+<section class="cat" id="catalogue"><div class="wrap">
+  <div class="sec-head"><h2>Le menu <i>en images</i></h2><span class="eyebrow">Commandez en deux clics</span></div>
+  <p class="cat-lead">Choisissez vos plats, ajoutez-les à votre commande et envoyez-la directement au restaurant sur WhatsApp. Sur place, à emporter ou en livraison.</p>
+  <div class="chips" role="tablist"><button class="on" data-f="all">Tout</button><button data-f="pizzas">Pizzas</button><button data-f="pates">Pâtes &amp; salades</button><button data-f="desserts">Desserts</button></div>
+  <div class="cgrid"><button type="button" class="ci" data-c="pizzas" data-i="0"><span class="ph"><img loading="lazy" src="media/p-stracciatella.jpg" alt="Pizza Pomodoro Stracciatella"></span><span class="cb"><b>Pizza Pomodoro Stracciatella</b><small>Sauce tomate maison, mozzarella, stracciatella, tomates cerises, basilic.</small><span class="pr">Prix bientôt</span></span><span class="plus" aria-hidden="true">+</span></button><button type="button" class="ci" data-c="pizzas" data-i="1"><span class="ph"><img loading="lazy" src="media/alfredo-poster.jpg" alt="Pizza Alfredo"></span><span class="cb"><b>Pizza Alfredo</b><small>Base crème onctueuse, champignons, olives et basilic.</small><span class="pr">Prix bientôt</span></span><span class="plus" aria-hidden="true">+</span></button><button type="button" class="ci" data-c="pizzas" data-i="2"><span class="ph"><img loading="lazy" src="media/p-champ.jpg" alt="Pizza champignons & pesto"></span><span class="cb"><b>Pizza champignons & pesto</b><small>Champignons, olives noires, pesto et basilic.</small><span class="pr">Prix bientôt</span></span><span class="plus" aria-hidden="true">+</span></button><button type="button" class="ci" data-c="pizzas" data-i="3"><span class="ph"><img loading="lazy" src="media/p-jambon.jpg" alt="Pizza jambon"></span><span class="cb"><b>Pizza jambon</b><small>Base blanche, jambon, fromage frais et basilic.</small><span class="pr">Prix bientôt</span></span><span class="plus" aria-hidden="true">+</span></button><button type="button" class="ci" data-c="pates" data-i="4"><span class="ph"><img loading="lazy" src="media/p-penne.jpg" alt="Pâtes Pomodoro Stracciatella"></span><span class="cb"><b>Pâtes Pomodoro Stracciatella</b><small>Sauce tomate, tomates cerises, parmesan, basilic, stracciatella.</small><span class="pr">55 DH</span></span><span class="plus" aria-hidden="true">+</span></button><button type="button" class="ci" data-c="pates" data-i="5"><span class="ph"><img loading="lazy" src="media/p-salade.jpg" alt="Salade poulet & parmesan"></span><span class="cb"><b>Salade poulet & parmesan</b><small>Poulet grillé, parmesan, tomates confites, croûtons.</small><span class="pr">Prix bientôt</span></span><span class="plus" aria-hidden="true">+</span></button><button type="button" class="ci" data-c="desserts" data-i="6"><span class="ph"><img loading="lazy" src="media/p-tiramisu.jpg" alt="Tiramisu"></span><span class="cb"><b>Tiramisu</b><small>Café, mascarpone. Dolce vita.</small><span class="pr">25 DH</span></span><span class="plus" aria-hidden="true">+</span></button><button type="button" class="ci" data-c="desserts" data-i="7"><span class="ph"><img loading="lazy" src="media/p-brownie.jpg" alt="Brownie Freddo"></span><span class="cb"><b>Brownie Freddo</b><small>Brownie chaud et glace vanille.</small><span class="pr">25 DH</span></span><span class="plus" aria-hidden="true">+</span></button></div>
+</div></section>
+<dialog class="dish" id="dish"><button class="x" type="button" data-close aria-label="Fermer">×</button><img id="d-img" alt=""><div class="db"><h3 id="d-name"></h3><p id="d-desc"></p><span class="pr" id="d-pr">Prix bientôt</span><div class="qty"><button type="button" id="d-m" aria-label="Moins">−</button><b id="d-q">1</b><button type="button" id="d-p" aria-label="Plus">+</button></div><button class="btn terra" type="button" id="d-add">Ajouter à ma commande</button></div></dialog>
+
+<button class="cart-btn" id="cart-btn" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12l-1 13H7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span>Ma commande</span><b id="cart-n">0</b></button>
+<dialog class="cart" id="cart"><button class="x" type="button" data-close aria-label="Fermer">×</button><h3>Ma commande</h3><ul id="cart-list"></ul>
+  <div class="fld"><label>Mode</label><div class="seg" id="c-mode"><button type="button" class="on">Sur place</button><button type="button">À emporter</button><button type="button">Livraison</button></div></div>
+  <div class="fld"><label for="c-nom">Nom</label><input id="c-nom" autocomplete="name"></div>
+  <p class="err" id="c-err" hidden></p>
+  <button class="btn terra" type="button" id="c-send"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Envoyer sur WhatsApp</button></dialog>
+
+
+
+<section class="menu fbsec" id="carte"><div class="wrap">
+  <div class="sec-head"><h2>La carte</h2><span class="eyebrow">Feuilletez notre menu</span></div>
+  <div class="fbwrap"><button class="fbnav prev" id="fbprev" type="button" aria-label="Page précédente">‹</button><div class="book" id="book"><div class="pg cover"><div class="cv"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDg2IDEyMjEiPjxwYXRoIGZpbGw9IiNmMWUzYzQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTY3MyAxNTQgNjY0IDE1MSA2NjQgMTQxIDY2MCAxMzYgNjU2IDEyMyA2NTQgMTEwIDY0OCA5NiA2NDggODQgNjQyIDcyIDY0MCA1MiA2MzIgMzYgNjMyIDIzIDYzNCAxOSA2NDYgMTAgNjc0IDEwIDcxMyA0IDc1NSA0IDc3MCA4IDgxMSAxMiA4MTYgMTkgODE2IDMwIDgxMCAzOSA4MDggNTQgODAyIDczIDgwMCA4NyA3OTQgMTAxIDc5MiAxMjMgNzg2IDEzNCA3ODQgMTQ2IDc4MiAxNTEgNzc5IDE1NCA2OTggMTUyIDY3MyAxNTRaIE04NjYgMTc4IDg1NiAxNzggODI1IDE2NCA4MTAgMTYyIDgwMiAxNTYgNzk4IDE1MCA4MDIgMTMxIDgwOCAxMTkgODEwIDkzIDgxNiA4MCA4MTggNjAgODI0IDQ1IDgzMSA0MiA4NDYgNDIgODU5IDUwIDg3NCA1MiA4OTggNjYgOTA3IDY4IDkyNiA4NCA5MjYgODkgOTIwIDkzIDkxOCAxMDEgOTA2IDExOCA5MDQgMTI2IDg5NCAxMzkgODk0IDE0MiA4ODggMTQ4IDg4MiAxNjIgODcyIDE3NyA4NjYgMTc4WiBNNTgzIDE4NCA1ODAgMTgyIDU2OCAxNzAgNTYwIDE1NiA1NTYgMTUxIDU1MCAxMzggNTM4IDEyMSA1MjggMTAwIDUyMiA5NCA1MjAgODYgNTMyIDc2IDU0MCA3NCA1NDcgNjYgNTU0IDY2IDU2MyA2MCA1NzggNTYgNTgyIDUyIDU5OCA1MCA2MTEgNDQgNjE0IDQ0IDYyMCA0OCA2MzAgNjkgNjMyIDk2IDYzOCAxMDcgNjQyIDEyOSA2NDggMTQ0IDY1MCAxNTYgNjQ0IDE2MiA2MzUgMTY0IDYyMiAxNzAgNjEzIDE3MCA1OTggMTc4IDU5MSAxNzggNTgzIDE4NFogTTkzOCAyNDIgOTE3IDIyMCA5MDAgMjA4IDg4OCAxOTcgODg0IDE5MyA4ODQgMTg3IDg4OCAxNzkgODkyIDE3NyA5MDYgMTQ1IDkxOCAxMjcgOTI0IDExNiA5MjggMTEzIDkzMCAxMDQgOTM1IDk4IDk0MiA5NCA5NTcgOTggOTY0IDEwNiA5NzEgMTA4IDk4OCAxMjIgMTAyMCAxNTEgMTAyNCAxNTcgMTAyNiAxNjYgOTgzIDIwNiA5NjMgMjIwIDk0MyAyNDAgOTM4IDI0MlogTTUxMSAyNDAgNTA2IDI0MCA1MDEgMjM0IDQ2OSAyMTAgNDM2IDE3OCA0MzEgMTc2IDQyMiAxNjYgNDI0IDE1NyA0MzYgMTQ2IDQ1OSAxMjQgNDk0IDk4IDUwNyA5OCA1MTIgMTAxIDUxOCAxMTIgNTIyIDEyMSA1MjYgMTI2IDUzMCAxMzQgNTQyIDE1MSA1NDYgMTU5IDU1MiAxNjggNTU0IDE3NCA1NjIgMTg1IDU2MiAxOTQgNTYwIDE5OCA1NDcgMjEwIDUzMiAyMjAgNTExIDI0MFogTTc3NiA5MzIgNjY2IDkzMCA2NDEgOTIyIDYwOSA5MjIgNTkzIDkxNiA1NzYgOTE0IDU1NyA5MDggNTQzIDkwNiA1MzEgOTAwIDUxNSA4OTggNTA4IDg5MiA0OTYgODg4IDQ3MCA4NzYgNDYxIDg3NCA0NTQgODY2IDQ0NSA4NjQgNDI0IDg1MCAzODggODE4IDM2MiA3ODYgMzYwIDc3OSAzNTQgNzczIDM1MiA3NjggMzQ0IDc1NSAzMzggNzI3IDMzNiA2OTEgMzQwIDY3MyAzNDYgNjU1IDM1MiA2NDggMzUyIDY0MCAzNjAgNjMyIDM2MiA2MjMgMzY4IDYxNyAzNjggNjEzIDM2NSA2MTAgMzA0IDYxMCAyOTggNjA1IDI5NiA1MzYgMjk4IDUzMyAzMDUgNTI2IDMxNSA1MjQgMzI1IDUyOCAzNDkgNTMwIDM2NCA1MjggMzkwIDUyOCA0MDEgNTI2IDQxNSA1MjggNDI0IDUyNiA0NDkgNTI2IDQ1MiA1MjMgNDU0IDUxNyA0NTYgNDc5IDQ1NiA0MTIgNDU4IDM5OCA0NjQgMzgyIDQ2NCAzNjYgNDcyIDM1NCA0NzQgMzQwIDQ4NiAzMTYgNDkwIDMwNyA0OTQgMzAyIDQ5NiAyOTQgNTA0IDI4NyA1MjIgMjYxIDU1NyAyMjggNTY2IDIyMCA1NzIgMjE4IDU3OSAyMTAgNTg3IDIxMCA1OTYgMjAyIDYxOCAxOTQgNjMwIDE4OCA2NDcgMTg2IDY2MCAxNzggNjc5IDE3OCA3MTYgMTcyIDczNSAxNzIgNzc2IDE3OCA3OTAgMTc4IDgwNSAxODYgODE5IDE4NiA4MjkgMTk0IDg1MyAyMDIgODYwIDIwOCA4NjkgMjEwIDg4OSAyMjggOTEwIDI0NyA5MzAgMjcxIDkzOCAyNzcgOTUyIDI5NyA5NTQgMzA0IDk2MiAzMTMgOTcwIDMzNSA5NzYgMzQ2IDk3NiAzNjAgOTg0IDM3MSA5ODYgMzgxIDk4NCAzOTQgOTkyIDQzMCA5OTIgNTE5IDk5OCA1MjggMTAwNCA1MzAgMTE0NCA1MzAgMTE1MCA1MzcgMTE1MiA1NDUgMTE1MiA2MDEgMTE1MCA2MDggMTE0NiA2MTAgMTA4NSA2MTAgMTA4MiA2MTMgMTA4MiA2MTYgMTA5MiA2MzIgMTA5NiA2MzUgMTA5OCA2NDAgMTEwNiA2NTYgMTExMCA2NjkgMTExMiA2ODQgMTExMiA3MjMgMTEwNCA3NTMgMTA5OCA3NjMgMTA5NiA3NzIgMTA5MCA3NzcgMTA4MiA3OTQgMTA3MCA4MDcgMTA2OCA4MTIgMTAzNiA4NDIgMTAyOSA4NDQgMTAxMyA4NTggOTkzIDg2OCA5ODcgODc0IDk4MSA4NzQgOTU2IDg4OCA5NDMgODkyIDkzNiA4OTggOTE5IDkwMCA5MTAgOTA2IDg5NSA5MDggODgwIDkxNCA4NTggOTE4IDg0OSA5MjIgODIyIDkyMiA4MDYgOTI2IDc5NyA5MjYgNzg5IDkzMCA3NzYgOTMyWiBNOTk4IDMxNiA5ODkgMzE2IDk4NiAzMTIgOTY4IDI3OSA5NjAgMjY4IDk1NCAyNjEgOTUyIDI1MCA5NTkgMjQyIDk4MiAyMjQgMTAyNiAxODQgMTAzNCAxNzggMTAzOSAxNzggMTA0NiAxODMgMTA3MiAyMTYgMTA3NCAyMjQgMTA4MCAyMzIgMTA5MCAyNTYgMTA5NiAyNjQgMTA5NiAyNzAgMTA4NCAyODIgMTA1OSAyOTAgMTA0NyAyOTggMTAzNiAyOTggMTAyNyAzMDYgMTAxNSAzMDggOTk4IDMxNlogTTQ1NiAzMTYgNDQ5IDMxNiA0MzMgMzA4IDQyNCAzMDggNDA5IDI5OCAzOTUgMjk4IDM4MCAyODggMzc2IDI4OCAzNTcgMjgwIDM1MiAyNzIgMzUyIDI2NCAzNjAgMjU1IDM2MiAyNDYgMzY2IDI0MCAzNzAgMjMyIDM3NCAyMjcgMzc4IDIyMCAzODQgMjE0IDM4NiAyMDcgNDA0IDE4MiA0MTAgMTgwIDQyMiAxODYgNDQ0IDIwOCA0NTAgMjEwIDQ2NSAyMjYgNDc4IDIzNCA0OTYgMjUzIDQ5NiAyNTkgNDk0IDI2MyA0ODIgMjc4IDQ3MiAyOTYgNDY2IDMwMSA0NjIgMzEyIDQ1NiAzMTZaIE03OTAgNDU4IDc5NCA0NTYgNzk2IDQ1MSA3OTQgNDQ2IDgwMCA0MjAgODEwIDQwMyA4MTYgMzk2IDgyNCAzNzUgODI4IDM1NyA4MjQgMzI3IDgxOCAzMTggODE2IDMwOSA4MTEgMzA4IDgwNiAzMTMgODA2IDMxNyA4MDAgMzI3IDgwMCAzMzUgNzk2IDM0MSA3ODQgMzU5IDc3NiAzNjYgNzc2IDM3MiA3NjggMzgwIDc2OCAzODUgNzYyIDM5NCA3NjAgNDE3IDc1OSA0MTggNzUzIDQxOCA3NDYgNDA4IDc0MCAzOTUgNzM4IDM4MyA3NDYgMzUwIDc1MCAzNDUgNzUyIDMzNiA3NjAgMzI3IDc2MiAzMTcgNzY4IDMwNiA3NjggMjgwIDc2MCAyNTUgNzM4IDIzMCA3MjQgMjE4IDcyMiAyMjEgNzIyIDIyNCA3MjYgMjMwIDcyOCAyMzQgNzI4IDI1MyA3MjAgMjY0IDcxOCAyNzkgNzE0IDI4NCA3MDQgMzAzIDY5NiAzMTEgNjk0IDMxOCA2ODggMzI1IDY3NCAzNTMgNjcyIDM5NCA2NjkgMzk0IDY2NCAzOTAgNjU4IDM3OCA2NTYgMzY3IDY1NiAzNDcgNjYwIDMzMCA2NjAgMzI0IDY1OCAzMTkgNjU2IDMwOCA2NTAgMzAxIDY0OCAyOTQgNjQ1IDI5NCA2NDIgMjk3IDYzOCAzMTMgNjM0IDMxNyA2MzAgMzI3IDYxOCAzNDQgNjE2IDM1NSA2MDggMzYzIDYwOCAzOTYgNjE0IDQwMyA2MTggNDEzIDYyNiA0MjcgNjUyIDQ1MCA2NjYgNDU2IDY3NiA0NTggNjk1IDQ1OCA3MDMgNDU2IDczMCA0NTYgNzM3IDQ1OCA3OTAgNDU4WiBNMTAzNiA0MDggMTAyNiA0MDggMTAyMCA0MDYgMTAxMiA0MDIgMTAwOCAzOTggMTAwOCAzNzEgMTAwMCAzNTcgMTAwMiAzMzMgMTAwNCAzMzAgMTAxMyAzMjggMTAyMCAzMjIgMTAyOSAzMjIgMTAzOSAzMTQgMTA2MSAzMDYgMTA3NCAyOTggMTA4MyAyOTggMTA5MiAyOTIgMTEwMyAyOTIgMTExMCAzMDMgMTExNCAzMjAgMTEyMCAzMzIgMTEyMCAzNjAgMTEyMiAzNzMgMTEyNiAzODMgMTEyNCA0MDAgMTExOSA0MDQgMTExNCA0MDQgMTA4NSA0MDQgMTA2NSA0MDYgMTA0NiA0MDYgMTAzNiA0MDhaIE00MjcgNDA2IDM5OCA0MDQgMzQ2IDQwNCAzMjcgNDAyIDMyMiAzOTkgMzIwIDM5MiAzMjAgMzgwIDMyMiAzNjUgMzI4IDM1MyAzMjggMzM0IDMzNiAzMTkgMzM4IDMwNiAzNDYgMjk2IDM2OCAyOTggMzc4IDMwNiAzOTMgMzEwIDQxNyAzMjIgNDMwIDMyMiA0NDggMzM0IDQ0OCAzNTAgNDQyIDM2NyA0NDAgMzk3IDQzNyA0MDIgNDI3IDQwNlogTTEwOTkgNTEyIDEwNjUgNTEwIDEwMjkgNTEyIDEwMTYgNTA4IDEwMTAgNTA1IDEwMDggNDI3IDEwMTMgNDIwIDEwOTcgNDE4IDExMjMgNDIwIDExMjggNDIzIDExMzAgNDMwIDExMzAgNTAzIDExMjggNTA4IDExMjMgNTEyIDEwOTkgNTEyWiBNNDI0IDUxMCAzMzMgNTA4IDMyNCA1MDYgMzIwIDUwMSAzMjAgNDI4IDMzMyA0MjAgNDEzIDQyMCA0MzYgNDIyIDQ0MCA0MjYgNDM4IDQ0MiA0NDAgNDUwIDQzOCA0ODcgNDQwIDQ5NyA0NDAgNTAyIDQzNiA1MDYgNDI0IDUxMFogTTc0MCA4ODkgNzg5IDg4OCA4MDEgODg0IDgyOCA4ODIgODUxIDg3NiA4NzUgODc0IDg4NSA4NjggOTA2IDg2NCA5MzQgODUyIDk0NiA4NTAgOTU0IDg0NCA5NjUgODQyIDk3MSA4MzYgOTgxIDgzMiA5OTcgODIwIDEwMDYgODE2IDEwMTggODA0IDEwMzIgNzk1IDEwMzIgNzkyIDEwNTYgNzY2IDEwNTYgNzYyIDEwNjQgNzUzIDEwNjYgNzQ0IDEwNzIgNzM5IDEwODAgNjk5IDEwODAgNjc2IDEwNzQgNjU3IDEwNzIgNjQyIDEwNjYgNjM0IDEwNjIgNjI1IDEwNTggNjIwIDEwNTAgNjA2IDEwMzMgNTg4IDk5NyA1NTggOTg1IDU1MiA5ODAgNTQ4IDk3NCA1NDYgOTU0IDUzMiA5NDIgNTMwIDkzMiA1MjIgOTIzIDUyMiA4OTAgNTA4IDg3MSA1MDYgODYxIDUwMCA4MjYgNDk4IDgwOCA0OTAgNzY2IDQ4OCA2ODEgNDg4IDY0OSA0OTAgNjIxIDQ5OCA1OTcgNDk4IDU4MiA1MDYgNTYyIDUwOCA1NTIgNTE0IDUzOCA1MTYgNTMyIDUyMCA1MTkgNTIyIDUxMiA1MjggNTAwIDUzMiA0NTYgNTU2IDQzMCA1NzYgNDAwIDYwNSAzNzYgNjQxIDM3NCA2NTMgMzcwIDY2MSAzNjYgNjc4IDM2NiA3MDMgMzcwIDcyMSAzNzYgNzM5IDM4NCA3NDQgNDAwIDczOCA0MDYgNzMyIDQxNSA3MzAgNDE4IDcyNyA0MTggNzIwIDQxNiA3MDkgNDEwIDY5NCA0MTAgNjc0IDQxNiA2NjMgNDE4IDY1MCA0MjYgNjMzIDQzNCA2MjEgNDQ4IDYwNSA0NzUgNTgyIDQ5NSA1NzAgNTAyIDU2NCA1MTIgNTYyIDUxNyA1NTYgNTI1IDU1NCA1MzEgNTU0IDU0MCA1NDYgNTUxIDU0NCA1NjAgNTQwIDU3NSA1MzggNTg3IDUzMiA2MDYgNTMwIDYyNSA1MjIgNjY0IDUyMCA2NzAgNTE4IDcxMiA1MTQgNzUyIDUxNiA3ODUgNTIwIDgxNSA1MjIgODIxIDUyNCA4MjcgNTIyIDg0NiA1MzAgODY3IDUzMiA4NzcgNTM4IDg5MCA1NDAgOTAwIDU0NCA5MDkgNTQ2IDkyMCA1NTQgOTI5IDU1NCA5MzkgNTYyIDk0OCA1NjQgOTU5IDU3NCA5NjkgNTc4IDk5NCA1OTggMTAxNiA2MjEgMTAyNCA2MzMgMTAzMiA2NDcgMTAzNCA2NTcgMTAzOCA2NjUgMTA0MCA2NzMgMTA0MCA2OTMgMTAzMiA3MTAgMTAzMCA3MjMgMTAxOCA3NDQgOTkwIDc3MyA5OTAgNzc3IDk5OCA3ODUgMTAwMCA3OTEgOTk2IDc5NCA5ODkgNzk0IDk4MCA3ODYgOTY4IDc4NiA5NDcgODAwIDkzMCA4MTAgOTIyIDgxMCA5MTQgODE2IDkxMSA4MTYgOTA1IDgyMCA4OTQgODIwIDg2OSA4MzIgODQ1IDgzNCA4NDAgODM4IDg0MiA4NjEgODM4IDg2MiA4MzIgODYyIDgyOCA4NTUgODIxIDg0OCA4MDkgODQyIDc2MCA4NDIgNzQwIDg0NCA3MzIgODQ4IDcxOCA4NDggNjgxIDg0MiA2NDIgODQ0IDYzMyA4NDAgNjI5IDg0MiA2MTYgODM2IDU5NSA4MzQgNTgwIDgyOCA1NjggODI2IDU1OCA4MjAgNTQ2IDgyMCA1MzggODE2IDUzMCA4MTAgNTE4IDgwOCA0OTkgNzk2IDQ5MSA3OTQgNDgzIDc4OCA0NzcgNzg2IDQ2OSA3NzggNDU5IDc3MiA0MjggNzQyIDQxOCA3NDIgNDA0IDc1MiAzOTggNzU0IDM5NCA3NTkgMzk0IDc2OCA0MDIgNzc4IDQyNCA4MDIgNDM3IDgxMCA0NDMgODE4IDQ2NyA4MzIgNDc2IDgzNiA0ODMgODQyIDQ5NCA4NDQgNTAzIDg1MCA1MjAgODUyIDUzMSA4NTggNTM4IDg2MCA1NDggODY2IDU3OSA4NjYgNTg5IDg3NCA2MDggODc2IDYyMiA4ODIgNzAyIDg5MCA3NDAgODg5WiBNNzM2IDgxNSA3NjIgODEwIDc5MCA4MTAgODAxIDgwMiA4MDkgODAwIDg3MCA3OTQgODg1IDc4NiA4OTcgNzg2IDkwNSA3ODAgOTE0IDc3OCA5NDIgNzYyIDk1NiA3NTAgOTUyIDc0MCA5NTIgNzMzIDk1NiA3MzAgOTgyIDczMCA5OTIgNzE1IDEwMDAgNzAwIDEwMDAgNjU5IDk5NCA2NDMgOTg0IDYyOSA5NzIgNjE0IDk2MCA2MDQgOTQ2IDU5NiA5MzcgNTk0IDkzMyA1OTAgOTI0IDU4NiA5MDYgNTcyIDg4MSA1NjAgODc1IDU1NCA4NTkgNTU0IDg0MyA1NDYgNzk3IDU0NiA3ODggNTQyIDc4NiA1NDIgNzgwIDUzOCA3NDUgNTM4IDcxNCA1NDAgNzAxIDU0NCA2ODggNTQ0IDY0OCA1NDQgNjIyIDU0NiA2MTAgNTQ4IDU5NyA1NTQgNTgzIDU1NiA1NzYgNTYyIDU2NyA1NjQgNTQ2IDU3NiA1MzUgNTgwIDUxOCA1OTQgNTA4IDU5NiA1MDYgNTk5IDUwNCA2MTAgNTAyIDYxMiA0ODEgNjE4IDQ3MCA2MjAgNDY0IDYzMCA0NTYgNjM3IDQ1MCA2NDkgNDQ2IDY2OSA0NDggNjc4IDQ0NiA2ODQgNDUwIDY5MSA0NTQgNjk2IDQ2MCA2OTkgNDU4IDcwNyA0NTYgNzEwIDQ1NiA3MTYgNDY0IDcyOCA0OTMgNzU0IDUzMiA3NzYgNTQyIDc3OCA1NTAgNzg2IDU2NyA3ODggNTc4IDc5NCA2MDEgNzk2IDYxMSA3ODggNjE1IDc4OCA2MTggNzkwIDYxNiA3OTYgNjE4IDc5OCA2MjQgODA0IDYzNyA4MTAgNjc1IDgxMCA3MDIgODE2IDczNiA4MTVaIE02NTYgNjU2IDYyNyA2NTYgNjAxIDY1MiA1NzkgNjQyIDU2NiA2MjggNTYyIDYxOCA1NjIgNjA4IDU2NiA1OTggNTc1IDU4OCA1ODIgNTg2IDU5MSA1NzggNTk5IDU3OCA2MTAgNTcyIDYyNCA1NzAgNjQyIDU2NCA2NzEgNTY0IDY4MyA1NzAgNjk0IDU3MiA3MDAgNTc2IDcwOCA1ODAgNzIwIDU5MSA3MjIgNjAwIDcyOCA2MDYgNzI4IDYxNCA3MjAgNjIzIDcxOCA2MjkgNzA1IDY0MCA2OTMgNjQ0IDY4MSA2NTIgNjU2IDY1NlogTTg2MSA2NTIgODI1IDY1MCA4MTEgNjQ0IDc5NiA2NDAgNzg2IDYzMiA3ODAgNjIwIDc4MCA2MTEgNzgyIDYwMSA3OTggNTg4IDgwNyA1ODYgODIwIDU4MCA4MjYgNTc4IDg1MSA1NzggODY4IDU4NiA4ODQgNTg4IDkwNiA2MDYgOTEyIDYxNyA5MTAgNjIzIDkwOCA2MjkgODkyIDY0MiA4ODMgNjQ0IDg3NiA2NDggODY4IDY0OCA4NjEgNjUyWiBNNjM4IDYwOSA2NDQgNjA1IDY0NCA1OTggNjM3IDU5MCA2MjcgNTkwIDYxOCA1OTQgNjE2IDYwMCA2MjEgNjA4IDYyNiA2MTAgNjM4IDYwOVogTTg0NiA2MTYgODU0IDYwOCA4NTAgNjAxIDg0NCA1OTggODM3IDU5OCA4MzMgNjAwIDgzMCA2MDcgODQwIDYxNCA4NDYgNjE2WiBNNTAzIDY3NiA0OTcgNjc0IDQ5MCA2NzAgNDg4IDY2MyA0ODggNjU0IDUwNSA2NDQgNTE3IDY0NCA1MjUgNjQ4IDUzMCA2NTMgNTI4IDY2MiA1MjUgNjY2IDUxNiA2NjYgNTEwIDY3NCA1MDMgNjc2WiBNOTQ2IDY4NCA5MzEgNjgyIDkyNCA2NzMgOTI0IDY3MCA5NDAgNjUyIDk0NCA2NTAgOTU3IDY1NCA5NjYgNjYzIDk2OCA2NjggOTY2IDY3MyA5NTcgNjgyIDk0NiA2ODRaIE04MjkgNzY2IDgwNCA3NjYgNzc4IDc2NCA3NzEgNzYyIDc2NCA3NTYgNzU0IDc1MiA3NDAgNzQyIDczMiA3MzQgNzI4IDcyNyA3MjYgNzEyIDczMCA2OTQgNzQ5IDY3NiA3NjIgNjc0IDc3NCA2NjggNzgzIDY2NiA4MzEgNjY2IDg0NCA2NzQgODU0IDY3NCA4NTkgNjc4IDg2MSA2NzYgODc1IDY4NCA4ODggNjk1IDg5NiA3MDYgODk4IDcxNCA4OTggNzMyIDg5NiA3MzggODgxIDc1MiA4NzAgNzU2IDg2MiA3NjIgODI5IDc2NlogTTU5MSA3NTYgNTYxIDc1NCA1MzkgNzQ0IDUzMCA3MzUgNTIyIDcyMiA1MjAgNzEyIDUyMiA3MDUgNTM0IDY5MiA1NjkgNjc4IDYwMyA2NzQgNjE3IDY3NiA2MjQgNjgwIDYzMyA2ODIgNjQ2IDY5MCA2NTQgNjk5IDY2MCA3MTggNjU2IDczMSA2NDggNzM4IDYyMCA3NTIgNTkxIDc1NlogTTc4NCA3MTEgNzk2IDcwOCA3OTggNzAzIDc5OCA3MDEgNzg3IDY5NiA3ODAgNjk0IDc3MSA2OTggNzY4IDcwMiA3NjggNzA2IDc3MSA3MTAgNzg0IDcxMVogTTYwMiA3MjAgNjA4IDcxNSA2MTAgNzA4IDYwMSA3MDAgNTk1IDcwMCA1ODIgNzA5IDU4MiA3MTMgNTg3IDcxOCA1OTEgNzIwIDYwMiA3MjBaIE04NDggNzM4IDg1NCA3MzMgODUzIDcyNCA4NDQgNzIyIDgyOSA3MjIgODI0IDcyNSA4MjQgNzMwIDgyOCA3MzYgODM1IDczOCA4NDggNzM4WiBNNzA1IDc3OCA2NzkgNzc2IDY3MCA3NjkgNjY2IDc2MyA2NjYgNzYwIDY2OSA3NTYgNjg0IDc0OCA2OTEgNzQ4IDcwMiA3NTQgNzA2IDc1NCA3MTIgNzYxIDcxMiA3NzEgNzA4IDc3NiA3MDUgNzc4WiBNMTM2NCAxMjE4IDEzNDEgMTIxNiAxMzI5IDEyMTIgMTMxMSAxMjEwIDEyOTYgMTIwMCAxMjg0IDExOTQgMTI2MiAxMTc0IDEyNTAgMTE1NyAxMjQ4IDExNTAgMTI0MiAxMTQyIDEyNDAgMTEyNCAxMjM2IDExMTkgMTIzMiAxMTA3IDEyMzQgMTA3OCAxMjQwIDEwNjQgMTI0MiAxMDUwIDEyNDggMTA0MyAxMjU4IDEwMjMgMTI4MCAxMDA0IDEzMDAgOTkwIDEzMDUgOTg4IDEzMjAgOTg2IDEzMzEgOTc4IDEzNjkgOTc4IDEzODkgOTgwIDE0MDIgOTg2IDE0MTEgOTg2IDE0MjEgOTk0IDE0MjggOTk2IDE0MzAgMTAwMCAxNDM0IDEwMDIgMTQzOCAxMDAyIDE0NDggMTAxMyAxNDYyIDEwMzEgMTQ2NiAxMDQxIDE0NzIgMTA0NiAxNDc0IDEwNTkgMTQ4MiAxMDc4IDE0ODIgMTEwNiAxNDgwIDExMjUgMTQ3NCAxMTQwIDE0NzIgMTE1MCAxNDY2IDExNTYgMTQ1NiAxMTcyIDE0MzQgMTE5NCAxNDIzIDEyMDIgMTQxNiAxMjA0IDE0MDcgMTIxMCAxMzkwIDEyMTAgMTM2NCAxMjE4WiBNODk0IDEyMTAgODA0IDEyMTAgODAwIDEyMDMgODA1IDExOTggODE0IDExOTEgODE4IDExNzkgODE2IDExNjYgODEwIDExNTggODA2IDExNDcgODAxIDExNDQgNzM1IDExNDQgNzIzIDExNDggNzIwIDExNTIgNzE4IDExNjUgNzEyIDExNzUgNzEyIDExODYgNzE4IDExOTQgNzI2IDExOTggNzI4IDEyMDEgNzI4IDEyMDkgNzI1IDEyMTAgNjYxIDEyMTAgNjU2IDEyMDggNjU2IDEyMDIgNjcwIDExOTMgNjc4IDExODEgNjgyIDExNjQgNjg2IDExNTcgNjg4IDExNDUgNjk2IDExMzQgNjk4IDExMjQgNzA0IDExMTYgNzA2IDExMDQgNzEwIDEwOTcgNzE0IDEwODUgNzE4IDEwNzggNzIwIDEwNjUgNzI4IDEwNTQgNzMwIDEwNDEgNzM2IDEwMzQgNzQyIDEwMTcgNzQ0IDEwMDMgNzM2IDk5MyA3MzggOTg4IDc0MSA5ODQgNzUxIDk4MCA3ODcgOTgyIDc5NiA5ODAgODA2IDk4NSA4MDggOTkyIDgwOCA5OTkgODE0IDEwMDcgODE4IDEwMjYgODMyIDEwNTYgODM0IDEwNjkgODQwIDEwNzUgODQyIDEwOTIgODQ4IDExMDAgODU4IDExMzQgODY0IDExNDMgODY2IDExNTcgODcyIDExNjQgODcyIDExNzIgODc4IDExODAgODc4IDExODMgODk2IDEyMDEgODk2IDEyMDcgODk0IDEyMTBaIE0xMDI0IDEyMTAgOTQxIDEyMTAgOTM4IDEyMDcgOTM4IDEyMDAgOTQzIDExOTYgOTQ4IDExOTYgOTUyIDExOTEgOTUyIDExODUgOTU2IDExNzkgOTU0IDExNzMgOTU0IDEwMTUgOTQ3IDEwMTAgOTE4IDEwMTAgOTAwIDEwMjIgODg4IDEwMzggODgwIDEwMzYgODc4IDEwMzUgODc4IDk4NyA4ODAgOTgzIDg4MyA5ODAgOTA4IDk4MiAxMDc5IDk4MiAxMDg0IDk4NSAxMDg2IDk5MCAxMDg4IDEwMjggMTA4NiAxMDM1IDEwODIgMTAzOCAxMDc1IDEwMzggMTA3MiAxMDMyIDEwNjEgMTAyMCAxMDQ2IDEwMTIgMTAxNCAxMDEwIDEwMDggMTAxNSAxMDA4IDExODIgMTAxMCAxMTg3IDEwMTkgMTE5NiAxMDMwIDEyMDIgMTAzMCAxMjA3IDEwMjQgMTIxMFogTTE5IDEyMTIgMTAgMTIwOCA2IDEyMDQgNiAxMTk5IDEzIDExOTYgMTYgMTE5MyAyMiAxMTY5IDIyIDEwMjAgMTYgMTAwMCA0IDk5MyA0IDk4OCAxMSA5ODIgMTMgOTg0IDIzIDk4MCA4NCA5ODAgOTAgOTg0IDkwIDk5MiA3NiAxMDA0IDcyIDEwMTAgNzIgMTE4MiA3NyAxMTg2IDExNSAxMTg2IDEyMyAxMTgwIDEzNCAxMTc2IDE0NSAxMTY4IDE2MyAxMTQ4IDE2NiAxMTQ4IDE3MiAxMTUyIDE3NCAxMTU5IDE3MCAxMTcxIDE2NiAxMjA1IDE1OCAxMjEwIDcwIDEyMTAgMTkgMTIxMlogTTU1OSAxMjEwIDQ5MiAxMjEwIDQ5MCAxMjA5IDQ5MCAxMjA1IDQ5MiAxMjAwIDUwNCAxMTkxIDUwNiAxMTc3IDUwNiAxMDExIDUwMiAxMDAwIDQ5MCA5OTIgNDkyIDk4MyA0OTYgOTgwIDUyNiA5ODIgNTQ2IDk4MCA2MDEgOTgwIDYxMSA5ODYgNjM0IDk4OCA2NDIgOTk0IDY1MCA5OTYgNjY0IDEwMDggNjc0IDEwMjMgNjc0IDEwMzEgNjc4IDEwMzkgNjgwIDEwNTcgNjc0IDEwNzEgNjcyIDEwODUgNjUzIDExMDYgNjI2IDExMjIgNjA1IDExMjQgNTkzIDExMjggNTY2IDExMjggNTYyIDExMjkgNTYwIDExMzUgNTYyIDExODggNTY1IDExOTQgNTc2IDEyMDAgNTc4IDEyMDMgNTc3IDEyMTAgNTU5IDEyMTBaIE0zNTYgMTIxMCAyMDIgMTIxMCAxOTYgMTIwNyAxOTggMTIwMiAyMDggMTE5NCAyMTYgMTE3OCAyMTYgMTAxMyAyMDggMTAwMCAyMDAgOTkyIDE5OCA5ODcgMjAyIDk4MiAzNTUgOTgyIDM1OCA5ODQgMzYwIDk5MCAzNjIgMTAyOSAzNTggMTAzNiAzNTEgMTAzNiAzNDggMTAzNCAzMzcgMTAyMiAzMjIgMTAxMiAyNzEgMTAxMCAyNjQgMTAxNSAyNjQgMTA2NSAyNjQgMTA3NSAyNjkgMTA4MCAzMDcgMTA4MCAzMTYgMTA3NiAzMjUgMTA2NCAzMzAgMTA2NCAzMzYgMTA2OCAzMzggMTA4MCAzMzggMTExOCAzMzQgMTEyMiAzMjggMTEyMiAzMTQgMTEwOCAyNjkgMTEwOCAyNjYgMTExMSAyNjYgMTE4MyAyNzIgMTE4NiAzMTIgMTE4NiAzMjAgMTE4NCAzMjUgMTE4MCAzMzQgMTE3OCAzNDUgMTE3MCAzNjUgMTE0OCAzNzAgMTE1MSAzNzIgMTE1OSAzNjggMTE2OCAzNjQgMTIwNiAzNjAgMTIxMCAzNTYgMTIxMFogTTEyMDMgMTIxMCAxMTI1IDEyMTAgMTExNiAxMjA2IDExMTYgMTIwMyAxMTI4IDExOTMgMTEzNCAxMTgxIDExMzYgMTE3MSAxMTM2IDEwMjAgMTEyOCAxMDAwIDExMjQgOTk2IDExMTkgOTk0IDExMTggOTkxIDExMTggOTg1IDExMjMgOTgyIDExOTIgOTgyIDEyMDAgOTg0IDEyMDQgOTg3IDEyMDQgOTkzIDExOTYgOTk2IDExODggMTAwNSAxMTg2IDEwMTAgMTE4NiAxMTc4IDExOTQgMTE5MyAxMjA2IDEyMDIgMTIwOCAxMjA2IDEyMDMgMTIxMFogTTEzNjYgMTE4OSAxMzg4IDExODYgMTM5MiAxMTg0IDE0MDYgMTE3MSAxNDEwIDExNjUgMTQxNiAxMTU4IDE0MTggMTE0MyAxNDI0IDExMjkgMTQyNiAxMTIwIDE0MjQgMTA2NiAxNDIwIDEwNTYgMTQxNiAxMDM4IDE0MDYgMTAyNSAxMzk1IDEwMTggMTM5MCAxMDEyIDEzNzkgMTAxMCAxMzY5IDEwMDQgMTM2NCAxMDA0IDEzNDggMTAwNCAxMzMzIDEwMTAgMTMyMyAxMDEyIDEzMTAgMTAyNiAxMjk4IDEwNDMgMTI5NiAxMDQ4IDEyOTYgMTA2MiAxMjkwIDEwODIgMTI4OCAxMTA1IDEyOTAgMTExOCAxMjk2IDExMjkgMTI5OCAxMTQ5IDEzMDQgMTE1NyAxMzA2IDExNjQgMTMxNCAxMTczIDEzMzEgMTE4NiAxMzM3IDExODYgMTM0NSAxMTkwIDEzNjYgMTE4OVogTTU4MiAxMDk5IDU5NyAxMDk4IDYwOCAxMDkwIDYxNiAxMDgzIDYxOCAxMDc4IDYyNCAxMDU5IDYyMiAxMDQ1IDYxOCAxMDI4IDYxMCAxMDIwIDU5NCAxMDEwIDU2NiAxMDEwIDU2MCAxMDE0IDU2MCAxMDg4IDU2MiAxMDk2IDU2NCAxMDk4IDU4MiAxMDk5WiBNNzQ4IDExMTYgNzg5IDExMTYgNzkyIDExMTIgNzkyIDExMDYgNzg2IDEwOTQgNzg0IDEwNzkgNzc4IDEwNzAgNzc2IDEwNTcgNzY3IDEwNDQgNzYzIDEwNDQgNzYwIDEwNDggNzYwIDEwNTUgNzUyIDEwNjUgNzUyIDEwNzUgNzQ2IDEwODMgNzQyIDEwOTcgNzM4IDExMDYgNzM4IDExMTMgNzQwIDExMTYgNzQ4IDExMTZaIi8+PC9zdmc+" alt="La Terrasse"><span class="cl"></span><p class="ct">La Carte</p><p class="cs">Pizzeria napolitaine · Oujda</p></div></div><div class="pg"><h4 class="bh">Les Pâtes</h4><p class="bn">Penne · Fusilli · Spaghetti</p><div class="bi"><div class="bt"><b>Pomodoro Stracciatella</b><span class="bd"></span><em>55</em></div><small>Sauce tomate, tomates cerises, parmesan, basilic, stracciatella</small></div><div class="bi"><div class="bt"><b>Tonno</b><span class="bd"></span><em>60</em></div><small>Sauce tomate, thon, tomates cerises, basilic, parmesan</small></div><div class="bi"><div class="bt"><b>Bolognaise</b><span class="bd"></span><em>65</em></div><small>Sauce bolognaise, tomates cerises, basilic, parmesan</small></div><div class="bi"><div class="bt"><b>5 fromages</b><span class="bd"></span><em>65</em></div><small>Edam, cheddar, mozzarella, parmesan, gorgonzola</small></div><div class="bi"><div class="bt"><b>Alfredo</b><span class="bd"></span><em>65</em></div><small>Poulet, champignons, sauce blanche, basilic, parmesan</small></div><div class="bi"><div class="bt"><b>Carbonara</b><span class="bd"></span><em>65</em></div><small>Charcuterie, sauce blanche, basilic, parmesan</small></div><div class="bi"><div class="bt"><b>Pesto Gambas</b><span class="bd"></span><em>75</em></div><small>Sauce pesto, gambas, crème fraîche, basilic, parmesan</small></div><p class="bf">Prix en dirhams</p></div><div class="pg"><h4 class="bh">Les Sandwichs</h4><p class="bn">Seul / en menu</p><div class="bi"><div class="bt"><b>Poulet</b><span class="bd"></span><em>30 / 45</em></div><small>Poulet, laitue, olive, cornichon, tomate, sauce maison</small></div><div class="bi"><div class="bt"><b>Poulet Crispy</b><span class="bd"></span><em>40 / 55</em></div><small>Poulet pané, laitue, olive, cornichon, tomate, sauce maison</small></div><div class="bi"><div class="bt"><b>Shawarma</b><span class="bd"></span><em>30 / 45</em></div><small>Dinde, laitue, cornichon, tomate, sauce shawarma maison</small></div><div class="bi"><div class="bt"><b>Gambas</b><span class="bd"></span><em>45 / 60</em></div><small>Gambas panées, avocat, laitue, cornichon, tomate, sauce maison</small></div><h4 class="bh">Menu Enfants</h4><div class="bi"><div class="bt"><b>Petite pizza ou petit pot de pâtes</b><span class="bd"></span><em>35</em></div><small>Jus et surprise</small></div><p class="bf">Prix en dirhams</p></div><div class="pg"><h4 class="bh">Les Desserts</h4><div class="bi"><div class="bt"><b>Dolce Caramello</b><span class="bd"></span><em>25</em></div><small>Flan spécial au caramel à la texture fondante</small></div><div class="bi"><div class="bt"><b>Tiramisu</b><span class="bd"></span><em>25</em></div><small>L'incontournable dessert italien au café et mascarpone</small></div><div class="bi"><div class="bt"><b>Brownie Freddo</b><span class="bd"></span><em>25</em></div><small>Brownie fondant servi avec une boule de glace vanille</small></div><div class="bi"><div class="bt"><b>Cheesecake</b><span class="bd"></span><em>30</em></div><small>Cheesecake maison crémeux et gourmand</small></div><h4 class="bh">Les Suppléments</h4><div class="bi"><div class="bt"><b>Frites</b><span class="bd"></span><em>10</em></div></div><div class="bi"><div class="bt"><b>Potatoes</b><span class="bd"></span><em>10</em></div></div><div class="bi"><div class="bt"><b>Supplément parmesan</b><span class="bd"></span><em>10</em></div></div><p class="bf">Prix en dirhams</p></div><div class="pg"><h4 class="bh">Les Boissons</h4><div class="bi"><div class="bt"><b>Jus d'orange</b><span class="bd"></span><em>20</em></div></div><div class="bi"><div class="bt"><b>Jus de citron</b><span class="bd"></span><em>20</em></div></div><div class="bi"><div class="bt"><b>Jus de fraise</b><span class="bd"></span><em>28</em></div></div><div class="bi"><div class="bt"><b>Jus de mangue</b><span class="bd"></span><em>28</em></div></div><div class="bi"><div class="bt"><b>Jus d'ananas</b><span class="bd"></span><em>28</em></div></div><hr class="br"><div class="bi"><div class="bt"><b>Boisson gazeuse 25 cl</b><span class="bd"></span><em>10</em></div></div><div class="bi"><div class="bt"><b>Boisson gazeuse 1 L</b><span class="bd"></span><em>15</em></div></div><hr class="br"><div class="bi"><div class="bt"><b>Café</b><span class="bd"></span><em>15</em></div></div><div class="bi"><div class="bt"><b>Thé</b><span class="bd"></span><em>15</em></div></div><div class="bi"><div class="bt"><b>Eau minérale 33 cl</b><span class="bd"></span><em>5</em></div></div><div class="bi"><div class="bt"><b>Eau minérale 1,5 L</b><span class="bd"></span><em>10</em></div></div><p class="bf">Prix en dirhams</p></div><div class="pg cover back"><div class="cv"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDg2IDEyMjEiPjxwYXRoIGZpbGw9IiNmMWUzYzQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTY3MyAxNTQgNjY0IDE1MSA2NjQgMTQxIDY2MCAxMzYgNjU2IDEyMyA2NTQgMTEwIDY0OCA5NiA2NDggODQgNjQyIDcyIDY0MCA1MiA2MzIgMzYgNjMyIDIzIDYzNCAxOSA2NDYgMTAgNjc0IDEwIDcxMyA0IDc1NSA0IDc3MCA4IDgxMSAxMiA4MTYgMTkgODE2IDMwIDgxMCAzOSA4MDggNTQgODAyIDczIDgwMCA4NyA3OTQgMTAxIDc5MiAxMjMgNzg2IDEzNCA3ODQgMTQ2IDc4MiAxNTEgNzc5IDE1NCA2OTggMTUyIDY3MyAxNTRaIE04NjYgMTc4IDg1NiAxNzggODI1IDE2NCA4MTAgMTYyIDgwMiAxNTYgNzk4IDE1MCA4MDIgMTMxIDgwOCAxMTkgODEwIDkzIDgxNiA4MCA4MTggNjAgODI0IDQ1IDgzMSA0MiA4NDYgNDIgODU5IDUwIDg3NCA1MiA4OTggNjYgOTA3IDY4IDkyNiA4NCA5MjYgODkgOTIwIDkzIDkxOCAxMDEgOTA2IDExOCA5MDQgMTI2IDg5NCAxMzkgODk0IDE0MiA4ODggMTQ4IDg4MiAxNjIgODcyIDE3NyA4NjYgMTc4WiBNNTgzIDE4NCA1ODAgMTgyIDU2OCAxNzAgNTYwIDE1NiA1NTYgMTUxIDU1MCAxMzggNTM4IDEyMSA1MjggMTAwIDUyMiA5NCA1MjAgODYgNTMyIDc2IDU0MCA3NCA1NDcgNjYgNTU0IDY2IDU2MyA2MCA1NzggNTYgNTgyIDUyIDU5OCA1MCA2MTEgNDQgNjE0IDQ0IDYyMCA0OCA2MzAgNjkgNjMyIDk2IDYzOCAxMDcgNjQyIDEyOSA2NDggMTQ0IDY1MCAxNTYgNjQ0IDE2MiA2MzUgMTY0IDYyMiAxNzAgNjEzIDE3MCA1OTggMTc4IDU5MSAxNzggNTgzIDE4NFogTTkzOCAyNDIgOTE3IDIyMCA5MDAgMjA4IDg4OCAxOTcgODg0IDE5MyA4ODQgMTg3IDg4OCAxNzkgODkyIDE3NyA5MDYgMTQ1IDkxOCAxMjcgOTI0IDExNiA5MjggMTEzIDkzMCAxMDQgOTM1IDk4IDk0MiA5NCA5NTcgOTggOTY0IDEwNiA5NzEgMTA4IDk4OCAxMjIgMTAyMCAxNTEgMTAyNCAxNTcgMTAyNiAxNjYgOTgzIDIwNiA5NjMgMjIwIDk0MyAyNDAgOTM4IDI0MlogTTUxMSAyNDAgNTA2IDI0MCA1MDEgMjM0IDQ2OSAyMTAgNDM2IDE3OCA0MzEgMTc2IDQyMiAxNjYgNDI0IDE1NyA0MzYgMTQ2IDQ1OSAxMjQgNDk0IDk4IDUwNyA5OCA1MTIgMTAxIDUxOCAxMTIgNTIyIDEyMSA1MjYgMTI2IDUzMCAxMzQgNTQyIDE1MSA1NDYgMTU5IDU1MiAxNjggNTU0IDE3NCA1NjIgMTg1IDU2MiAxOTQgNTYwIDE5OCA1NDcgMjEwIDUzMiAyMjAgNTExIDI0MFogTTc3NiA5MzIgNjY2IDkzMCA2NDEgOTIyIDYwOSA5MjIgNTkzIDkxNiA1NzYgOTE0IDU1NyA5MDggNTQzIDkwNiA1MzEgOTAwIDUxNSA4OTggNTA4IDg5MiA0OTYgODg4IDQ3MCA4NzYgNDYxIDg3NCA0NTQgODY2IDQ0NSA4NjQgNDI0IDg1MCAzODggODE4IDM2MiA3ODYgMzYwIDc3OSAzNTQgNzczIDM1MiA3NjggMzQ0IDc1NSAzMzggNzI3IDMzNiA2OTEgMzQwIDY3MyAzNDYgNjU1IDM1MiA2NDggMzUyIDY0MCAzNjAgNjMyIDM2MiA2MjMgMzY4IDYxNyAzNjggNjEzIDM2NSA2MTAgMzA0IDYxMCAyOTggNjA1IDI5NiA1MzYgMjk4IDUzMyAzMDUgNTI2IDMxNSA1MjQgMzI1IDUyOCAzNDkgNTMwIDM2NCA1MjggMzkwIDUyOCA0MDEgNTI2IDQxNSA1MjggNDI0IDUyNiA0NDkgNTI2IDQ1MiA1MjMgNDU0IDUxNyA0NTYgNDc5IDQ1NiA0MTIgNDU4IDM5OCA0NjQgMzgyIDQ2NCAzNjYgNDcyIDM1NCA0NzQgMzQwIDQ4NiAzMTYgNDkwIDMwNyA0OTQgMzAyIDQ5NiAyOTQgNTA0IDI4NyA1MjIgMjYxIDU1NyAyMjggNTY2IDIyMCA1NzIgMjE4IDU3OSAyMTAgNTg3IDIxMCA1OTYgMjAyIDYxOCAxOTQgNjMwIDE4OCA2NDcgMTg2IDY2MCAxNzggNjc5IDE3OCA3MTYgMTcyIDczNSAxNzIgNzc2IDE3OCA3OTAgMTc4IDgwNSAxODYgODE5IDE4NiA4MjkgMTk0IDg1MyAyMDIgODYwIDIwOCA4NjkgMjEwIDg4OSAyMjggOTEwIDI0NyA5MzAgMjcxIDkzOCAyNzcgOTUyIDI5NyA5NTQgMzA0IDk2MiAzMTMgOTcwIDMzNSA5NzYgMzQ2IDk3NiAzNjAgOTg0IDM3MSA5ODYgMzgxIDk4NCAzOTQgOTkyIDQzMCA5OTIgNTE5IDk5OCA1MjggMTAwNCA1MzAgMTE0NCA1MzAgMTE1MCA1MzcgMTE1MiA1NDUgMTE1MiA2MDEgMTE1MCA2MDggMTE0NiA2MTAgMTA4NSA2MTAgMTA4MiA2MTMgMTA4MiA2MTYgMTA5MiA2MzIgMTA5NiA2MzUgMTA5OCA2NDAgMTEwNiA2NTYgMTExMCA2NjkgMTExMiA2ODQgMTExMiA3MjMgMTEwNCA3NTMgMTA5OCA3NjMgMTA5NiA3NzIgMTA5MCA3NzcgMTA4MiA3OTQgMTA3MCA4MDcgMTA2OCA4MTIgMTAzNiA4NDIgMTAyOSA4NDQgMTAxMyA4NTggOTkzIDg2OCA5ODcgODc0IDk4MSA4NzQgOTU2IDg4OCA5NDMgODkyIDkzNiA4OTggOTE5IDkwMCA5MTAgOTA2IDg5NSA5MDggODgwIDkxNCA4NTggOTE4IDg0OSA5MjIgODIyIDkyMiA4MDYgOTI2IDc5NyA5MjYgNzg5IDkzMCA3NzYgOTMyWiBNOTk4IDMxNiA5ODkgMzE2IDk4NiAzMTIgOTY4IDI3OSA5NjAgMjY4IDk1NCAyNjEgOTUyIDI1MCA5NTkgMjQyIDk4MiAyMjQgMTAyNiAxODQgMTAzNCAxNzggMTAzOSAxNzggMTA0NiAxODMgMTA3MiAyMTYgMTA3NCAyMjQgMTA4MCAyMzIgMTA5MCAyNTYgMTA5NiAyNjQgMTA5NiAyNzAgMTA4NCAyODIgMTA1OSAyOTAgMTA0NyAyOTggMTAzNiAyOTggMTAyNyAzMDYgMTAxNSAzMDggOTk4IDMxNlogTTQ1NiAzMTYgNDQ5IDMxNiA0MzMgMzA4IDQyNCAzMDggNDA5IDI5OCAzOTUgMjk4IDM4MCAyODggMzc2IDI4OCAzNTcgMjgwIDM1MiAyNzIgMzUyIDI2NCAzNjAgMjU1IDM2MiAyNDYgMzY2IDI0MCAzNzAgMjMyIDM3NCAyMjcgMzc4IDIyMCAzODQgMjE0IDM4NiAyMDcgNDA0IDE4MiA0MTAgMTgwIDQyMiAxODYgNDQ0IDIwOCA0NTAgMjEwIDQ2NSAyMjYgNDc4IDIzNCA0OTYgMjUzIDQ5NiAyNTkgNDk0IDI2MyA0ODIgMjc4IDQ3MiAyOTYgNDY2IDMwMSA0NjIgMzEyIDQ1NiAzMTZaIE03OTAgNDU4IDc5NCA0NTYgNzk2IDQ1MSA3OTQgNDQ2IDgwMCA0MjAgODEwIDQwMyA4MTYgMzk2IDgyNCAzNzUgODI4IDM1NyA4MjQgMzI3IDgxOCAzMTggODE2IDMwOSA4MTEgMzA4IDgwNiAzMTMgODA2IDMxNyA4MDAgMzI3IDgwMCAzMzUgNzk2IDM0MSA3ODQgMzU5IDc3NiAzNjYgNzc2IDM3MiA3NjggMzgwIDc2OCAzODUgNzYyIDM5NCA3NjAgNDE3IDc1OSA0MTggNzUzIDQxOCA3NDYgNDA4IDc0MCAzOTUgNzM4IDM4MyA3NDYgMzUwIDc1MCAzNDUgNzUyIDMzNiA3NjAgMzI3IDc2MiAzMTcgNzY4IDMwNiA3NjggMjgwIDc2MCAyNTUgNzM4IDIzMCA3MjQgMjE4IDcyMiAyMjEgNzIyIDIyNCA3MjYgMjMwIDcyOCAyMzQgNzI4IDI1MyA3MjAgMjY0IDcxOCAyNzkgNzE0IDI4NCA3MDQgMzAzIDY5NiAzMTEgNjk0IDMxOCA2ODggMzI1IDY3NCAzNTMgNjcyIDM5NCA2NjkgMzk0IDY2NCAzOTAgNjU4IDM3OCA2NTYgMzY3IDY1NiAzNDcgNjYwIDMzMCA2NjAgMzI0IDY1OCAzMTkgNjU2IDMwOCA2NTAgMzAxIDY0OCAyOTQgNjQ1IDI5NCA2NDIgMjk3IDYzOCAzMTMgNjM0IDMxNyA2MzAgMzI3IDYxOCAzNDQgNjE2IDM1NSA2MDggMzYzIDYwOCAzOTYgNjE0IDQwMyA2MTggNDEzIDYyNiA0MjcgNjUyIDQ1MCA2NjYgNDU2IDY3NiA0NTggNjk1IDQ1OCA3MDMgNDU2IDczMCA0NTYgNzM3IDQ1OCA3OTAgNDU4WiBNMTAzNiA0MDggMTAyNiA0MDggMTAyMCA0MDYgMTAxMiA0MDIgMTAwOCAzOTggMTAwOCAzNzEgMTAwMCAzNTcgMTAwMiAzMzMgMTAwNCAzMzAgMTAxMyAzMjggMTAyMCAzMjIgMTAyOSAzMjIgMTAzOSAzMTQgMTA2MSAzMDYgMTA3NCAyOTggMTA4MyAyOTggMTA5MiAyOTIgMTEwMyAyOTIgMTExMCAzMDMgMTExNCAzMjAgMTEyMCAzMzIgMTEyMCAzNjAgMTEyMiAzNzMgMTEyNiAzODMgMTEyNCA0MDAgMTExOSA0MDQgMTExNCA0MDQgMTA4NSA0MDQgMTA2NSA0MDYgMTA0NiA0MDYgMTAzNiA0MDhaIE00MjcgNDA2IDM5OCA0MDQgMzQ2IDQwNCAzMjcgNDAyIDMyMiAzOTkgMzIwIDM5MiAzMjAgMzgwIDMyMiAzNjUgMzI4IDM1MyAzMjggMzM0IDMzNiAzMTkgMzM4IDMwNiAzNDYgMjk2IDM2OCAyOTggMzc4IDMwNiAzOTMgMzEwIDQxNyAzMjIgNDMwIDMyMiA0NDggMzM0IDQ0OCAzNTAgNDQyIDM2NyA0NDAgMzk3IDQzNyA0MDIgNDI3IDQwNlogTTEwOTkgNTEyIDEwNjUgNTEwIDEwMjkgNTEyIDEwMTYgNTA4IDEwMTAgNTA1IDEwMDggNDI3IDEwMTMgNDIwIDEwOTcgNDE4IDExMjMgNDIwIDExMjggNDIzIDExMzAgNDMwIDExMzAgNTAzIDExMjggNTA4IDExMjMgNTEyIDEwOTkgNTEyWiBNNDI0IDUxMCAzMzMgNTA4IDMyNCA1MDYgMzIwIDUwMSAzMjAgNDI4IDMzMyA0MjAgNDEzIDQyMCA0MzYgNDIyIDQ0MCA0MjYgNDM4IDQ0MiA0NDAgNDUwIDQzOCA0ODcgNDQwIDQ5NyA0NDAgNTAyIDQzNiA1MDYgNDI0IDUxMFogTTc0MCA4ODkgNzg5IDg4OCA4MDEgODg0IDgyOCA4ODIgODUxIDg3NiA4NzUgODc0IDg4NSA4NjggOTA2IDg2NCA5MzQgODUyIDk0NiA4NTAgOTU0IDg0NCA5NjUgODQyIDk3MSA4MzYgOTgxIDgzMiA5OTcgODIwIDEwMDYgODE2IDEwMTggODA0IDEwMzIgNzk1IDEwMzIgNzkyIDEwNTYgNzY2IDEwNTYgNzYyIDEwNjQgNzUzIDEwNjYgNzQ0IDEwNzIgNzM5IDEwODAgNjk5IDEwODAgNjc2IDEwNzQgNjU3IDEwNzIgNjQyIDEwNjYgNjM0IDEwNjIgNjI1IDEwNTggNjIwIDEwNTAgNjA2IDEwMzMgNTg4IDk5NyA1NTggOTg1IDU1MiA5ODAgNTQ4IDk3NCA1NDYgOTU0IDUzMiA5NDIgNTMwIDkzMiA1MjIgOTIzIDUyMiA4OTAgNTA4IDg3MSA1MDYgODYxIDUwMCA4MjYgNDk4IDgwOCA0OTAgNzY2IDQ4OCA2ODEgNDg4IDY0OSA0OTAgNjIxIDQ5OCA1OTcgNDk4IDU4MiA1MDYgNTYyIDUwOCA1NTIgNTE0IDUzOCA1MTYgNTMyIDUyMCA1MTkgNTIyIDUxMiA1MjggNTAwIDUzMiA0NTYgNTU2IDQzMCA1NzYgNDAwIDYwNSAzNzYgNjQxIDM3NCA2NTMgMzcwIDY2MSAzNjYgNjc4IDM2NiA3MDMgMzcwIDcyMSAzNzYgNzM5IDM4NCA3NDQgNDAwIDczOCA0MDYgNzMyIDQxNSA3MzAgNDE4IDcyNyA0MTggNzIwIDQxNiA3MDkgNDEwIDY5NCA0MTAgNjc0IDQxNiA2NjMgNDE4IDY1MCA0MjYgNjMzIDQzNCA2MjEgNDQ4IDYwNSA0NzUgNTgyIDQ5NSA1NzAgNTAyIDU2NCA1MTIgNTYyIDUxNyA1NTYgNTI1IDU1NCA1MzEgNTU0IDU0MCA1NDYgNTUxIDU0NCA1NjAgNTQwIDU3NSA1MzggNTg3IDUzMiA2MDYgNTMwIDYyNSA1MjIgNjY0IDUyMCA2NzAgNTE4IDcxMiA1MTQgNzUyIDUxNiA3ODUgNTIwIDgxNSA1MjIgODIxIDUyNCA4MjcgNTIyIDg0NiA1MzAgODY3IDUzMiA4NzcgNTM4IDg5MCA1NDAgOTAwIDU0NCA5MDkgNTQ2IDkyMCA1NTQgOTI5IDU1NCA5MzkgNTYyIDk0OCA1NjQgOTU5IDU3NCA5NjkgNTc4IDk5NCA1OTggMTAxNiA2MjEgMTAyNCA2MzMgMTAzMiA2NDcgMTAzNCA2NTcgMTAzOCA2NjUgMTA0MCA2NzMgMTA0MCA2OTMgMTAzMiA3MTAgMTAzMCA3MjMgMTAxOCA3NDQgOTkwIDc3MyA5OTAgNzc3IDk5OCA3ODUgMTAwMCA3OTEgOTk2IDc5NCA5ODkgNzk0IDk4MCA3ODYgOTY4IDc4NiA5NDcgODAwIDkzMCA4MTAgOTIyIDgxMCA5MTQgODE2IDkxMSA4MTYgOTA1IDgyMCA4OTQgODIwIDg2OSA4MzIgODQ1IDgzNCA4NDAgODM4IDg0MiA4NjEgODM4IDg2MiA4MzIgODYyIDgyOCA4NTUgODIxIDg0OCA4MDkgODQyIDc2MCA4NDIgNzQwIDg0NCA3MzIgODQ4IDcxOCA4NDggNjgxIDg0MiA2NDIgODQ0IDYzMyA4NDAgNjI5IDg0MiA2MTYgODM2IDU5NSA4MzQgNTgwIDgyOCA1NjggODI2IDU1OCA4MjAgNTQ2IDgyMCA1MzggODE2IDUzMCA4MTAgNTE4IDgwOCA0OTkgNzk2IDQ5MSA3OTQgNDgzIDc4OCA0NzcgNzg2IDQ2OSA3NzggNDU5IDc3MiA0MjggNzQyIDQxOCA3NDIgNDA0IDc1MiAzOTggNzU0IDM5NCA3NTkgMzk0IDc2OCA0MDIgNzc4IDQyNCA4MDIgNDM3IDgxMCA0NDMgODE4IDQ2NyA4MzIgNDc2IDgzNiA0ODMgODQyIDQ5NCA4NDQgNTAzIDg1MCA1MjAgODUyIDUzMSA4NTggNTM4IDg2MCA1NDggODY2IDU3OSA4NjYgNTg5IDg3NCA2MDggODc2IDYyMiA4ODIgNzAyIDg5MCA3NDAgODg5WiBNNzM2IDgxNSA3NjIgODEwIDc5MCA4MTAgODAxIDgwMiA4MDkgODAwIDg3MCA3OTQgODg1IDc4NiA4OTcgNzg2IDkwNSA3ODAgOTE0IDc3OCA5NDIgNzYyIDk1NiA3NTAgOTUyIDc0MCA5NTIgNzMzIDk1NiA3MzAgOTgyIDczMCA5OTIgNzE1IDEwMDAgNzAwIDEwMDAgNjU5IDk5NCA2NDMgOTg0IDYyOSA5NzIgNjE0IDk2MCA2MDQgOTQ2IDU5NiA5MzcgNTk0IDkzMyA1OTAgOTI0IDU4NiA5MDYgNTcyIDg4MSA1NjAgODc1IDU1NCA4NTkgNTU0IDg0MyA1NDYgNzk3IDU0NiA3ODggNTQyIDc4NiA1NDIgNzgwIDUzOCA3NDUgNTM4IDcxNCA1NDAgNzAxIDU0NCA2ODggNTQ0IDY0OCA1NDQgNjIyIDU0NiA2MTAgNTQ4IDU5NyA1NTQgNTgzIDU1NiA1NzYgNTYyIDU2NyA1NjQgNTQ2IDU3NiA1MzUgNTgwIDUxOCA1OTQgNTA4IDU5NiA1MDYgNTk5IDUwNCA2MTAgNTAyIDYxMiA0ODEgNjE4IDQ3MCA2MjAgNDY0IDYzMCA0NTYgNjM3IDQ1MCA2NDkgNDQ2IDY2OSA0NDggNjc4IDQ0NiA2ODQgNDUwIDY5MSA0NTQgNjk2IDQ2MCA2OTkgNDU4IDcwNyA0NTYgNzEwIDQ1NiA3MTYgNDY0IDcyOCA0OTMgNzU0IDUzMiA3NzYgNTQyIDc3OCA1NTAgNzg2IDU2NyA3ODggNTc4IDc5NCA2MDEgNzk2IDYxMSA3ODggNjE1IDc4OCA2MTggNzkwIDYxNiA3OTYgNjE4IDc5OCA2MjQgODA0IDYzNyA4MTAgNjc1IDgxMCA3MDIgODE2IDczNiA4MTVaIE02NTYgNjU2IDYyNyA2NTYgNjAxIDY1MiA1NzkgNjQyIDU2NiA2MjggNTYyIDYxOCA1NjIgNjA4IDU2NiA1OTggNTc1IDU4OCA1ODIgNTg2IDU5MSA1NzggNTk5IDU3OCA2MTAgNTcyIDYyNCA1NzAgNjQyIDU2NCA2NzEgNTY0IDY4MyA1NzAgNjk0IDU3MiA3MDAgNTc2IDcwOCA1ODAgNzIwIDU5MSA3MjIgNjAwIDcyOCA2MDYgNzI4IDYxNCA3MjAgNjIzIDcxOCA2MjkgNzA1IDY0MCA2OTMgNjQ0IDY4MSA2NTIgNjU2IDY1NlogTTg2MSA2NTIgODI1IDY1MCA4MTEgNjQ0IDc5NiA2NDAgNzg2IDYzMiA3ODAgNjIwIDc4MCA2MTEgNzgyIDYwMSA3OTggNTg4IDgwNyA1ODYgODIwIDU4MCA4MjYgNTc4IDg1MSA1NzggODY4IDU4NiA4ODQgNTg4IDkwNiA2MDYgOTEyIDYxNyA5MTAgNjIzIDkwOCA2MjkgODkyIDY0MiA4ODMgNjQ0IDg3NiA2NDggODY4IDY0OCA4NjEgNjUyWiBNNjM4IDYwOSA2NDQgNjA1IDY0NCA1OTggNjM3IDU5MCA2MjcgNTkwIDYxOCA1OTQgNjE2IDYwMCA2MjEgNjA4IDYyNiA2MTAgNjM4IDYwOVogTTg0NiA2MTYgODU0IDYwOCA4NTAgNjAxIDg0NCA1OTggODM3IDU5OCA4MzMgNjAwIDgzMCA2MDcgODQwIDYxNCA4NDYgNjE2WiBNNTAzIDY3NiA0OTcgNjc0IDQ5MCA2NzAgNDg4IDY2MyA0ODggNjU0IDUwNSA2NDQgNTE3IDY0NCA1MjUgNjQ4IDUzMCA2NTMgNTI4IDY2MiA1MjUgNjY2IDUxNiA2NjYgNTEwIDY3NCA1MDMgNjc2WiBNOTQ2IDY4NCA5MzEgNjgyIDkyNCA2NzMgOTI0IDY3MCA5NDAgNjUyIDk0NCA2NTAgOTU3IDY1NCA5NjYgNjYzIDk2OCA2NjggOTY2IDY3MyA5NTcgNjgyIDk0NiA2ODRaIE04MjkgNzY2IDgwNCA3NjYgNzc4IDc2NCA3NzEgNzYyIDc2NCA3NTYgNzU0IDc1MiA3NDAgNzQyIDczMiA3MzQgNzI4IDcyNyA3MjYgNzEyIDczMCA2OTQgNzQ5IDY3NiA3NjIgNjc0IDc3NCA2NjggNzgzIDY2NiA4MzEgNjY2IDg0NCA2NzQgODU0IDY3NCA4NTkgNjc4IDg2MSA2NzYgODc1IDY4NCA4ODggNjk1IDg5NiA3MDYgODk4IDcxNCA4OTggNzMyIDg5NiA3MzggODgxIDc1MiA4NzAgNzU2IDg2MiA3NjIgODI5IDc2NlogTTU5MSA3NTYgNTYxIDc1NCA1MzkgNzQ0IDUzMCA3MzUgNTIyIDcyMiA1MjAgNzEyIDUyMiA3MDUgNTM0IDY5MiA1NjkgNjc4IDYwMyA2NzQgNjE3IDY3NiA2MjQgNjgwIDYzMyA2ODIgNjQ2IDY5MCA2NTQgNjk5IDY2MCA3MTggNjU2IDczMSA2NDggNzM4IDYyMCA3NTIgNTkxIDc1NlogTTc4NCA3MTEgNzk2IDcwOCA3OTggNzAzIDc5OCA3MDEgNzg3IDY5NiA3ODAgNjk0IDc3MSA2OTggNzY4IDcwMiA3NjggNzA2IDc3MSA3MTAgNzg0IDcxMVogTTYwMiA3MjAgNjA4IDcxNSA2MTAgNzA4IDYwMSA3MDAgNTk1IDcwMCA1ODIgNzA5IDU4MiA3MTMgNTg3IDcxOCA1OTEgNzIwIDYwMiA3MjBaIE04NDggNzM4IDg1NCA3MzMgODUzIDcyNCA4NDQgNzIyIDgyOSA3MjIgODI0IDcyNSA4MjQgNzMwIDgyOCA3MzYgODM1IDczOCA4NDggNzM4WiBNNzA1IDc3OCA2NzkgNzc2IDY3MCA3NjkgNjY2IDc2MyA2NjYgNzYwIDY2OSA3NTYgNjg0IDc0OCA2OTEgNzQ4IDcwMiA3NTQgNzA2IDc1NCA3MTIgNzYxIDcxMiA3NzEgNzA4IDc3NiA3MDUgNzc4WiBNMTM2NCAxMjE4IDEzNDEgMTIxNiAxMzI5IDEyMTIgMTMxMSAxMjEwIDEyOTYgMTIwMCAxMjg0IDExOTQgMTI2MiAxMTc0IDEyNTAgMTE1NyAxMjQ4IDExNTAgMTI0MiAxMTQyIDEyNDAgMTEyNCAxMjM2IDExMTkgMTIzMiAxMTA3IDEyMzQgMTA3OCAxMjQwIDEwNjQgMTI0MiAxMDUwIDEyNDggMTA0MyAxMjU4IDEwMjMgMTI4MCAxMDA0IDEzMDAgOTkwIDEzMDUgOTg4IDEzMjAgOTg2IDEzMzEgOTc4IDEzNjkgOTc4IDEzODkgOTgwIDE0MDIgOTg2IDE0MTEgOTg2IDE0MjEgOTk0IDE0MjggOTk2IDE0MzAgMTAwMCAxNDM0IDEwMDIgMTQzOCAxMDAyIDE0NDggMTAxMyAxNDYyIDEwMzEgMTQ2NiAxMDQxIDE0NzIgMTA0NiAxNDc0IDEwNTkgMTQ4MiAxMDc4IDE0ODIgMTEwNiAxNDgwIDExMjUgMTQ3NCAxMTQwIDE0NzIgMTE1MCAxNDY2IDExNTYgMTQ1NiAxMTcyIDE0MzQgMTE5NCAxNDIzIDEyMDIgMTQxNiAxMjA0IDE0MDcgMTIxMCAxMzkwIDEyMTAgMTM2NCAxMjE4WiBNODk0IDEyMTAgODA0IDEyMTAgODAwIDEyMDMgODA1IDExOTggODE0IDExOTEgODE4IDExNzkgODE2IDExNjYgODEwIDExNTggODA2IDExNDcgODAxIDExNDQgNzM1IDExNDQgNzIzIDExNDggNzIwIDExNTIgNzE4IDExNjUgNzEyIDExNzUgNzEyIDExODYgNzE4IDExOTQgNzI2IDExOTggNzI4IDEyMDEgNzI4IDEyMDkgNzI1IDEyMTAgNjYxIDEyMTAgNjU2IDEyMDggNjU2IDEyMDIgNjcwIDExOTMgNjc4IDExODEgNjgyIDExNjQgNjg2IDExNTcgNjg4IDExNDUgNjk2IDExMzQgNjk4IDExMjQgNzA0IDExMTYgNzA2IDExMDQgNzEwIDEwOTcgNzE0IDEwODUgNzE4IDEwNzggNzIwIDEwNjUgNzI4IDEwNTQgNzMwIDEwNDEgNzM2IDEwMzQgNzQyIDEwMTcgNzQ0IDEwMDMgNzM2IDk5MyA3MzggOTg4IDc0MSA5ODQgNzUxIDk4MCA3ODcgOTgyIDc5NiA5ODAgODA2IDk4NSA4MDggOTkyIDgwOCA5OTkgODE0IDEwMDcgODE4IDEwMjYgODMyIDEwNTYgODM0IDEwNjkgODQwIDEwNzUgODQyIDEwOTIgODQ4IDExMDAgODU4IDExMzQgODY0IDExNDMgODY2IDExNTcgODcyIDExNjQgODcyIDExNzIgODc4IDExODAgODc4IDExODMgODk2IDEyMDEgODk2IDEyMDcgODk0IDEyMTBaIE0xMDI0IDEyMTAgOTQxIDEyMTAgOTM4IDEyMDcgOTM4IDEyMDAgOTQzIDExOTYgOTQ4IDExOTYgOTUyIDExOTEgOTUyIDExODUgOTU2IDExNzkgOTU0IDExNzMgOTU0IDEwMTUgOTQ3IDEwMTAgOTE4IDEwMTAgOTAwIDEwMjIgODg4IDEwMzggODgwIDEwMzYgODc4IDEwMzUgODc4IDk4NyA4ODAgOTgzIDg4MyA5ODAgOTA4IDk4MiAxMDc5IDk4MiAxMDg0IDk4NSAxMDg2IDk5MCAxMDg4IDEwMjggMTA4NiAxMDM1IDEwODIgMTAzOCAxMDc1IDEwMzggMTA3MiAxMDMyIDEwNjEgMTAyMCAxMDQ2IDEwMTIgMTAxNCAxMDEwIDEwMDggMTAxNSAxMDA4IDExODIgMTAxMCAxMTg3IDEwMTkgMTE5NiAxMDMwIDEyMDIgMTAzMCAxMjA3IDEwMjQgMTIxMFogTTE5IDEyMTIgMTAgMTIwOCA2IDEyMDQgNiAxMTk5IDEzIDExOTYgMTYgMTE5MyAyMiAxMTY5IDIyIDEwMjAgMTYgMTAwMCA0IDk5MyA0IDk4OCAxMSA5ODIgMTMgOTg0IDIzIDk4MCA4NCA5ODAgOTAgOTg0IDkwIDk5MiA3NiAxMDA0IDcyIDEwMTAgNzIgMTE4MiA3NyAxMTg2IDExNSAxMTg2IDEyMyAxMTgwIDEzNCAxMTc2IDE0NSAxMTY4IDE2MyAxMTQ4IDE2NiAxMTQ4IDE3MiAxMTUyIDE3NCAxMTU5IDE3MCAxMTcxIDE2NiAxMjA1IDE1OCAxMjEwIDcwIDEyMTAgMTkgMTIxMlogTTU1OSAxMjEwIDQ5MiAxMjEwIDQ5MCAxMjA5IDQ5MCAxMjA1IDQ5MiAxMjAwIDUwNCAxMTkxIDUwNiAxMTc3IDUwNiAxMDExIDUwMiAxMDAwIDQ5MCA5OTIgNDkyIDk4MyA0OTYgOTgwIDUyNiA5ODIgNTQ2IDk4MCA2MDEgOTgwIDYxMSA5ODYgNjM0IDk4OCA2NDIgOTk0IDY1MCA5OTYgNjY0IDEwMDggNjc0IDEwMjMgNjc0IDEwMzEgNjc4IDEwMzkgNjgwIDEwNTcgNjc0IDEwNzEgNjcyIDEwODUgNjUzIDExMDYgNjI2IDExMjIgNjA1IDExMjQgNTkzIDExMjggNTY2IDExMjggNTYyIDExMjkgNTYwIDExMzUgNTYyIDExODggNTY1IDExOTQgNTc2IDEyMDAgNTc4IDEyMDMgNTc3IDEyMTAgNTU5IDEyMTBaIE0zNTYgMTIxMCAyMDIgMTIxMCAxOTYgMTIwNyAxOTggMTIwMiAyMDggMTE5NCAyMTYgMTE3OCAyMTYgMTAxMyAyMDggMTAwMCAyMDAgOTkyIDE5OCA5ODcgMjAyIDk4MiAzNTUgOTgyIDM1OCA5ODQgMzYwIDk5MCAzNjIgMTAyOSAzNTggMTAzNiAzNTEgMTAzNiAzNDggMTAzNCAzMzcgMTAyMiAzMjIgMTAxMiAyNzEgMTAxMCAyNjQgMTAxNSAyNjQgMTA2NSAyNjQgMTA3NSAyNjkgMTA4MCAzMDcgMTA4MCAzMTYgMTA3NiAzMjUgMTA2NCAzMzAgMTA2NCAzMzYgMTA2OCAzMzggMTA4MCAzMzggMTExOCAzMzQgMTEyMiAzMjggMTEyMiAzMTQgMTEwOCAyNjkgMTEwOCAyNjYgMTExMSAyNjYgMTE4MyAyNzIgMTE4NiAzMTIgMTE4NiAzMjAgMTE4NCAzMjUgMTE4MCAzMzQgMTE3OCAzNDUgMTE3MCAzNjUgMTE0OCAzNzAgMTE1MSAzNzIgMTE1OSAzNjggMTE2OCAzNjQgMTIwNiAzNjAgMTIxMCAzNTYgMTIxMFogTTEyMDMgMTIxMCAxMTI1IDEyMTAgMTExNiAxMjA2IDExMTYgMTIwMyAxMTI4IDExOTMgMTEzNCAxMTgxIDExMzYgMTE3MSAxMTM2IDEwMjAgMTEyOCAxMDAwIDExMjQgOTk2IDExMTkgOTk0IDExMTggOTkxIDExMTggOTg1IDExMjMgOTgyIDExOTIgOTgyIDEyMDAgOTg0IDEyMDQgOTg3IDEyMDQgOTkzIDExOTYgOTk2IDExODggMTAwNSAxMTg2IDEwMTAgMTE4NiAxMTc4IDExOTQgMTE5MyAxMjA2IDEyMDIgMTIwOCAxMjA2IDEyMDMgMTIxMFogTTEzNjYgMTE4OSAxMzg4IDExODYgMTM5MiAxMTg0IDE0MDYgMTE3MSAxNDEwIDExNjUgMTQxNiAxMTU4IDE0MTggMTE0MyAxNDI0IDExMjkgMTQyNiAxMTIwIDE0MjQgMTA2NiAxNDIwIDEwNTYgMTQxNiAxMDM4IDE0MDYgMTAyNSAxMzk1IDEwMTggMTM5MCAxMDEyIDEzNzkgMTAxMCAxMzY5IDEwMDQgMTM2NCAxMDA0IDEzNDggMTAwNCAxMzMzIDEwMTAgMTMyMyAxMDEyIDEzMTAgMTAyNiAxMjk4IDEwNDMgMTI5NiAxMDQ4IDEyOTYgMTA2MiAxMjkwIDEwODIgMTI4OCAxMTA1IDEyOTAgMTExOCAxMjk2IDExMjkgMTI5OCAxMTQ5IDEzMDQgMTE1NyAxMzA2IDExNjQgMTMxNCAxMTczIDEzMzEgMTE4NiAxMzM3IDExODYgMTM0NSAxMTkwIDEzNjYgMTE4OVogTTU4MiAxMDk5IDU5NyAxMDk4IDYwOCAxMDkwIDYxNiAxMDgzIDYxOCAxMDc4IDYyNCAxMDU5IDYyMiAxMDQ1IDYxOCAxMDI4IDYxMCAxMDIwIDU5NCAxMDEwIDU2NiAxMDEwIDU2MCAxMDE0IDU2MCAxMDg4IDU2MiAxMDk2IDU2NCAxMDk4IDU4MiAxMDk5WiBNNzQ4IDExMTYgNzg5IDExMTYgNzkyIDExMTIgNzkyIDExMDYgNzg2IDEwOTQgNzg0IDEwNzkgNzc4IDEwNzAgNzc2IDEwNTcgNzY3IDEwNDQgNzYzIDEwNDQgNzYwIDEwNDggNzYwIDEwNTUgNzUyIDEwNjUgNzUyIDEwNzUgNzQ2IDEwODMgNzQyIDEwOTcgNzM4IDExMDYgNzM4IDExMTMgNzQwIDExMTYgNzQ4IDExMTZaIi8+PC9zdmc+" alt="La Terrasse"><span class="cl"></span><p class="cs">Résidence la Colline 42, près de la Clinique Badr</p><p class="cs">06 00 00 00 00 · @lepatio__</p><p class="cs">Buon appetito !</p></div></div></div><button class="fbnav next" id="fbnext" type="button" aria-label="Page suivante">›</button></div>
+  <div class="fbbar"><span id="fbcount">1 / 6</span><span class="fbhint">Touchez la page pour tourner</span></div>
+  <button class="btn out-d more" id="more" type="button" hidden>Voir toute la carte</button>
+  
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head"><h2>Pourquoi La Terrasse</h2><span class="eyebrow">Ce qui nous distingue</span></div>
+  <div class="pts">
+    <a class="pt" href="#carte"><b>Pizza napolitaine</b><span>Pâte moelleuse, bords gonflés.</span></a>
+    <a class="pt" href="#carte"><b>La pizza</b><span>Celle que nos clients recommandent.</span></a>
+    <a class="pt" href="#avis"><b>4,8 sur Google</b><span>D'après 67 avis clients.</span></a>
+    <a class="pt" href="#reserver"><b>Accueil chaleureux</b><span>Une équipe aux petits soins.</span></a>
+    <a class="pt" href="#carte"><b>Menu enfants</b><span>Petite pizza ou pâtes, jus et surprise : 35 DH.</span></a>
+    <a class="pt" href="#infos"><b>13h – 22h</b><span>Du mardi au dimanche.</span></a>
+  </div>
+</div></section>
+
+<section class="resa" id="reserver"><div class="wrap grid">
+  <div><span class="eyebrow" style="color:var(--olive)">Prenotazione</span><h2 style="margin-top:16px">Réservez <i>votre table.</i></h2><p class="lead">Votre demande part sur WhatsApp. Le restaurant vous confirme rapidement.</p></div>
+  <form class="form" id="resa" novalidate>
+    <div class="fld"><label for="r-date">Date</label><input id="r-date" type="date"></div>
+    <div class="fld"><label for="r-time">Heure</label><select id="r-time"></select></div>
+    <div class="fld"><label for="r-pers">Personnes</label><select id="r-pers"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option value="9+">9 et plus</option></select></div>
+    <div class="fld"><label for="r-occ">Occasion</label><select id="r-occ"><option>Dîner</option><option>Déjeuner</option><option>Anniversaire</option><option>Repas de famille</option><option>Repas d'affaires</option></select></div>
+    <div class="fld full"><label for="r-nom">Nom</label><input id="r-nom" autocomplete="name"></div>
+    <div class="fld full"><label for="r-msg">Demande particulière</label><input id="r-msg" placeholder="Chaise bébé, gâteau d'anniversaire…"></div>
+    <p class="err" id="r-err" hidden></p>
+    <button class="btn terra" type="submit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Envoyer sur WhatsApp</button>
+  </form>
+</div></section>
+
+<section class="ev" id="evenements"><div class="wrap">
+  <figure class="evp"><img loading="lazy" src="media/p-legumes.jpg" alt="Pizza aux légumes à partager"></figure>
+  <div class="evt">
+    <span class="eyebrow">Anniversaires &amp; groupes</span>
+    <h2>Vos moments <i>à l'italienne.</i></h2>
+    <p>Un anniversaire, un repas de famille ou d'équipe ? Dites-nous ce que vous préparez, nous revenons vers vous avec une proposition.</p>
+    <ul class="evl"><li><b>Anniversaires</b><span>Gâteau, décoration, table réservée</span></li><li><b>Repas de famille</b><span>Grandes tablées, menu partagé</span></li><li><b>Repas d'affaires</b><span>Déjeuners d'équipe</span></li><li><b>Groupes d'amis</b><span>Pizzas à partager</span></li></ul>
+    <form class="form evf" id="evf" novalidate>
+      <div class="fld"><label for="e-type">Événement</label><select id="e-type"><option>Anniversaire</option><option>Repas de famille</option><option>Repas d'affaires</option><option>Groupe d'amis</option><option>Autre</option></select></div>
+      <div class="fld"><label for="e-date">Date</label><input id="e-date" type="date"></div>
+      <div class="fld"><label for="e-nb">Invités</label><select id="e-nb"><option>6 – 10</option><option>10 – 20</option><option>20 – 40</option><option>40 et plus</option></select></div>
+      <div class="fld"><label for="e-nom">Nom</label><input id="e-nom" autocomplete="name"></div>
+      <p class="err" id="e-err" hidden></p>
+      <button class="btn terra" type="submit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Demander un devis</button>
+    </form>
+  </div>
+</div></section>
+
+<section id="infos" class="dark-visit"><div class="wrap visit">
+  <img class="facadev" loading="lazy" src="media/p-jambon2.jpg" alt="Pizza napolitaine du Terrasse">
+  <div class="vinfo">
+    <span class="eyebrow">Nous trouver</span>
+    <h2>Le <i>Terrasse</i></h2>
+    <div class="hrs"><span class="lbl">Du mardi au dimanche</span><b>13h – 22h</b><span class="now" id="now">Ouvert maintenant</span></div>
+    <p class="addr">Résidence la Colline 42, près de la Clinique Badr, Oujda<br>06 00 00 00 00 · Fermé le lundi<br>4,8 <em>★</em> sur Google (67 avis)</p>
+    <div class="row"><a class="btn terra" href="https://www.google.com/maps/search/?api=1&query=restaurant+Oujda" target="_blank" rel="noopener">Itinéraire</a><a class="btn out-d" href="tel:+212600000000">Appeler</a></div>
+  </div>
+</div>
+</section>
+
+<section class="ouv"><div class="wrap">
+  <div class="ot">
+    <span class="eyebrow">Bientôt au Terrasse</span>
+    <h2>Quelque chose <i>de sucré.</i></h2>
+    <p>Douceurs, café et boissons fraîches : la suite arrive au Terrasse. Suivez-nous sur Instagram pour ne rien manquer.</p>
+    <div class="row"><a class="btn terra" href="#reserver">Réserver une table</a><a class="btn out-l" href="https://www.instagram.com/lepatio__/" target="_blank" rel="noopener">Instagram</a></div>
+  </div>
+  <div class="ov"><video class="lazyv" id="ouvv" data-src="media/v-teaser.mp4" poster="media/teaser-poster.jpg" muted loop playsinline preload="none"></video><button type="button" class="snd" id="snd" aria-label="Activer le son"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor"/><path class="w" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/><path class="x" d="m16 9 6 6m0-6-6 6"/></svg><span>Son</span></button></div>
+</div></section>
+
+<section class="loc" id="localisation"><div class="wrap">
+  <div class="sec-head"><h2>Localisation</h2><span class="eyebrow">Résidence la Colline · près de la Clinique Badr</span></div>
+</div>
+<div class="wrap"><div class="map" style="margin-top:0"><iframe title="La Terrasse sur Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=restaurant+Oujda&amp;z=13&amp;output=embed"></iframe></div></div>
+<div class="wrap"><div class="row" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:22px"><a class="btn terra" href="https://www.google.com/maps/search/?api=1&query=restaurant+Oujda" target="_blank" rel="noopener">Itinéraire</a><a class="btn out-d" href="tel:+212600000000">06 00 00 00 00</a></div></div>
+</section>
+
+<footer><div class="wrap">
+  <div class="top"><a class="logo img" href="#top"><span style="font-family:Georgia,serif;font-size:22px;letter-spacing:.12em;color:#f1e3c4;white-space:nowrap">LA TERRASSE</span></a><div class="soc">
+    <a href="https://www.instagram.com/lepatio__/" data-soc target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+  </div></div>
+  <div class="bot"><span>La Terrasse · Italian Restaurant · Oujda</span><span>Site réalisé par SiteLik</span></div>
+</div></footer>
+
+<div class="mbar"><a href="#carte">La carte</a><a href="tel:+212600000000">Appeler</a><a class="go" href="#reserver">Réserver</a></div>
+
+<script>
+function toBlob(d){try{const bin=atob(d.split(',')[1]);const u=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);return URL.createObjectURL(new Blob([u],{type:'video/mp4'}))}catch(_){return d}}
+let HERO='';(function(){const v=document.querySelector('.hero video');const d=v&&v.getAttribute('src');if(!d)return;HERO=d.indexOf('base64,')>0?toBlob(d):d})();
+var I18N={"Aperçu proposé par SiteLik": ["Preview by SiteLik", "Anteprima di SiteLik", "Vista previa de SiteLik"], "La carte": ["Menu", "Menù", "Carta"], "Réserver": ["Book", "Prenota", "Reservar"], "Infos": ["Info", "Info", "Info"], "Ouvert": ["Open", "Aperto", "Abierto"], "Fermé": ["Closed", "Chiuso", "Cerrado"], "Réserver une table": ["Book a table", "Prenota un tavolo", "Reservar mesa"], "Réservation": ["Booking", "Prenotazione", "Reserva"], "Nos assiettes": ["Our dishes", "I nostri piatti", "Nuestros platos"], "De la cuisine à votre table": ["From our kitchen to your table", "Dalla cucina alla tua tavola", "De la cocina a su mesa"], "Voir la carte": ["See the menu", "Vedi il menù", "Ver la carta"], "Ce qui nous distingue": ["What sets us apart", "Cosa ci distingue", "Lo que nos distingue"], "Prix en dirhams": ["Prices in dirhams", "Prezzi in dirham", "Precios en dírhams"], "Boissons": ["Drinks", "Bevande", "Bebidas"], "Caramel": ["Caramel", "Caramello", "Caramelo"], "Voir toute la carte": ["See the full menu", "Vedi tutto il menù", "Ver toda la carta"], "Un QR code sur chaque table": ["A QR code on every table", "Un QR code su ogni tavolo", "Un código QR en cada mesa"], "Le client scanne avec son téléphone et la carte s'ouvre, avec photos et prix. Un prix change ? On le modifie en une minute, sans réimprimer.": ["Guests scan it with their phone and the menu opens, with photos and prices. A price changes? Updated in a minute, no reprinting.", "Il cliente scansiona con il telefono e si apre il menù, con foto e prezzi. Cambia un prezzo? Si aggiorna in un minuto, senza ristampare.", "El cliente lo escanea con su móvil y se abre la carta, con fotos y precios. ¿Cambia un precio? Se actualiza en un minuto, sin reimprimir."], "Réservez": ["Book", "Prenota", "Reserve"], "votre table.": ["your table.", "il tuo tavolo.", "su mesa."], "Votre demande part sur WhatsApp. Le restaurant vous confirme rapidement.": ["Your request is sent by WhatsApp. The restaurant will confirm shortly.", "La richiesta parte su WhatsApp. Il ristorante conferma rapidamente.", "Su solicitud se envía por WhatsApp. El restaurante le confirma enseguida."], "Date": ["Date", "Data", "Fecha"], "Heure": ["Time", "Ora", "Hora"], "Personnes": ["Guests", "Persone", "Personas"], "9 et plus": ["9 or more", "9 o più", "9 o más"], "Occasion": ["Occasion", "Occasione", "Ocasión"], "Dîner": ["Dinner", "Cena", "Cena"], "Déjeuner": ["Lunch", "Pranzo", "Almuerzo"], "Anniversaire": ["Birthday", "Compleanno", "Cumpleaños"], "Repas d'affaires": ["Business meal", "Pranzo di lavoro", "Comida de negocios"], "Nom": ["Name", "Nome", "Nombre"], "Demande particulière": ["Special request", "Richiesta particolare", "Petición especial"], "Envoyer sur WhatsApp": ["Send on WhatsApp", "Invia su WhatsApp", "Enviar por WhatsApp"], "Nous trouver": ["Find us", "Dove siamo", "Dónde estamos"], "Ouvert maintenant": ["Open now", "Aperto ora", "Abierto ahora"], "Itinéraire": ["Directions", "Indicazioni", "Cómo llegar"], "Site réalisé par SiteLik": ["Website by SiteLik", "Sito realizzato da SiteLik", "Web realizada por SiteLik"], "Indiquez votre nom et la date.": ["Please enter your name and the date.", "Indica il tuo nome e la data.", "Indique su nombre y la fecha."], "Démo : le numéro WhatsApp du restaurant sera ajouté ici.": ["Demo: the restaurant's WhatsApp number will be added here.", "Demo: qui verrà aggiunto il numero WhatsApp del ristorante.", "Demo: aquí se añadirá el número de WhatsApp del restaurante."], "Exemple. Le vrai QR ouvrira cette carte dès que le site sera en ligne.": ["Example. The real QR will open this menu once the site is live.", "Esempio. Il vero QR aprirà questo menù quando il sito sarà online.", "Ejemplo. El QR real abrirá esta carta cuando la web esté en línea."], "Événements": ["Events", "Eventi", "Eventos"], "Ils en parlent": ["What guests say", "Dicono di noi", "Lo que dicen"], "Avis Google": ["Google reviews", "Recensioni Google", "Reseñas de Google"], "Voir tous les avis": ["See all reviews", "Vedi tutte le recensioni", "Ver todas las reseñas"], "Client · Google": ["Guest · Google", "Cliente · Google", "Cliente · Google"], "Le menu": ["The menu", "Il menù", "La carta"], "en images": ["in pictures", "in immagini", "en imágenes"], "Commandez en deux clics": ["Order in two taps", "Ordina in due clic", "Pida en dos clics"], "Choisissez vos plats, ajoutez-les à votre commande et envoyez-la directement au restaurant sur WhatsApp. Sur place, à emporter ou en livraison.": ["Pick your dishes, add them to your order and send it straight to the restaurant on WhatsApp. Dine in, takeaway or delivery.", "Scegli i piatti, aggiungili all'ordine e invialo direttamente al ristorante su WhatsApp. Al tavolo, da asporto o a domicilio.", "Elija sus platos, añádalos a su pedido y envíelo directamente al restaurante por WhatsApp. En el local, para llevar o a domicilio."], "Tout": ["All", "Tutto", "Todo"], "Prix bientôt": ["Price coming soon", "Prezzo in arrivo", "Precio próximamente"], "Ajouter à ma commande": ["Add to my order", "Aggiungi all'ordine", "Añadir a mi pedido"], "Ma commande": ["My order", "Il mio ordine", "Mi pedido"], "Mode": ["Option", "Modalità", "Modo"], "Sur place": ["Dine in", "Al tavolo", "En el local"], "À emporter": ["Takeaway", "Da asporto", "Para llevar"], "Livraison": ["Delivery", "Consegna", "A domicilio"], "Indiquez votre nom.": ["Please enter your name.", "Indica il tuo nome.", "Indique su nombre."], "Anniversaires": ["Birthdays", "Compleanni", "Cumpleaños"], "Gâteau, décoration, table réservée": ["Cake, decoration, reserved table", "Torta, decorazioni, tavolo riservato", "Tarta, decoración, mesa reservada"], "Événement": ["Event", "Evento", "Evento"], "Autre": ["Other", "Altro", "Otro"], "Invités": ["Guests", "Ospiti", "Invitados"], "Demander un devis": ["Request a quote", "Richiedi un preventivo", "Pedir presupuesto"], "Localisation": ["Location", "Dove siamo", "Ubicación"], "Instagram": ["Instagram", "Instagram", "Instagram"], "Son": ["Sound", "Audio", "Sonido"], "Fermé · ouvre à 12h": ["Closed · opens at 12 pm", "Chiuso · apre alle 12", "Cerrado · abre a las 12"], "Pizza": ["Pizza", "Pizza", "Pizza"], "Pizzas": ["Pizzas", "Pizze", "Pizzas"], "Desserts": ["Desserts", "Dolci", "Postres"], "Repas de famille": ["Family meal", "Pranzo in famiglia", "Comida familiar"], "Chaise bébé, gâteau d'anniversaire…": ["High chair, birthday cake…", "Seggiolone, torta di compleanno…", "Trona, tarta de cumpleaños…"], "Appeler": ["Call", "Chiama", "Llamar"], "Pomodoro Stracciatella": ["Pomodoro Stracciatella", "Pomodoro Stracciatella", "Pomodoro Stracciatella"], "Sauce tomate maison, mozzarella, stracciatella, tomates cerises, basilic.": ["Homemade tomato sauce, mozzarella, stracciatella, cherry tomatoes, basil.", "Salsa di pomodoro della casa, mozzarella, stracciatella, pomodorini, basilico.", "Salsa de tomate casera, mozzarella, stracciatella, tomates cherry, albahaca."], "Pizza aux légumes": ["Vegetable pizza", "Pizza alle verdure", "Pizza de verduras"], "Penne & escalope": ["Penne & cutlet", "Penne e cotoletta", "Penne y escalope"], "Penne à la tomate, escalope panée gratinée à la mozzarella.": ["Tomato penne, breaded cutlet topped with melted mozzarella.", "Penne al pomodoro, cotoletta impanata gratinata alla mozzarella.", "Penne con tomate, escalope empanado gratinado con mozzarella."], "Salade poulet & parmesan": ["Chicken & parmesan salad", "Insalata pollo e parmigiano", "Ensalada de pollo y parmesano"], "Poulet grillé, copeaux de parmesan, tomates confites, croûtons.": ["Grilled chicken, parmesan shavings, confit tomatoes, croutons.", "Pollo alla griglia, scaglie di parmigiano, pomodori confit, crostini.", "Pollo a la parrilla, lascas de parmesano, tomates confitados, picatostes."], "Tiramisu": ["Tiramisu", "Tiramisù", "Tiramisú"], "L'incontournable dessert italien, café et mascarpone.": ["The must-have Italian dessert, coffee and mascarpone.", "L'immancabile dolce italiano, caffè e mascarpone.", "El imprescindible postre italiano, café y mascarpone."], "Pâtes & salades": ["Pasta & salads", "Pasta e insalate", "Pasta y ensaladas"], "Menu enfants": ["Kids' menu", "Menù bambini", "Menú infantil"], "Petite pizza ou pâtes, jus et surprise : 35 DH.": ["Small pizza or pasta, juice and a surprise: 35 DH.", "Pizza piccola o pasta, succo e sorpresa: 35 DH.", "Pizza pequeña o pasta, zumo y sorpresa: 35 DH."], "Penne · Fusilli · Spaghetti": ["Penne · Fusilli · Spaghetti", "Penne · Fusilli · Spaghetti", "Penne · Fusilli · Spaghetti"], "Bientôt au Terrasse": ["Coming soon at La Terrasse", "Presto al Terrasse", "Pronto en La Terrasse"], "Quelque chose": ["Something", "Qualcosa", "Algo"], "de sucré.": ["sweet.", "di dolce.", "dulce."], "Douceurs, café et boissons fraîches : la suite arrive au Terrasse. Suivez-nous sur Instagram pour ne rien manquer.": ["Sweets, coffee and fresh drinks: more is coming to La Terrasse. Follow us on Instagram so you don't miss a thing.", "Dolci, caffè e bevande fresche: il seguito arriva al Terrasse. Seguici su Instagram per non perdere nulla.", "Dulces, café y bebidas frescas: llega más a La Terrasse. Síguenos en Instagram para no perderte nada."], "Résidence la Colline 42, près de la Clinique Badr, Oujda": ["Résidence la Colline 42, near Clinique Badr, Oujda", "Résidence la Colline 42, vicino alla Clinique Badr, Oujda", "Résidence la Colline 42, cerca de la Clínica Badr, Oujda"], "06 00 00 00 00 · Fermé le lundi": ["06 00 00 00 00 · Closed on Mondays", "06 00 00 00 00 · Chiuso il lunedì", "06 00 00 00 00 · Cerrado los lunes"], "Résidence la Colline · près de la Clinique Badr": ["Résidence la Colline · near Clinique Badr", "Résidence la Colline · vicino alla Clinique Badr", "Résidence la Colline · cerca de la Clínica Badr"], "Pizza Pomodoro Stracciatella": ["Pizza Pomodoro Stracciatella", "Pizza Pomodoro Stracciatella", "Pizza Pomodoro Stracciatella"], "Base crème onctueuse, champignons, olives et basilic.": ["Creamy base, mushrooms, olives and basil.", "Base di panna, funghi, olive e basilico.", "Base de nata, champiñones, aceitunas y albahaca."], "Pizza champignons & pesto": ["Mushroom & pesto pizza", "Pizza funghi e pesto", "Pizza de champiñones y pesto"], "Champignons, olives noires, pesto et basilic.": ["Mushrooms, black olives, pesto and basil.", "Funghi, olive nere, pesto e basilico.", "Champiñones, aceitunas negras, pesto y albahaca."], "Pizza jambon": ["Ham pizza", "Pizza al prosciutto", "Pizza de jamón"], "Base blanche, jambon, fromage frais et basilic.": ["White base, ham, fresh cheese and basil.", "Base bianca, prosciutto, formaggio fresco e basilico.", "Base blanca, jamón, queso fresco y albahaca."], "Sauce tomate, tomates cerises, parmesan, basilic, stracciatella.": ["Tomato sauce, cherry tomatoes, parmesan, basil, stracciatella.", "Salsa di pomodoro, pomodorini, parmigiano, basilico, stracciatella.", "Salsa de tomate, tomates cherry, parmesano, albahaca, stracciatella."], "Poulet grillé, parmesan, tomates confites, croûtons.": ["Grilled chicken, parmesan, confit tomatoes, croutons.", "Pollo alla griglia, parmigiano, pomodori confit, crostini.", "Pollo a la parrilla, parmesano, tomates confitados, picatostes."], "Café, mascarpone. Dolce vita.": ["Coffee, mascarpone. Dolce vita.", "Caffè, mascarpone. Dolce vita.", "Café, mascarpone. Dolce vita."], "Brownie chaud et glace vanille.": ["Warm brownie and vanilla ice cream.", "Brownie caldo e gelato alla vaniglia.", "Brownie caliente y helado de vainilla."], "Jus de fraise": ["Strawberry juice", "Succo di fragola", "Zumo de fresa"], "Pâtes fraîches": ["Pasta", "Pasta", "Pasta"], "Penne, fusilli ou spaghetti, de 55 à 75 DH.": ["Penne, fusilli or spaghetti, 55 to 75 DH.", "Penne, fusilli o spaghetti, da 55 a 75 DH.", "Penne, fusilli o espaguetis, de 55 a 75 DH."], "Poulet, crispy, shawarma ou gambas, dès 30 DH.": ["Chicken, crispy, shawarma or prawns, from 30 DH.", "Pollo, crispy, shawarma o gamberi, da 30 DH.", "Pollo, crispy, shawarma o gambas, desde 30 DH."], "Pizza Alfredo": ["Pizza Alfredo", "Pizza Alfredo", "Pizza Alfredo"], "Laissez-vous": ["Let yourself", "Lasciatevi", "Déjese"], "séduire.": ["be tempted.", "sedurre.", "seducir."], "Une base de crème onctueuse, des champignons, des olives et du basilic, sur notre pâte napolitaine dorée au four.": ["A creamy base, mushrooms, olives and basil on our oven-golden Neapolitan dough.", "Una base di panna, funghi, olive e basilico sul nostro impasto napoletano dorato in forno.", "Una base cremosa, champiñones, aceitunas y albahaca sobre nuestra masa napolitana dorada al horno."], "Tiramisu maison · La Terrasse": ["Homemade tiramisu · La Terrasse", "Tiramisù della casa · La Terrasse", "Tiramisú casero · La Terrasse"], "Feuilletez notre menu": ["Browse our menu", "Sfoglia il nostro menù", "Hojee nuestra carta"], "Touchez la page pour tourner": ["Tap the page to turn it", "Tocca la pagina per girarla", "Toque la página para pasarla"], "La Carte": ["The Menu", "Il Menù", "La Carta"], "Pizzeria napolitaine · Oujda": ["Neapolitan pizzeria · Oujda", "Pizzeria napoletana · Oujda", "Pizzería napolitana · Oujda"], "Les Pâtes": ["Pasta", "La Pasta", "La Pasta"], "Les Sandwichs": ["Sandwiches", "I Panini", "Bocadillos"], "Seul / en menu": ["Alone / as a meal", "Solo / in menù", "Solo / en menú"], "Menu Enfants": ["Kids' Menu", "Menù Bambini", "Menú Infantil"], "Les Desserts": ["Desserts", "I Dolci", "Postres"], "Les Suppléments": ["Extras", "Supplementi", "Suplementos"], "Les Boissons": ["Drinks", "Le Bevande", "Bebidas"], "Buon appetito !": ["Buon appetito!", "Buon appetito!", "¡Buon appetito!"], "Benvenuto": ["Welcome", "Benvenuto", "Bienvenido"], "al Terrasse.": ["to La Terrasse.", "al Terrasse.", "al Terrasse."], "Pizzas napolitaines, sandwichs traditionnels, plats et bien plus encore. Du mardi au dimanche, de 13h à 22h.": ["Neapolitan pizzas, traditional sandwiches, mains and much more. Tuesday to Sunday, 1 pm to 10 pm.", "Pizze napoletane, panini tradizionali, piatti e molto altro. Da martedì a domenica, dalle 13 alle 22.", "Pizzas napolitanas, bocadillos tradicionales, platos y mucho más. De martes a domingo, de 13h a 22h."], "Pizza napolitaine": ["Neapolitan pizza", "Pizza napoletana", "Pizza napolitana"], "Sandwichs": ["Sandwiches", "Panini", "Bocadillos"], "Sandwich": ["Sandwich", "Panino", "Bocadillo"], "Pâte moelleuse, bords gonflés.": ["Soft dough, puffy crust.", "Impasto morbido, cornicione alto.", "Masa tierna, borde inflado."], "La Terrasse · Italian Restaurant · Oujda": ["La Terrasse · Italian Restaurant · Oujda", "La Terrasse · Ristorante italiano · Oujda", "La Terrasse · Restaurante italiano · Oujda"], "Restaurant La Terrasse": ["Restaurant La Terrasse", "Ristorante La Terrasse", "Restaurante La Terrasse"], "Comme": ["Just like", "Come", "Como"], "en Italie.": ["in Italy.", "in Italia.", "en Italia."], "Une cuisine italienne généreuse, des assiettes soignées et un accueil chaleureux. Nos clients nous donnent 4,8 sur 5 sur Google.": ["Generous Italian cooking, carefully plated dishes and a warm welcome. Our guests rate us 4.8 out of 5 on Google.", "Una cucina italiana generosa, piatti curati e un'accoglienza calorosa. I nostri clienti ci danno 4,8 su 5 su Google.", "Una cocina italiana generosa, platos cuidados y una acogida cálida. Nuestros clientes nos dan 4,8 sobre 5 en Google."], "Pâtes": ["Pasta", "Pasta", "Pasta"], "La pizza": ["The pizza", "La pizza", "La pizza"], "Pourquoi La Terrasse": ["Why La Terrasse", "Perché La Terrasse", "Por qué La Terrasse"], "Celle que nos clients recommandent.": ["The one our guests recommend.", "Quella che i clienti consigliano.", "La que recomiendan nuestros clientes."], "4,8 sur Google": ["4.8 on Google", "4,8 su Google", "4,8 en Google"], "D'après 67 avis clients.": ["From 67 customer reviews.", "Da 67 recensioni.", "Según 67 reseñas."], "Accueil chaleureux": ["Warm welcome", "Accoglienza calorosa", "Acogida cálida"], "Une équipe aux petits soins.": ["A team that takes care of you.", "Uno staff premuroso.", "Un equipo atento."], "Du mardi au dimanche.": ["Tuesday to Sunday.", "Da martedì a domenica.", "De martes a domingo."], "Note moyenne sur Google, d'après 67 avis.": ["Average Google rating, from 67 reviews.", "Valutazione media su Google, da 67 recensioni.", "Nota media en Google, según 67 reseñas."], "Dessert": ["Dessert", "Dolce", "Postre"], "Boisson": ["Drink", "Bevanda", "Bebida"], "Prenotazione": ["Booking", "Prenotazione", "Reserva"], "Anniversaires & groupes": ["Birthdays & groups", "Compleanni e gruppi", "Cumpleaños y grupos"], "Vos moments": ["Your moments", "I vostri momenti", "Sus momentos"], "à l'italienne.": ["the Italian way.", "all'italiana.", "a la italiana."], "Un anniversaire, un repas de famille ou d'équipe ? Dites-nous ce que vous préparez, nous revenons vers vous avec une proposition.": ["A birthday, a family or team meal? Tell us what you are planning and we will come back with a proposal.", "Un compleanno, un pranzo in famiglia o di lavoro? Diteci cosa state organizzando, vi risponderemo con una proposta.", "¿Un cumpleaños, una comida familiar o de equipo? Cuéntenos qué prepara y le enviaremos una propuesta."], "Grandes tablées, menu partagé": ["Large tables, shared menu", "Grandi tavolate, menù condiviso", "Mesas grandes, menú compartido"], "Déjeuners d'équipe": ["Team lunches", "Pranzi di squadra", "Comidas de equipo"], "Groupes d'amis": ["Groups of friends", "Gruppi di amici", "Grupos de amigos"], "Pizzas à partager": ["Pizzas to share", "Pizze da condividere", "Pizzas para compartir"], "Groupe d'amis": ["Group of friends", "Gruppo di amici", "Grupo de amigos"], "40 et plus": ["40 or more", "40 e più", "40 o más"], "Le": ["Le", "Le", "Le"], "Terrasse": ["Terrasse", "Terrasse", "Terrasse"], "Fermé le lundi": ["Closed on Mondays", "Chiuso il lunedì", "Cerrado los lunes"], "sur Google (67 avis)": ["on Google (67 reviews)", "su Google (67 recensioni)", "en Google (67 reseñas)"], "Du mardi au dimanche": ["Tuesday to Sunday", "Da martedì a domenica", "De martes a domingo"], "Fermé · ouvre à 13h": ["Closed · opens at 1 pm", "Chiuso · apre alle 13", "Cerrado · abre a las 13h"], "La Terrasse": ["La Terrasse", "La Terrasse", "La Terrasse"]};
+var LI={en:0,it:1,es:2};var LANG='fr';
+function t(fr){return LANG==='fr'||!I18N[fr]?fr:I18N[fr][LI[LANG]]}
+const WA='';
+
+document.querySelectorAll('[data-soc]').forEach(a=>{if(!/^https?:/.test(a.getAttribute('href')))a.remove()});
+(function(){const n=document.querySelector('nav');const f=()=>n.classList.toggle('solid',scrollY>40);addEventListener('scroll',f,{passive:true});f()})(); // numéro WhatsApp du restaurant, ex. 2126XXXXXXXX
+window.refreshStatus=function(){let d,m;try{const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Africa/Casablanca',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+  d={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[p.find(x=>x.type==='weekday').value];m=(+p.find(x=>x.type==='hour').value%24)*60+(+p.find(x=>x.type==='minute').value)}catch(_){const n=new Date();d=n.getDay();m=n.getHours()*60+n.getMinutes()}
+  const open=d!==1&&m>=780&&m<1320,s=document.getElementById('status');s.textContent=t(open?'Ouvert':'Fermé');s.classList.toggle('closed',!open);const nw=document.getElementById('now');if(nw){nw.textContent=t(open?'Ouvert maintenant':(d===1?'Fermé le lundi':'Fermé · ouvre à 13h'));nw.classList.toggle('closed',!open)}
+  };refreshStatus();
+const more=document.getElementById('more');
+function show(t){document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected',x.dataset.t===t));
+  document.querySelectorAll('.panel').forEach(p=>{p.hidden=p.dataset.p!==t;p.classList.toggle('clip',!p.hidden&&(p.querySelectorAll('.item').length>6||p.querySelectorAll('.grp').length>4))});
+  const cur=document.querySelector('.panel:not([hidden])');more.hidden=!(cur&&cur.classList.contains('clip'));}
+document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>show(b.dataset.t)));
+document.querySelectorAll('[data-go]').forEach(a=>a.addEventListener('click',()=>show(a.dataset.go)));
+more.addEventListener('click',()=>{const cur=document.querySelector('.panel:not([hidden])');cur.classList.remove('clip');more.hidden=true});
+show('viandes');
+(function(){const s=document.getElementById('r-time'),t=[];for(let h=13;h<=21;h++)for(const mm of['00','30']){t.push((h%24)+'h'+mm)}s.innerHTML=t.map(x=>`<option${x==='20h00'?' selected':''}>${x}</option>`).join('');const dt=document.getElementById('r-date');dt.min=new Date().toISOString().slice(0,10);dt.value=dt.min})();
+document.getElementById('resa').addEventListener('submit',e=>{e.preventDefault();const g=id=>document.getElementById(id).value.trim(),er=document.getElementById('r-err');
+  if(!g('r-nom')||!g('r-date')){er.textContent=t('Indiquez votre nom et la date.');er.hidden=false;return}
+  if(!WA){er.textContent=t('Démo : le numéro WhatsApp du restaurant sera ajouté ici.');er.hidden=false;return}
+  const[y,mo,da]=g('r-date').split('-');const msg=["Bonjour La Terrasse, je souhaite réserver une table.",'Date : '+da+'/'+mo+'/'+y+' à '+g('r-time'),'Personnes : '+g('r-pers'),'Occasion : '+g('r-occ'),'Nom : '+g('r-nom'),g('r-msg')?'Demande : '+g('r-msg'):''].filter(Boolean).join('\n');
+  location.href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg)});
+(function(){const c=document.getElementById('qr');if(!c)return;const x=c.getContext('2d'),N=29;x.fillStyle='#fff';x.fillRect(0,0,N,N);x.fillStyle='#161714';let s=11;const r=()=>(s=(s*16807)%2147483647)/2147483647;for(let i=0;i<N;i++)for(let j=0;j<N;j++)if(r()<.48)x.fillRect(i,j,1,1);
+  function eye(a,b){x.fillStyle='#fff';x.fillRect(a-1,b-1,9,9);x.fillStyle='#161714';x.fillRect(a,b,7,7);x.fillStyle='#fff';x.fillRect(a+1,b+1,5,5);x.fillStyle='#161714';x.fillRect(a+2,b+2,3,3)}eye(0,0);eye(N-7,0);eye(0,N-7)})();
+
+// hero videos: phone plays the first one; desktop shows three side by side. Hidden players load only when shown.
+(function(){const vids=[...document.querySelectorAll('.hero video')];
+  const shown=v=>getComputedStyle(v).display!=='none';
+  const play=v=>{if(!shown(v)||!v.src)return;v.muted=true;const p=v.play();if(p)p.catch(()=>{})};
+  function load(v,i){if(v.dataset.ready||!shown(v))return;v.dataset.ready=1;v.muted=true;v.setAttribute('muted','');
+    if(i===0){if(HERO)v.src=HERO}else{const d=v.dataset.src;v.src=d?(d.indexOf('base64,')>0?toBlob(d):d):HERO;
+      if(!d)v.addEventListener('loadedmetadata',()=>{try{v.currentTime=(v.duration*i/3)%v.duration}catch(_){}},{once:true})}
+    v.addEventListener('canplay',()=>play(v),{once:true});play(v)}
+  const all=()=>vids.forEach((v,i)=>{load(v,i);play(v)});all();
+  ['touchstart','click','scroll'].forEach(ev=>addEventListener(ev,all,{once:true,passive:true}));
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)all()});
+  matchMedia('(min-width:900px)').addEventListener('change',all);
+})();
+
+
+(function(){
+const IT=[...document.querySelectorAll('.ci')].map(b=>({el:b,img:b.querySelector('img').getAttribute('src'),name:b.querySelector('b').textContent.trim(),desc:b.querySelector('small').textContent.trim()}));
+const cart=new Map();let cur=0,q=1;
+const $=id=>document.getElementById(id);const dish=$('dish'),cd=$('cart'),btn=$('cart-btn');
+const op=d=>{if(d.showModal)d.showModal();else d.setAttribute('open','')};const cl=d=>{if(d.close)d.close();else d.removeAttribute('open')};
+document.querySelectorAll('dialog [data-close]').forEach(x=>x.addEventListener('click',()=>cl(x.closest('dialog'))));
+document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d)cl(d)}));
+document.querySelectorAll('.chips button').forEach(c=>c.addEventListener('click',()=>{document.querySelectorAll('.chips button').forEach(x=>x.classList.toggle('on',x===c));IT.forEach(i=>i.el.hidden=!(c.dataset.f==='all'||i.el.dataset.c===c.dataset.f))}));
+IT.forEach((it,i)=>it.el.addEventListener('click',()=>{cur=i;q=1;$('d-img').src=it.img;$('d-img').alt=it.name;$('d-name').textContent=t(it.name);$('d-desc').textContent=t(it.desc);$('d-pr').textContent=t('Prix bientôt');$('d-q').textContent=q;$('d-add').textContent=t('Ajouter à ma commande');op(dish)}));
+$('d-m').onclick=()=>{q=Math.max(1,q-1);$('d-q').textContent=q};$('d-p').onclick=()=>{q++;$('d-q').textContent=q};
+function render(){let n=0;cart.forEach(v=>n+=v);$('cart-n').textContent=n;btn.hidden=!n;
+  $('cart-list').innerHTML=[...cart].map(([i,v])=>`<li><img src="${IT[i].img}" alt=""><span>${t(IT[i].name)}</span><div class="qty"><button type="button" data-d="${i}">−</button><b>${v}</b><button type="button" data-u="${i}">+</button></div></li>`).join('')}
+$('cart-list').addEventListener('click',e=>{const d=e.target.dataset;if(d.u){cart.set(+d.u,cart.get(+d.u)+1)}else if(d.d){const v=cart.get(+d.d)-1;v?cart.set(+d.d,v):cart.delete(+d.d)}render();if(!cart.size)cl(cd)});
+$('d-add').onclick=()=>{cart.set(cur,(cart.get(cur)||0)+q);render();cl(dish);btn.classList.remove('pop');void btn.offsetWidth;btn.classList.add('pop')};
+btn.onclick=()=>{$('c-err').hidden=true;op(cd)};
+document.querySelectorAll('#c-mode button').forEach(b=>b.addEventListener('click',()=>document.querySelectorAll('#c-mode button').forEach(x=>x.classList.toggle('on',x===b))));
+$('c-send').onclick=()=>{const er=$('c-err');if(!$('c-nom').value.trim()){er.textContent=t('Indiquez votre nom.');er.hidden=false;return}
+  if(!WA){er.textContent=t('Démo : le numéro WhatsApp du restaurant sera ajouté ici.');er.hidden=false;return}
+  const mode=document.querySelector('#c-mode .on').textContent;const msg=['Bonjour La Terrasse, je souhaite commander :',...[...cart].map(([i,v])=>'• '+v+' × '+IT[i].name),'Mode : '+mode,'Nom : '+$('c-nom').value.trim()].join('\n');
+  location.href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg)};
+const ef=$('evf');const ed=$('e-date');ed.min=new Date().toISOString().slice(0,10);
+ef.addEventListener('submit',e=>{e.preventDefault();const er=$('e-err');if(!$('e-nom').value.trim()||!ed.value){er.textContent=t('Indiquez votre nom et la date.');er.hidden=false;return}
+  if(!WA){er.textContent=t('Démo : le numéro WhatsApp du restaurant sera ajouté ici.');er.hidden=false;return}
+  const[y,m,d]=ed.value.split('-');const msg=['Bonjour La Terrasse, je souhaite organiser un événement.','Type : '+$('e-type').value,'Date : '+d+'/'+m+'/'+y,'Invités : '+$('e-nb').value,'Nom : '+$('e-nom').value.trim()].join('\n');
+  location.href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg)});
+})();
+(function(){const v=document.getElementById('ouvv'),b=document.getElementById('snd');if(!v||!b)return;b.addEventListener('click',()=>{if(!v.src)v.src=v.dataset.src;v.muted=!v.muted;v.dataset.snd=v.muted?'':'1';b.classList.toggle('on',!v.muted);v.play().catch(()=>{})})})();
+
+(function(){const book=document.getElementById('book');if(!book)return;const pages=[...book.querySelectorAll(':scope>.pg')];let leaves=[],cur=0,mode='';
+const prev=document.getElementById('fbprev'),next=document.getElementById('fbnext'),cnt=document.getElementById('fbcount');
+function build(){const m=matchMedia('(max-width:760px)').matches?'one':'two';if(m===mode)return;mode=m;leaves.forEach(l=>l.remove());leaves=[];
+  const per=m==='two'?2:1;for(let i=0;i<pages.length;i+=per){const l=document.createElement('div');l.className='leaf';const f=document.createElement('div');f.className='face f';f.appendChild(pages[i]);l.appendChild(f);
+    const b=document.createElement('div');b.className='face b';if(per===2&&pages[i+1])b.appendChild(pages[i+1]);else{const blank=document.createElement('div');blank.className='pg';b.appendChild(blank)}l.appendChild(b);
+    l.addEventListener('click',()=>{l.classList.contains('flipped')?go(cur-1):go(cur+1)});book.appendChild(l);leaves.push(l)}
+  cur=Math.min(cur,leaves.length);render(false);fit()}
+function fit(){pages.forEach(pg=>{pg.style.fontSize='';let f=parseFloat(getComputedStyle(pg).fontSize),k=0;while(pg.scrollHeight>pg.clientHeight+1&&f>7&&k<40){f-=.5;pg.style.fontSize=f+'px';k++}})}
+addEventListener('resize',()=>{clearTimeout(window.__fbt);window.__fbt=setTimeout(fit,200)});
+function render(){leaves.forEach((l,i)=>{const f=i<cur;l.classList.toggle('flipped',f);l.style.zIndex=f?i+1:leaves.length-i});
+  book.classList.toggle('closed',mode==='two'&&cur===0);book.classList.toggle('end',mode==='two'&&cur===leaves.length);
+  prev.disabled=cur===0;next.disabled=cur===(mode==='two'?leaves.length:leaves.length-1);
+  const tot=pages.length;let a=mode==='two'?(cur===0?1:Math.min(cur*2,tot)):cur+1;cnt.textContent=a+' / '+tot}
+function go(n){const max=mode==='two'?leaves.length:leaves.length-1;n=Math.max(0,Math.min(max,n));if(n===cur)return;const l=leaves[n>cur?cur:n];l.classList.add('turning');setTimeout(()=>l.classList.remove('turning'),1000);cur=n;render()}
+prev.onclick=()=>go(cur-1);next.onclick=()=>go(cur+1);
+let sx=0;book.addEventListener('touchstart',e=>{sx=e.touches[0].clientX},{passive:true});book.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40){e.preventDefault();go(cur+(dx<0?1:-1))}});
+addEventListener('keydown',e=>{const r=book.getBoundingClientRect();if(r.top>innerHeight||r.bottom<0)return;if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});
+build();matchMedia('(max-width:760px)').addEventListener('change',build);
+document.querySelectorAll('a[href="#carte"]').forEach(a=>a.addEventListener('click',()=>{if(cur===0)setTimeout(()=>go(1),700)}));
+})();
+// lazy videos: load and play only when on screen
+(function(){const vs=[...document.querySelectorAll('video.lazyv')];if(!vs.length)return;
+  const go=v=>{if(!v.src){v.src=v.dataset.src}if(!v.dataset.snd)v.muted=true;const p=v.play();if(p)p.catch(()=>{})};
+  if(!('IntersectionObserver'in window)){vs.forEach(go);return}
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)go(e.target);else e.target.pause()}),{rootMargin:'200px'});vs.forEach(v=>io.observe(v))})();
+(function(){const nodes=[];const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>{const p=n.parentElement;if(!p||/^(SCRIPT|STYLE)$/.test(p.tagName))return 2;return n.nodeValue.trim()?1:2}});let n;
+  while(n=w.nextNode()){const k=n.nodeValue.trim().replace(/\s+/g,' ');if(I18N[k]){n._k=k;n._pre=n.nodeValue.match(/^\s*/)[0];n._post=n.nodeValue.match(/\s*$/)[0];nodes.push(n)}}
+  const ph=[...document.querySelectorAll('[placeholder]')].filter(e=>I18N[e.placeholder]).map(e=>(e._k=e.placeholder,e));
+  window.setLang=function(l){LANG=l;document.documentElement.lang=l;
+    nodes.forEach(n=>{if(n.parentElement&&(n.parentElement.id==='status'||n.parentElement.id==='now'))return;n.nodeValue=n._pre+t(n._k)+n._post});
+    ph.forEach(e=>e.placeholder=t(e._k));
+    document.querySelectorAll('.langs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===l));
+    if(window.refreshStatus)refreshStatus();
+    try{localStorage.setItem('lepatio-lang',l)}catch(_){}};
+  document.querySelectorAll('.langs button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.l)));
+  let l='fr';try{l=localStorage.getItem('lepatio-lang')||''}catch(_){}
+  if(!l){const nl=(navigator.language||'fr').slice(0,2);l=['en','it','es'].includes(nl)?nl:'fr'}
+  setLang(l);
+})();
+</script>
+</body>
+</html>
